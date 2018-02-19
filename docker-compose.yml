@@ -1,0 +1,59 @@
+version: "2"
+
+volumes:
+  postgres-data:
+    driver: local
+  gems:
+    driver: local
+
+services:
+  db:
+    image: postgres:9.6
+    ports:
+      - 5433:5432
+    volumes:
+      - .:/code
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      LC_ALL: C.UTF-8
+      POSTGRES_PASSWORD: P4Ssw0rD!
+
+  test:
+    image: askify/askify:development
+    command: rspec spec/
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    working_dir: /code
+    volumes:
+      - .:/code
+      - gems:/usr/local/bundle
+    tty: true
+    stdin_open: true
+    environment:
+      DATABASE_URL: "postgres://postgres:P4Ssw0rD!@db:5432/askify_test"
+      RACK_ENV: "test"
+      RAILS_ENV: "test"
+      LC_ALL: C.UTF-8
+    links:
+      - db
+  web:
+    image: askify/askify:development
+    entrypoint: /code/development-entrypoint
+    command: rails server -p 3000 -b 0.0.0.0
+    ports:
+      - 3000:3000
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    working_dir: /code
+    volumes:
+      - .:/code
+      - gems:/usr/local/bundle
+    tty: false
+    stdin_open: true
+    environment:
+      DATABASE_URL: "postgres://postgres:P4Ssw0rD!@db:5432/askify_dev"
+      LC_ALL: C.UTF-8
+    links:
+      - db

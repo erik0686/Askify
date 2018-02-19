@@ -1,0 +1,8 @@
+#! /bin/sh
+set -e
+
+if [ -e /code/tmp/pids/server.pid ] 
+then rm /code/tmp/pids/server.pid
+fi
+
+exec "$@"
