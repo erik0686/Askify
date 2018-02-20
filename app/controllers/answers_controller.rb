@@ -1,16 +1,16 @@
 class AnswerController < ApplicationController
 
 def index
-    @answers = Answer.all
+    @answer = Answer.all
 end
 
 def new
-    @answers = Answer.new
+    @answer = Answer.new
 end
 
 def create
-    @answers = Answer.new(answer_params)
-    if @answers.save
+    @answer = Answer.new(answer_params)
+    if @answer.save
         redirect_to answer_path
     else
         render 'new'
@@ -18,12 +18,12 @@ def create
 end
 
 def edit
-    @answers = Answer.find(params[:id])
+    @answer = Answer.find(params[:id])
 end
 
 def update
-    @answers = Answer.find(params[:id])
-    if @answers.update(answers_params)
+    @answer = Answer.find(params[:id])
+    if @answer.update(answers_params)
         redirect_to answers_path
     else
         render :edit
