@@ -12,5 +12,5 @@ class User < ApplicationRecord
   has_many :answers
   has_many :answers, through: :answer_rating, class_name: "RatedAnswer"
 
-  validates :name, :student_id, :email, :username, uniqueness: true
+  validates :student_id, :email, :user_name, uniqueness: true
 end
