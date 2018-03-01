@@ -1,0 +1,11 @@
+@import "registrations";
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.field {
+    text-align: center;
+    align-self:center;
+    margin: auto;
+    font-size: 13px;
+}
