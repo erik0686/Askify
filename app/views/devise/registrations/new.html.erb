@@ -1,64 +1,63 @@
-
-<body>
 <h2> Sign up</h2>
+<div class="registration">
+  <div>
+      <%= image_tag "Logo.png", class: "main-logo", alt: "Askify logo" %>
+  </div>
 
-<div>
-    <%= image_tag "Logo.png", class: "main-logo", alt: "Askify logo" %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+
+    <div class="field" id="fName">
+         <%= f.label :first_name %><br />
+         <%= f.text_field :first_name %>
+    </div>
+
+    <div class="field" id="lName">
+         <%= f.label :last_name %><br />
+         <%= f.text_field :last_name %>
+    </div>
+
+    <div class="field" id="uMat">
+      <%= f.label :matricula %><br />
+      <%= f.password_field :matricula, autocomplete: "off" %>
+    </div>
+
+    <div class="field" id="uEmail">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field" id="uName">
+         <%= f.label :user_name %><br />
+         <%= f.text_field :user_name%>
+    </div>
+
+    <div class="field" id="uPass">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+
+    <div class="field" id="uPassConf">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+
+    <div class="field" id="uGender">
+        <%= check_box_tag(:gender) %>
+        <%= label_tag(:gender, "Female") %>
+        <%= check_box_tag(:gender) %>
+        <%= label_tag(:gender, "Male") %>
+    </div>
+
+
+    <div class="actions" id="singUp">
+      <%= f.submit "Sign up" %>
+    </div>
+  <% end %>
 </div>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field" id="fName">
-       <%= f.label :first_name %><br />
-       <%= f.text_field :first_name %>
-  </div>
-
-  <div class="field" id="lName">
-       <%= f.label :last_name %><br />
-       <%= f.text_field :last_name %>
-  </div>
-
-  <div class="field" id="uMat">
-    <%= f.label :matricula %><br />
-    <%= f.password_field :matricula, autocomplete: "off" %>
-  </div>
-
-  <div class="field" id="uEmail">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field" id="uName">
-       <%= f.label :user_name %><br />
-       <%= f.text_field :user_name%>
-  </div>
-
-  <div class="field" id="uPass">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field" id="uPassConf">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="field" id="uGender">
-      <%= check_box_tag(:gender) %>
-      <%= label_tag(:gender, "Female") %>
-      <%= check_box_tag(:gender) %>
-      <%= label_tag(:gender, "Male") %>
-  </div>
-
-
-  <div class="actions" id="singUp">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-</body>
+<div>
+  <%= render "devise/shared/links" %>
+</div>
