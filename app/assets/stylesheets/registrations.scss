@@ -1,14 +1,8 @@
-
-#fName, #lName, #uMat, #uEmail, #uName,
-#uPass, #uPassConf, #uGender, #signUp, h2{
-    text-align: center;
-    align-self: left;
-    margin: auto;
-    font-size: 13px;
-    padding-left: 500px;
+.field {
+  align-self: left;
+  font-size: 13px;
 }
 
-#imgLogo {
-    padding-right: 500px;
-    padding-top: height/2 + 200px;
+.main-logo {
+  height: 100px;
 }

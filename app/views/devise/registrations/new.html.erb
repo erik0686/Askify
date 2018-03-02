@@ -2,8 +2,8 @@
 <body>
 <h2> Sign up</h2>
 
-<div id="imgLogo">
-    <img src="app/assets/images/Logo.png" alt="Askify Logo">
+<div>
+    <%= image_tag "Logo.png", class: "main-logo", alt: "Askify logo" %>
 </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
