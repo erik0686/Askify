@@ -1,11 +1,14 @@
-@import "registrations";
-// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
-@import "bootstrap-sprockets";
-@import "bootstrap";
 
-.field {
+#fName, #lName, #uMat, #uEmail, #uName,
+#uPass, #uPassConf, #uGender, #signUp, h2{
     text-align: center;
-    align-self:center;
+    align-self: left;
     margin: auto;
     font-size: 13px;
+    padding-left: 500px;
+}
+
+#imgLogo {
+    padding-right: 500px;
+    padding-top: height/2 + 200px;
 }
