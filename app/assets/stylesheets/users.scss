@@ -2,7 +2,27 @@
     margin-left: 7px;
 }
 
+.row {
+    background-color: #f7f7f9
+}
+
+#profileTitle{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
 .media-object.profile {
-    width:150px; 
+    width:160px; 
     border-radius: 50%;
-  }
+}
+
+.jumbotron.profile {
+    padding-top: 44px;
+    margin-top: 32px;
+    margin-left: 15px;
+}
+
+.list-group-item.menu {
+    background-color: transparent;
+    font-size: 14px;
+}
