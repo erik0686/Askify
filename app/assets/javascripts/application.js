@@ -11,8 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require rails-ujs
 //= require turbolinks
 //= require popper
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function () {
+    $("#new-question-second").on("shown.bs.modal", function () {
+        document.activeElement.blur();
+        $("#question-modal-input").focus();
+    });
+});

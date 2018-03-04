@@ -1,3 +1,17 @@
 // Place all the styles related to the questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.btn-group-categories {
+  width: 100%;
+}
+
+div{
+  .modal-header-no-line {
+    border-bottom: 0px;
+  }
+
+  .modal-body-no-top-padding {
+    padding-top: 0;
+  }
+}

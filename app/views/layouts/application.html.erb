@@ -6,9 +6,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= favicon_link_tag 'brand/favicon.ico' %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/navbar" %>
+
+    <div class="container container-large">
+      <%= yield %>
+    </div>
+
+    <%= render "questions/new_first", question: @question %>
+    <%= render "questions/new_second", question: @question %>    
+
   </body>
 </html>
