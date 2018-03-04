@@ -1,0 +1,8 @@
+{
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": true,
+    "window.zoomLevel": 1,
+    "editor.tabSize": 2
+}

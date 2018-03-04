@@ -1,0 +1,51 @@
+.navbar-color{
+  background-color: #61B77A;
+}
+
+.nav-link {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-logo-text {
+  position: absolute;
+  left: 50%;
+
+  .nav-item {
+    position: relative;
+    left: -50%;
+  }
+}
+
+.navbar-img {
+  height: 35px;
+}
+
+// .dropdown-menu:li {
+//     text-align: left;
+// }
+
+.desktop-navbar .dropdown:hover .dropdown-menu.dd-menu {
+  display: block;
+  margin-top: 0; 
+}
+
+.mobile-click-show {
+  display: block;
+  margin-top: 0; 
+}
+
+// .modal-content {
+//     padding: 24px;
+//     h4 {
+//         font-size: medium;
+//     }
+// }
+
+// body {
+//   padding-top: 70px;
+// }
