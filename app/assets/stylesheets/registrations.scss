@@ -1,14 +1,62 @@
-.field {
+ #signUp{
   text-align: center;
   align-self: left;
   margin: auto;
-  font-size: 13px;
+  font-size: 20px;
 }
 
-.main-logo {
-	height: 1000px;
+#formReg{
+    padding-top: 90%;
+}
+
+.new_user {
+
+    margin-left: 15%;
+}
+
+#imgLogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .registration {
   display: inline-flex;
+}
+
+.imgSize{
+    height: 450px;
+    // border: none;
+    // display: block;
+    // margin: 0 auto;
+}
+
+#registrationbk {
+    background: #61B77A;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+}
+
+.form-group, .form-check{
+    color: white;
+}
+
+#formBox{
+    position: absolute;
+
+}
+.logo-wrapper {
+    position: relative;
+
+  .logo{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.form-group{
+    
 }

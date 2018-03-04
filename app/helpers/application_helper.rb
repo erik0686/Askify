@@ -1,5 +1,4 @@
 module ApplicationHelper
-<<<<<<< HEAD
 
     def profileCardMaker(title, data)
         data = '<p class="lead showing">
@@ -25,10 +24,9 @@ module ApplicationHelper
         data.html_safe
     end
 
-=======
   def question_timestamp(question)
-    if question.answers.count > 0 
-      "Answered by " + question.answers.last.user.first_name + " " + 
+    if question.answers.count > 0
+      "Answered by " + question.answers.last.user.first_name + " " +
       question.answers.last.user.last_name + " about " +
       time_ago_in_words(question.answers.last.created_at) + " ago"
     else
@@ -36,5 +34,5 @@ module ApplicationHelper
       time_ago_in_words(question.created_at) + " ago"
     end
   end
->>>>>>> 94ee0de71600a148566ae05552400800b4b67687
+
 end

@@ -11,10 +11,13 @@
   </head>
 
   <body>
-    <%= render "layouts/navbar" %>
-    <%= yield %>
+
+    <div style="height:100%;">
+      <%= yield %>
+    </div>
+
     <%= render "questions/new_first", question: @question %>
-    <%= render "questions/new_second", question: @question %>    
+    <%= render "questions/new_second", question: @question %>
 
   </body>
 </html>

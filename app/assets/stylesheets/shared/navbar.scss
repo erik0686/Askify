@@ -31,12 +31,12 @@
 
 .desktop-navbar .dropdown:hover .dropdown-menu.dd-menu {
   display: block;
-  margin-top: 0; 
+  margin-top: 0;
 }
 
 .mobile-click-show {
   display: block;
-  margin-top: 0; 
+  margin-top: 0;
 }
 
 // .modal-content {
@@ -45,7 +45,8 @@
 //         font-size: medium;
 //     }
 // }
-
-// body {
-//   padding-top: 70px;
-// }
+html, body {
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+}
