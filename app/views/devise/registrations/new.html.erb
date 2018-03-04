@@ -1,49 +1,49 @@
 
-<div id=registrationbk class="row">
 
-<div class="col-sm-5 logo-wrapper">
-      <div class="logo">
-        <%=image_tag("brand/LogoWhite.png", class: "imgSize", alt: "Askify-Logo") %>
-  </div>
-</div>
+<div id=registrationbk class="row justify-content-left lign-self-center">
 
-<div class="col-sm-7">
-    <div id="formBox" >
+    <div class="col-sm-5  align-self-center logo-wrapper">
+          <div class="logo">
+            <%=image_tag("brand/LogoWhite.png", class: "imgSize", alt: "Askify-Logo") %>
+      </div>
+    </div>
+
+    <div class="col-sm-7 justify-content-left align-self-center" id="containerForm">
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: "form") do |f| %>
         <%= devise_error_messages! %>
         <div id="formReg" >
             <div class="form-group" id="fName">
-               <%= f.text_field :first_name, autofocus: true,
+               <%= f.text_field :first_name, class:"form-control",  autofocus: true,
                placeholder:"First Name"%>
             </div>
 
             <div class="form-group" id="lName">
-               <%= f.text_field :last_name, placeholder:"Last Name"%>
+               <%= f.text_field :last_name, class:"form-control",  placeholder:"Last Name"%>
             </div>
 
             <div class="form-group" id="uMat">
-                <%= f.text_field :student_id, autocomplete: "off" , placeholder:"Matricula"%>
+                <%= f.text_field :student_id, autocomplete: "off" , class:"form-control",  placeholder:"Matricula"%>
             </div>
 
             <div class="form-group" id="uEmail">
-                <%= f.email_field :email, autocomplete: "email" , placeholder:"Email"%>
+                <%= f.email_field :email, class:"form-control", autocomplete: "email" , placeholder:"Email"%>
             </div>
 
             <div class="form-group" id="uName">
-               <%= f.text_field :user_name, placeholder:"Username"%>
+               <%= f.text_field :user_name, class:"form-control", placeholder:"Username"%>
             </div>
 
 
             <div class="form-group" id="uName">
-                <%= f.date_field :birth_date %>
+                <%= f.date_field :birth_date, class: 'form-control datepicker'%>
             </div>
 
             <div class="form-group" id="uPass">
-            <%= f.password_field :password, autocomplete: "off", placeholder:"Password"%>
+            <%= f.password_field :password, class:"form-control", autocomplete: "off", placeholder:"Password"%>
             </div>
 
             <div class="form-group" id="uPassConf">
-            <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Password Confirmation"%>
+            <%= f.password_field :password_confirmation, class:"form-control",  autocomplete: "off", placeholder:"Password Confirmation"%>
             </div>
 
             <div class="form-check" id="uGender">
@@ -54,15 +54,12 @@
             </div>
 
             <div class="actions" id="signUp">
-            <%= f.submit "Sign up", class:"submit-form btn btn-primary " %>
-
+            <%= f.submit "Register", id:"signUpBtn", class:"submit-form btn btn-primary" %>
             <%= render "devise/shared/links" %>
-            <% end %>
             </div>
+
+            <% end %>
         </div>
     </div>
-</div>
-
-
 
 </div>

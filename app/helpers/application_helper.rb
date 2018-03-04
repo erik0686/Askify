@@ -34,8 +34,5 @@ module ApplicationHelper
       time_ago_in_words(question.created_at) + " ago"
     end
   end
-<<<<<<< HEAD
 
-=======
->>>>>>> e873e80c5e017cd0036339bffedf473183a81224
 end
