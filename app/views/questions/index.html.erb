@@ -1,3 +1,13 @@
 <% @questions.each do |question| %>
-    <%= render question %>
+  <div>
+    <div class="question-info">
+      <%= question.answers.count %>
+    </div>
+    <div>
+      <%= question.question_title %>
+      <div class="user-info">
+        <%= question.user.first_name %>
+      </div>
+    </div>
+  </div>
 <% end %>
