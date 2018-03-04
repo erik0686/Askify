@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'answer_ratings/index'
 
   devise_for :users
+
   resources :users, :only => [:show]
 
   resources :questions, :except => [:new]

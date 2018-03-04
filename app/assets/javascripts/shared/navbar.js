@@ -1,5 +1,5 @@
 function setBodyTopPadding() {
-  $('body').css("padding-top", ($('#navbar').outerHeight() + 10).toString() + "px");
+  $('body').css("padding-top", ($('#navbar').outerHeight()).toString() + "px");
 }
 
 $(document).on('turbolinks:load', function () {
