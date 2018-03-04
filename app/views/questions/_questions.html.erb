@@ -1,0 +1,23 @@
+<h1>Questions</h1>
+<hr>
+<% @questions.each do |question| %>
+  <div class="question-information">
+    <div class="question-info">
+      <div class="answer-quantity">
+        <%= question.answers.count %>
+      </div>
+      <div>
+        answers
+      </div>
+    </div>
+    <div>
+      <div>
+        <%= link_to question.question_title, question_path(question), class: "link-to-question", onClick:"$('#homeQuestions').resizable('destroy')"%>
+      </div>
+      <div class="user-info">
+        <%= question_timestamp(question) %>
+      </div>
+    </div>
+  </div>
+  <hr>
+<% end %>
