@@ -15,3 +15,23 @@ div{
     padding-top: 0;
   }
 }
+
+.link-to-question {
+	font-size: 1.5rem;
+}
+
+.question-information {
+	display: inline-flex;
+	margin-bottom: 0.5rem;
+	width: 100%;
+}
+
+.question-info {
+	margin-left: 1rem;
+	margin-right: 3rem;
+	margin-top: 0.5rem;
+}
+
+.answer-quantity {
+	text-align: center;
+}

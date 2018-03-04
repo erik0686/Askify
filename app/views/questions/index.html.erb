@@ -1,13 +1,23 @@
+<h1>Questions</h1>
+<hr>
 <% @questions.each do |question| %>
-  <div>
+  <div class="question-information">
     <div class="question-info">
-      <%= question.answers.count %>
+      <div class="answer-quantity">
+        <%= question.answers.count %>
+      </div>
+      <div>
+        answers
+      </div>
     </div>
     <div>
-      <%= question.question_title %>
+      <div>
+        <%= link_to question.question_title, question_path(question), class: "link-to-question"%>
+      </div>
       <div class="user-info">
-        <%= question.user.first_name %>
+        <%= question_timestamp(question) %>
       </div>
     </div>
   </div>
+  <hr>
 <% end %>
