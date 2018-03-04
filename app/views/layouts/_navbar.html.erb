@@ -1,0 +1,86 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+                <%=image_tag("logo.png", class: "navbar-img", alt: "Askify") %>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <!-- <%= link_to "Ask something!", new_question_path, remote: true, class: "btn btn-primary" %> -->
+                    <!-- <%= link_to 'Ask something!', new_question_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-new-question'}  %> -->
+                    <%= link_to "#new-question-first", "data-toggle" => "modal", class: "nav-link" do %>
+                        <span class="glyphicon">&#x2b;</span> Ask something!
+                    <% end %>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <%= link_to "Home", root_path, class: "nav-link" %>
+                </li>
+                <li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <%= link_to "Life @ Tec", root_path, class: "nav-link" %>
+                            </li>
+                            <li>
+                                <%= link_to "Languages", root_path, class: "nav-link" %>
+                            </li>
+                            <li>
+                                <%= link_to "Courses", root_path, class: "nav-link" %>
+                            </li>
+                            <li>
+                                <%= link_to "Other", root_path, class: "nav-link" %>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <%= link_to "All", categories_index_path, class: "nav-link" %>
+                            </li>
+                        </ul>
+                    </li>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options
+                        <span class="badge total-notification"><%= 4 if 1+3 > 0 %></span>
+                        <!-- En lugar de 1+3 se debe obtener la cantidad de preguntas y respuestas no leidas -->
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <%= link_to "Profile", categories_index_path, class: "nav-link" %>
+                        </li>
+                        <li>
+                            <%= link_to(root_path, class:"nav-link") do %>
+                                My questions<span class="badge single-notification"><%= 1 if 1 > 0 %></span>
+                                <!-- En lugar de 1 se debe obtener la cantidad de preguntas no leidas -->
+                            <% end %>
+                        </li>
+                        <li>
+                            <%= link_to(root_path, class:"nav-link") do %>
+                                My answers<span class="badge single-notification"><%= 3 if 1 > 0 %></span>
+                                <!-- En lugar de 1 se debe obtener la cantidad de respuestas no leidas -->
+                            <% end %>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
