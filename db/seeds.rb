@@ -1,1 +1,2 @@
 User.create!(email: "erik@torres.com", password: "111111", password_confirmation: "111111", first_name: "Erik", last_name: "Torres", birth_date: "10-09-1996", major: "BCT", user_name: "erik0686", student_id: "A01196362")
+User.create!(email: "diego@aat.com", password: "111111", password_confirmation: "111111", first_name: "Diego", last_name: "Astiazaran", birth_date: "08-04-1997", major: "BCT", user_name: "diegoaat", student_id: "A01243969")

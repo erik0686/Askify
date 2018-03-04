@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180302165909) do
+ActiveRecord::Schema.define(version: 20180304180010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20180302165909) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "question_id"
+    t.integer "user_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(version: 20180302165909) do
     t.string "notification_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -60,6 +62,8 @@ ActiveRecord::Schema.define(version: 20180302165909) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "question_title"
+    t.integer "user_id"
+    t.integer "topic_id"
   end
 
   create_table "topics", force: :cascade do |t|
@@ -67,6 +71,8 @@ ActiveRecord::Schema.define(version: 20180302165909) do
     t.boolean "is_official"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -84,10 +90,10 @@ ActiveRecord::Schema.define(version: 20180302165909) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.string "birth_date"
     t.string "major"
     t.string "user_name"
     t.string "student_id"
+    t.date "birth_date"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
