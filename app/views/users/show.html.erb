@@ -17,7 +17,7 @@
                     <p class="lead">
                         View your profile details
                         <a class="btn btn-success btn-sm" href="#" role="button" id="editProfileBut">Edit</a>
-                        <a class="btn btn-primary btn-sm" href="#" role="button" id="editProfileBut">Save</a>
+                        <a class="btn btn-primary btn-sm" href="#" role="button" id="saveChangesBut">Save Changes</a>
                     </p>
                 </div>
                 <div id="userImage" class="media-right media-middle">
@@ -30,6 +30,18 @@
         <%=profileCardMaker("Student ID",  @user.student_id)%>
         <%=profileCardMaker("Major",  @user.major)%>
         <%=profileCardMaker("Birth Date",  @user.birth_date)%>
+        <%=profileEditableCardMaker("Username",  @user.user_name)%>
+        <%=profileEditableCardMaker("Email",  @user.email)%>
+        <%=profileEditableCardMaker("Student ID",  @user.student_id)%>
+        <%=profileEditableCardMaker("Major",  @user.major)%>
+        <%=profileEditableCardMaker("Birth Date",  @user.birth_date)%>
+        <div class="container deleteAccount">
+            <button type="button" class="btn btn-primary" id="bottomSaveChangesBut">Save Changes</button>
+        </div>
+        <div class="container deleteAccount">
+            <button type="button" class="btn btn-outline-danger" id="deleteProfileBut">Delete Account</button>
+        </div>
+        
         </div>
     </div>
 </div>
