@@ -15,7 +15,8 @@ gem 'therubyracer', platforms: :ruby
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 
 group :development, :test do
