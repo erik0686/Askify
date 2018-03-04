@@ -1,0 +1,73 @@
+#editProfileBut,
+#saveChangesBut{
+    margin-left: 7px;
+}
+
+.row {
+    background-color: #f7f7f9
+}
+
+#profileTitle{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.cardWithFocus{
+    border-color: rgb(85, 170, 226);
+    -webkit-box-shadow: 16px 8px 23px rgb(85, 170, 226);
+    -moz-box-shadow: 16px 8px 23px rgb(85, 170, 226);
+    box-shadow: 0px 0px 18px rgb(85, 170, 226);
+}
+
+.media-object.profile {
+    width:160px; 
+    border-radius: 50%;
+}
+
+.jumbotron.profile {
+    padding-top: 44px;
+    margin-top: 32px;
+    margin-right: 15px;
+}
+
+.hidden,
+.lead.hidden,
+.card.hidden {
+    display:none;
+}
+
+.showing,
+.lead.showing,
+.card.showing {
+    display: block;
+}
+.list-group-item.menu {
+    background-color: transparent;
+    font-size: 14px;
+}
+
+.container.deleteAccount{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form-group.editProfile{
+    margin-bottom: 0rem;
+}
+
+.form-control.editProfile{
+    border: none;
+    color: #2980B9;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+.form-control.editProfile:focus{
+    border: none;
+    color: #2980B9;
+    outline: 0 none;
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}

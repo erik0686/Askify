@@ -12,11 +12,7 @@
 
   <body>
     <%= render "layouts/navbar" %>
-
-    <div class="container container-large">
-      <%= yield %>
-    </div>
-
+    <%= yield %>
     <%= render "questions/new_first", question: @question %>
     <%= render "questions/new_second", question: @question %>    
 
