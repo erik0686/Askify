@@ -1,0 +1,22 @@
+[2018-03-01 00:38:40.913] [exthost1] [info] extension host started
+[2018-03-01 00:38:40.951] [exthost1] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-03-01 00:38:40.951] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/out/extension
+[2018-03-01 00:38:41.297] [exthost1] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-03-01 00:38:41.297] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/out/main
+[2018-03-01 00:38:41.882] [exthost1] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-03-01 00:38:41.882] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/out/extension
+[2018-03-01 00:38:41.936] [exthost1] [info] ExtensionService#_doActivateExtension ms-vscode.sublime-keybindings {"startup":true,"activationEvent":"*"}
+[2018-03-01 00:38:41.936] [exthost1] [info] ExtensionService#loadCommonJSModule /home/default/.vscode/extensions/ms-vscode.sublime-keybindings-3.0.3/extension
+[2018-03-01 00:38:41.962] [exthost1] [info] eager extensions activated
+[2018-03-01 00:38:41.977] [exthost1] [info] ExtensionService#_doActivateExtension vscode.html {"startup":false,"activationEvent":"onLanguage:html"}
+[2018-03-01 00:38:41.977] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/html/client/out/htmlMain
+[2018-03-01 00:41:35.713] [exthost1] [info] ExtensionService#_doActivateExtension vscode.css {"startup":false,"activationEvent":"onLanguage:scss"}
+[2018-03-01 00:41:35.713] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/css/client/out/cssMain
+[2018-03-01 01:46:17.568] [exthost1] [info] ExtensionService#_doActivateExtension rebornix.Ruby {"startup":false,"activationEvent":"onLanguage:ruby"}
+[2018-03-01 01:46:17.569] [exthost1] [info] ExtensionService#loadCommonJSModule /home/default/.vscode/extensions/rebornix.ruby-0.16.0/out/ruby.js
+[2018-03-01 02:37:45.803] [exthost1] [info] ExtensionService#_doActivateExtension vscode.javascript {"startup":false,"activationEvent":"onLanguage:javascript"}
+[2018-03-01 02:37:45.803] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/javascript/out/javascriptMain
+[2018-03-01 02:37:45.915] [exthost1] [info] ExtensionService#_doActivateExtension vscode.typescript {"startup":false,"activationEvent":"onLanguage:javascript"}
+[2018-03-01 02:37:45.915] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/typescript/out/extension
+[2018-03-01 02:38:18.582] [exthost1] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"activationEvent":"onLanguage:typescript"}
+[2018-03-01 02:38:18.582] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/extension-editing/out/extension

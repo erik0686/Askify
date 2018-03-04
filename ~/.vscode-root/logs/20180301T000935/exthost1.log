@@ -1,0 +1,14 @@
+[2018-03-01 00:09:40.903] [exthost1] [info] extension host started
+[2018-03-01 00:09:40.929] [exthost1] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2018-03-01 00:09:40.929] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/out/extension
+[2018-03-01 00:09:41.137] [exthost1] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2018-03-01 00:09:41.137] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/out/main
+[2018-03-01 00:09:41.482] [exthost1] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2018-03-01 00:09:41.482] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/out/extension
+[2018-03-01 00:09:41.522] [exthost1] [info] ExtensionService#_doActivateExtension ms-vscode.sublime-keybindings {"startup":true,"activationEvent":"*"}
+[2018-03-01 00:09:41.522] [exthost1] [info] ExtensionService#loadCommonJSModule /home/default/.vscode/extensions/ms-vscode.sublime-keybindings-3.0.3/extension
+[2018-03-01 00:09:41.542] [exthost1] [info] eager extensions activated
+[2018-03-01 00:09:41.545] [exthost1] [info] ExtensionService#_doActivateExtension vscode.html {"startup":false,"activationEvent":"onLanguage:html"}
+[2018-03-01 00:09:41.545] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/html/client/out/htmlMain
+[2018-03-01 00:20:37.354] [exthost1] [info] ExtensionService#_doActivateExtension vscode.css {"startup":false,"activationEvent":"onLanguage:scss"}
+[2018-03-01 00:20:37.356] [exthost1] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/css/client/out/cssMain
