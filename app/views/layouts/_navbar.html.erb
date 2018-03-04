@@ -49,7 +49,7 @@
           </a>
     
           <div id="dropdown-menu-options" class="dropdown-menu dd-menu" aria-labelledby="navbarDropdownOptions">
-            <%= link_to "Profile", categories_index_path, class: "dropdown-item" %>
+            <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
             <%= link_to(root_path, class:"dropdown-item") do %>
               My questions   <span class="badge badge-secondary"><%= 1 if 1 > 0 %></span>
               <!-- En lugar de 1 se debe obtener la cantidad de preguntas no leidas -->

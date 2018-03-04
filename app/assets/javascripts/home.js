@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).on('turbolinks:load', function () {
     $("#homeQuestions").resizable({
         handles: 'e',
         maxWidth: $("#homeWrapper").width() * .8,
