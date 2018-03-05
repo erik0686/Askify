@@ -11,8 +11,8 @@ $(document).on('turbolinks:load', function () {
   } else {
     $('#navbarContentCollapsable').addClass("desktop-navbar");
   }
-  
-  
+
+
   $('#navbarContentCollapsable').on('show.bs.collapse', function () {
     $('.navbar-logo-text').hide();
   });
@@ -20,11 +20,11 @@ $(document).on('turbolinks:load', function () {
   $('#navbarContentCollapsable').on('shown.bs.collapse', function () {
     setBodyTopPadding();
   });
-  
+
   $('#navbarContentCollapsable').on('hidden.bs.collapse', function () {
     $('.navbar-logo-text').show();
     $('.dropdown-menu').removeAttr('style');
-    setBodyTopPadding();    
+    setBodyTopPadding();
   });
 
   $("#navbar-toggler").hideShow(function (e, visibility) {
@@ -44,7 +44,7 @@ $(document).on('turbolinks:load', function () {
       $('#navbarContentCollapsable').removeClass("desktop-navbar");
     }
   });
-  
+
   $('.dropdown-toggle').click(function (e) {
       $(this).next().removeClass('dd-menu');
       $('.dd-menu').removeAttr('style');

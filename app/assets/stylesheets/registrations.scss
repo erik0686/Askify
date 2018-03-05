@@ -1,14 +1,84 @@
-.field {
-  text-align: center;
-  align-self: left;
-  margin: auto;
-  font-size: 13px;
+
+#formReg{
+    vertical-align: center;
 }
 
-.main-logo {
-	height: 1000px;
+
+#signUp,
+#signUpBtn{
+    display: block;
+    vertical-align: center;
+    font-size: 30px;
+    float:right;
+    margin-left: 20px;
+}
+
+#signUp > a {
+    font-size: 25px;
+    margin-top: 12px;
+    float: right;
+    color: white;
+}
+
+#containerForm {
+    margin-top: 30px;
+    vertical-align: center;
+}
+
+#imgLogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .registration {
   display: inline-flex;
+}
+
+.imgSize{
+    height: 600px;
+}
+
+#registrationbk {
+    background: #61B77A;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+}
+
+#containerForm{
+    padding-right: 160px;
+}
+
+.form-check{
+    color: white;
+}
+
+.form-control,
+.input,
+.form-check{
+    width: 100%;
+    height: auto;
+    font-size: 25px;
+    margin-right: 50px;
+}
+
+#formBox{
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 0px;
+    margin-top: 0px;
+    float: none;
+    margin-right: 50px;
+}
+.logo-wrapper {
+    position: relative;
+
+  .logo{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }

@@ -14,9 +14,13 @@
     <% if user_signed_in? %>
       <%= render "layouts/navbar" %>
     <% end %>
-    <%= yield %>
+    
+    <div style="height:100%;">
+      <%= yield %>
+    </div>
+    
     <%= render "questions/new_first", question: @question %>
-    <%= render "questions/new_second", question: @question %>    
+    <%= render "questions/new_second", question: @question %>
 
   </body>
 </html>
