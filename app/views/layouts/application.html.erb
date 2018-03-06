@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Askify</title>
     <%= csrf_meta_tags %>
 
@@ -15,9 +16,7 @@
       <%= render "layouts/navbar" %>
     <% end %>
     
-    <div style="height:100%;">
-      <%= yield %>
-    </div>
+    <%= yield %>
     
     <%= render "questions/new_first", question: @question %>
     <%= render "questions/new_second", question: @question %>

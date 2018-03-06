@@ -3,6 +3,15 @@
     vertical-align: center;
 }
 
+#signUpContainer{
+    display: flex;
+    height: 100%;
+}
+
+#signInContainer{
+    display: flex;
+    height: 100%;
+}
 
 #signUp,
 #signUpBtn{
@@ -35,6 +44,7 @@
 #containerForm {
     margin-top: 30px;
     vertical-align: center;
+    padding-bottom: 5%;
 }
 
 #imgLogo{
@@ -83,11 +93,39 @@
     margin-top: 0px;
     float: none;
 }
+
 .logo-wrapper {
     position: relative;
 
   .logo{
-      float: right;
       text-align: right;
   }
 }
+
+@media screen and (max-width: 768px) {
+    #registrationbk {
+        width: auto;
+    }
+
+    #signUpContainer{
+        display: flex;
+        height: auto;
+        width: auto;
+    }
+    .imgSize{
+        height: 280px;
+        width: auto;
+    }
+
+    #containerForm{
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+
+    .logo-wrapper {
+        position: relative;
+        .logo{
+            text-align: center;
+        }
+    }
+  }
