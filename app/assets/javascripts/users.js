@@ -1,5 +1,12 @@
 $(document).on('ready', function () {
+    //reloadUserPage();
+});
 
+$(document).on('turbolinks:load', function () {
+    reloadUserPage();
+});
+
+function reloadUserPage(){
     $( ".form-control.editProfile" ).focusin(function() {
         $(this).parent().parent().parent()
         .addClass("cardWithFocus");
@@ -66,4 +73,4 @@ $(document).on('ready', function () {
         close: 'Ok',
         closeOnSelect: false // Close upon selecting a date,
         });
-});
+}
