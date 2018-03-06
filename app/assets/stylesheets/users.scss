@@ -3,6 +3,15 @@
     margin-left: 7px;
 }
 
+#editProfileBut{
+    background-color: rgba(94, 173, 55, 1);
+    border-color: rgba(94, 173, 55, 1);
+}
+
+#editProfileBut:hover{
+    background-color: rgb(75, 141, 42);
+    border-color: rgb(75, 141, 42);
+}
 .row {
     background-color: #f7f7f9
 }
@@ -41,6 +50,11 @@
 .card.showing {
     display: block;
 }
+
+.list-group-item.menu:hover {
+    text-decoration: underline;
+}
+
 .list-group-item.menu {
     background-color: transparent;
     font-size: 14px;
@@ -57,6 +71,7 @@
 
 .form-control.editProfile{
     border: none;
+    font-size: 1rem;
     color: #2980B9;
     padding-top: 0px;
     padding-bottom: 0px;
