@@ -13,12 +13,17 @@
     // background-color:blue;
 }
 
+.display-4.home{
+	font-size: 3rem;
+}
+
 #homeQuestions {
 	float: left;
     width: 50%;
 	// background-color:red;
-	border-right-style: dashed;
-	border-right-color: black;
+	margin-top: 7px;
+	border-right-style: solid;
+	border-right-color: grey;
 	border-right-width: 5px;
 }
 
