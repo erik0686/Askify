@@ -1,26 +1,21 @@
 Rails.application.routes.draw do
-  get 'home/index'
-
-  get 'answer_ratings/new'
-
-  get 'answer_ratings/create'
-
-  get 'answer_ratings/index'
 
   devise_for :users
 
-  resources :users, :only => [:show]
-
-  resources :questions, :except => [:new]
-
-  get 'questions/new' => 'questions#new', :as => :new_question
-
+  resources :answer_ratings
+  resources :questions
+  resources :users
   resources :home, :only => [:index]
-
-  root 'home#index' 
-
   resources :topics, :only => [:index]
+  resources :categories, :only => [:index]
 
-  get 'categories/index'
+  devise_scope :user do
+    authenticated :user do
+      root 'questions#index', as: :authenticated_root
+    end
+    unauthenticated :user do
+      root "devise/sessions#new", as: :unauthenticated_root
+    end
+  end
 
 end

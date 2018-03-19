@@ -34,6 +34,11 @@
         <%=profileCardMaker("Student ID",  @user, "student_id")%>
         <%=profileCardMaker("Major",  @user, "major")%>
         <%=profileCardMaker("Birth Date",  @user, "birth_date" )%>
+        <%=#profileEditableCardMaker("Username",  @user.user_name)%>
+        <%=#profileEditableCardMaker("Email",  @user.email)%>
+        <%=#profileEditableCardMaker("Student ID",  @user.student_id)%>
+        <%=#profileEditableCardMaker("Major",  @user.major)%>
+        <%=#profileEditableCardMaker("Birth Date",  @user.birth_date.strftime("%d/%m/%Y"))%>
         <div class="container deleteAccount">
           <button type="button" class="btn btn-primary" id="bottomSaveChangesBut">Save Changes</button>
         </div>
@@ -70,30 +75,39 @@
           <% end %>
         </div>
       </div>
+
+      <!-- <div class="user-answers-tab hidden">
+        <hr class="my-4">
+        <div>  
+          <div class="dropdown-divider questions"></div>
+          <% #@user_answers.each do |answer| %>
+            <div class="question-information">
+              <div>
+                <div>
+                  <%= #link_to answer.question.question_title, question_path(answer.question), class: "link-to-question" %>
+                </div>
+                <div>
+                  <%= answer.answer_text%>
+                </div>
+                <div class="user-info" style="font-size: 0.8rem;">
+                  <%= answer_timestamp(answer) %>
+                </div>
+              </div>
+            </div>
+            <hr>
+          <%# end %>
+        </div>
+      </div> -->
+
       <div class="user-answers-tab hidden">
         <hr class="my-4">
         <div>  
           <div class="dropdown-divider questions"></div>
           <% @questions.each do |question| %>
-            <% if question_answered_by_me?(question, @user) %>
-              <div class="question-information">
-                <div>
-                  <div>
-                    <%= question_answered_by_me_title(question, @user) %>
-                  </div>
-                  <% my_answers(question, @user).each do |answer| %>
-                    <div>
-                      <%= answer.answer_text %>
-                    </div>
-                    <div class="user-info" style="font-size: 0.8rem;">
-                    <%= answer_timestamp(answer) %>
-                    </div>
-                    <hr>
-                  <% end %>
-                </div>
-              </div>
-              <hr>
+            <%= question.answers.find_by(user_id: @user.id).each do |answer| %>
+              <div> <%= answer.answer_text %></div>
             <% end %>
+            <hr>
           <% end %>
         </div>
       </div>

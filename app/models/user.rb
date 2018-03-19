@@ -9,8 +9,9 @@ class User < ApplicationRecord
   has_many :posts
   has_many :notifications, dependent: :destroy
   has_many :questions
-  has_many :answers
   has_many :answers, through: :answer_rating, class_name: "RatedAnswer"
+  has_many :answers
+  
 
   validates :student_id, :email, :user_name, uniqueness: true
 end
