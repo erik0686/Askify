@@ -1,4 +1,4 @@
-<div style="margin-left: 5rem;">  
+<div>  
   <div class="container titleHome">
       <h3 class="display-4 home">Questions</h3> 
   </div>
@@ -15,7 +15,7 @@
       </div>
       <div>
         <div>
-          <%= link_to question.question_title, question_path(question), class: "link-to-question", onClick:"$('#homeQuestions').resizable('destroy')"%>
+          <%= link_to question.question_title, question_path(question), class: "link-to-question", onClick:"$('#homeQuestionsPanel').resizable('destroy')"%>
         </div>
         <div class="user-info">
           <%= answer_timestamp(question) %>
