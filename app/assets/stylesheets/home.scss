@@ -21,7 +21,9 @@
 
 #listPosts{
 	max-height: 800px;
-    overflow-y:scroll; 
+	padding-top: 65px; 
+	overflow-y:scroll; 
+	padding:2px;
 }
 
 #searchPost{
@@ -33,6 +35,13 @@
 	margin-top: 4px;
 }
 
+.sticky-top{
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	padding-bottom: 5px;
+	background-color: #e9ecef;
+}
+
 #homePanel {
     //float: left;
 	//width: 50%;
@@ -40,13 +49,13 @@
 	padding: 10px;
 	padding-bottom: 25px;
 	border-radius: 25px;
-    background-color:rgba(216, 216, 218, 0.477);
+	background-color: #e9ecef;
 }
 
 #homeQuestionsPanel {
 	//float: left;
-    //width: 50%;
-	background-color:rgba(216, 216, 218, 0.477);
+	//width: 50%;   
+	background-color: #e9ecef;
 	margin: 6px;
 	padding: 10px;
 	border-radius: 25px;
