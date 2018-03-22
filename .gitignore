@@ -19,3 +19,15 @@
 .byebug_history
 
 Dockerfile
+Backups/
+Cache/
+CachedData/
+CachedExtensions/
+Cookies
+Cookies-journal
+GPUCache/
+Local Storage/
+Preferences
+logs/
+machineid
+storage.json
