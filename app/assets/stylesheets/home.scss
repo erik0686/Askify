@@ -19,6 +19,20 @@
 	}
 }
 
+#listPosts{
+	max-height: 800px;
+    overflow-y:scroll; 
+}
+
+#searchPost{
+	width: 100%;
+	font-size: 0.9rem;
+	border: none;
+	border-radius: 15px;
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
+
 #homePanel {
     //float: left;
 	//width: 50%;
