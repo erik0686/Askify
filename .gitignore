@@ -15,5 +15,5 @@
 
 /node_modules
 /yarn-error.log
-
+~/.vscode-root
 .byebug_history
