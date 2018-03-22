@@ -72,7 +72,6 @@ html, body {
   color: rgba(202, 202, 204, 1);
 }
 
-
 #linkQuestion:focus{
   border: none;
   outline: 0 none;
@@ -84,4 +83,9 @@ html, body {
 #linkQuestion:hover{
   color: rgba(202, 202, 204, 1);
   text-decoration: underline;
+}
+
+#navbar{
+  padding-left: 50px;
+  padding-right: 50px;
 }
