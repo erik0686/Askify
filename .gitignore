@@ -17,3 +17,5 @@
 /yarn-error.log
 ~/.vscode-root
 .byebug_history
+
+Dockerfile
