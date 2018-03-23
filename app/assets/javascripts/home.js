@@ -1,13 +1,13 @@
 $(document).on('turbolinks:load', function () {
-    $("#homeQuestions").resizable({
-        handles: 'e',
-        maxWidth: $("#homeWrapper").width() * .8,
-        minWidth: $("#homeWrapper").width() * .4,
-    });
+    // $("#homeQuestions").resizable({
+    //     handles: 'e',
+    //     maxWidth: $("#homeWrapper").width() * .8,
+    //     minWidth: $("#homeWrapper").width() * .4,
+    // });
 
-    $(window).resize(function () {
-        $('#homePanel').width($("#parent").width() - $("#homeQuestions").width());
-        $('#homeQuestions').height($("#parent").height());
-    });
+    // $(window).resize(function () {
+    //     $('#homePanel').width($("#parent").width() - $("#homeQuestions").width());
+    //     $('#homeQuestions').height($("#parent").height());
+    // });
 
 });

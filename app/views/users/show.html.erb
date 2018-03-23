@@ -59,7 +59,7 @@
               </div>
               <div>
                 <div>
-                  <%= link_to question.question_title, question_path(question), class: "link-to-question", onClick:"$('#homeQuestions').resizable('destroy')"%>
+                  <%= link_to question.question_title, question_path(question), class: "link-to-question", onClick:"$('#homeQuestionsPanel').resizable('destroy')"%>
                 </div>
                 <div class="user-info">
                   <%= user_question_timestamp(question) %>
