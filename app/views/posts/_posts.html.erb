@@ -1,42 +1,23 @@
 <div class="container" id="listPosts">
 
-    <div class="sticky-top">
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" id="searchPost" placeholder="Search" aria-label="Search">
-        </form>
-    </div>
+  <div class="sticky-top">
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" id="searchPost" placeholder="Search" aria-label="Search">
+    </form>
+  </div>
 
-    <ul id="posts" class="list-group list-group-flush">
-        <li class="list-group-item flex-column">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Foto en mi oficina</h5>
-                <small>Just now</small>
-            </div>
-                <p class="mb-1">
-                    Vengan a tomarse una foto en mi oficina y les daremos swag de empresas.
-                </p>
-        </li>
-    
-        <li class="list-group-item flex-column">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Organizadores evento</h5>
-                <small>3 days ago</small>
-            </div>
-                <p class="mb-1">
-                    Chavos..muy pronto tendremos este evento en el campus..Es una responsabilidad de nuestra Escuela.. y se necesita gente que quiera/pueda apoyar en el staff de organizadores.. ¿quién nos apoya?..es el fin de semana de salida a semana santa..
-                </p>
-                <%=image_tag("testing/testPost.jpg", class: "imgSize", alt: "eventImage") %>
-        </li>
-
-        <li class="list-group-item flex-column">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Concurso</h5>
-                <small>8 days ago</small>
-            </div>
-                <p class="mb-1">
-                    chavos..les dejo un reto SÚPER-interesante..armen su equipo (4 max) pudiendo ser multidisciplinario.. demuestren que los ITC's pueden crear propuestas tecnológicas de valor para mejorar nuestra ciudad.. la propuesta ganadora recibirá un fondeo de 1'000,000 de pesos.. ;) 
-                    Solamente pueden competir alumnos inscritos del Tecnológico de Monterrey.
-                </p>
-        </li>
-    </ul>
+  <ul id="posts" class="list-group list-group-flush">
+    <% @posts.each do |post| %>    
+      <li class="list-group-item flex-column">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Organizadores evento</h5>
+          <small><%= post_timestamp post %></small>
+        </div>
+          <p class="mb-1">
+            <%= post.post_content %>
+          </p>
+          <%=image_tag("testing/testPost.jpg", class: "imgSize", alt: "eventImage") %>
+      </li>
+    <% end %>
+  </ul>
 </div>

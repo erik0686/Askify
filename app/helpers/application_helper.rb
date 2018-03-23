@@ -70,4 +70,8 @@ module ApplicationHelper
     my_answers(question,user).count > 0
   end
 
+  def post_timestamp(post)
+    time_ago_in_words(post.created_at) + " ago"
+  end
+
 end
