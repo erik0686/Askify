@@ -11,7 +11,7 @@
 
       <ul class="nav navbar-nav mr-auto">
         <li class="nav-item">
-          <%= link_to "Ask something!", "#new-question-first", "data-toggle" => "modal", class: "nav-link lead", id:"linkQuestion"%>
+          <%= link_to "Ask something!", "#new-question-modal", "data-toggle" => "modal", class: "nav-link lead", id:"linkQuestion"%>
         </li>
       </ul>
       
@@ -26,10 +26,10 @@
           </a>
           
           <div id="dropdown-menu-categories" class="dropdown-menu dd-menu" aria-labelledby="navbarDropdownCategories">
-            <%= link_to "Life @ Tec", questions_path, class: "dropdown-item" %>
+            <%= link_to "Topics CS", questions_path, class: "dropdown-item" %>
             <%= link_to "Languages", questions_path, class: "dropdown-item" %>
             <%= link_to "Courses", questions_path, class: "dropdown-item" %>
-            <%= link_to "Other", questions_path, class: "dropdown-item" %>
+            <%= link_to "Life @ Tec", questions_path, class: "dropdown-item" %>
             <div class="dropdown-divider"></div>
             <%= link_to "All", categories_path, class: "dropdown-item" %>
           </div>

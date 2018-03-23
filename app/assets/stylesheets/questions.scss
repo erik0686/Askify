@@ -64,3 +64,63 @@ div{
 .dropdown-divider.questions{
 	margin-right: 25px;
 }
+
+@mixin BoxShadowHelper($level: 1){
+  @if $level == 1 {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  }
+  @if $level == 2 {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+  }
+}
+
+.card {
+  @include BoxShadowHelper(1);
+  
+  overflow: hidden;
+  transition: .25s box-shadow;
+  
+  &:focus,
+  &:hover {
+    @include BoxShadowHelper(2);
+  }
+}
+
+// .card-click { 
+//   // color: inherit !important;
+//   text-decoration: inherit !important; 
+// }
+
+// .card-click button {
+//   z-index: 1;
+// }
+
+.col-category a {
+	// color: inherit !important;
+	text-decoration: inherit !important;
+	
+	button {
+  	z-index: 1;		
+	}
+}
+
+#new-question-topic-input {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.card-category {
+  height: 8rem;
+  border-radius: 1rem !important;
+
+  .card-body {
+    display : flex;
+    align-items : center;
+    
+    .card-title {
+      text-align: center;
+      width: 100%;
+      font-size: x-large;
+    }
+  }
+}
