@@ -6,6 +6,11 @@
   width: 100%;
 }
 
+.questionContent{
+	  max-height: 800px;
+    overflow-y: scroll;
+}
+
 div{
   .modal-header-no-line {
     border-bottom: 0px;
@@ -17,19 +22,37 @@ div{
 }
 
 .link-to-question {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
+	font-weight: 450;
+	color: black;
+}
+
+.questionText{
+	font-size: 0.9rem;
+}
+
+.link-to-question:hover {
+	text-decoration: underline;
+	color: rgba(40, 93, 145, 1);
 }
 
 .question-information {
 	display: inline-flex;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0rem;
 	width: 100%;
+	background-color: white;
+	border-radius: 15px;
+	padding: 20px;
+
 }
 
 .question-info {
 	margin-left: 1rem;
 	margin-right: 3rem;
-	margin-top: 0.5rem;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
 }
 
 .answer-quantity {

@@ -1,7 +1,2 @@
 User.create!(email: "erik@torres.com", password: "111111", password_confirmation: "111111", first_name: "Erik", last_name: "Torres", birth_date: "10-09-1996", major: "BCT", user_name: "erik0686", student_id: "A01196362")
 User.create!(email: "diego@aat.com", password: "111111", password_confirmation: "111111", first_name: "Diego", last_name: "Astiazaran", birth_date: "08-04-1997", major: "BCT", user_name: "diegoaat", student_id: "A01243969")
-Post.create({post_content: "chavos..les dejo un reto SÚPER-interesante..armen su equipo (4 máx) pudiendo ser multidisciplinario..demuestren que los ITC's pueden crear propuestas tecnológicas de valor para mejorar nuestra ciudad.. la propuesta ganadora recibirá un fondeo de 1'000,000 de pesos.. ;) \n El sitio del reto es: http://www.xignuxchallenge.net \n Los alumnos deben registrar su equipo en ese sitio.
-La aplicación de propuestas se encontrará abierta desde el día 19 de marzo del 2018 y cerrará el 30 de marzo a las 11:59 PM (GMT-6).
-Los alumnos finalistas asistirán al reto de 24 horas que se llevará a cabo en el Campus Monterrey.
-Solamente pueden competir alumnos inscritos del Tecnológico de Monterrey.", expiry_date: "12-12-2018", user_id: "1"})
-Post.create({post_content: "Chavos..muy pronto tendremos este evento en el campus..Es una responsabilidad de nuestra Escuela.. y se necesita gente que quiera/pueda apoyar en el staff de organizadores.. ¿quién nos apoya?..es el fin de semana de salida a semana santa..", expiry_date: "12-11-2018", user_id: "1"})
