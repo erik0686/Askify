@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
 
-  before_action :set_question
+  before_action :set_question, :get_categories
 
   protected
 
@@ -15,6 +15,10 @@ class ApplicationController < ActionController::Base
 
   def set_question
     @question = Question.new
+  end
+
+  def get_categories
+    @categories = Category.all
   end
 end
 
