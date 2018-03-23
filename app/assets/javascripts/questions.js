@@ -15,7 +15,7 @@ function newQuestionThird() {
   $('#new-question-question-input').focus();    
 }
 
-$(document).ready(function () {
+$(document).on('turbolinks:load', function () {
 
   $("#new-question-modal").on("show.bs.modal", function () {
     newQuestionFirst();
