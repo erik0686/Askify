@@ -25,7 +25,17 @@
 		h5{
 			font-size: 1.1rem;
 		}
+
+		.d-flex {
+			flex-direction: row-reverse;
+			margin-bottom: 5px;
+		}
+
+		.imgSize{
+			border-radius: 30px;
+		}
 	}
+
 }
 
 #listPosts{

@@ -29,6 +29,8 @@ div{
 
 .questionText{
 	font-size: 0.9rem;
+	max-height: 100px;
+	text-overflow: ellipsis;
 }
 
 .link-to-question:hover {
