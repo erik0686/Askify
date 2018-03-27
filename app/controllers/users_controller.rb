@@ -1,12 +1,13 @@
- class UsersController < ApplicationController
+# Controller for users
+class UsersController < ApplicationController
   def show
-  @user = User.find(params[:id])
-  @user_questions = User.find(params[:id]).questions
-  @questions = Question.all
+    @user = User.find(params[:id])
+    @questions = Question.all
+    @user_questions = User.find(params[:id]).questions
   end
 
   def edit
-  @user = User.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   def update
@@ -17,12 +18,10 @@
       render :edit
     end
   end
+
   private
 
-    def user_params
-      params.require(:user).permit(:email,:first_name,:last_name,:major,:user_name,:student_id,:birth_date)
-    end
+  def user_params
+    params.require(:user).permit(:email, :first_name, :last_name, :major, :user_name, :student_id, :birth_date)
+  end
 end
-  
-
-   
