@@ -1,9 +1,3 @@
-<%= search_form_for @q, remote: true, url: user_path do |f| %>
-  <div class="sticky-top align-flex">
-    <%= f.search_field :question_text_or_question_title_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
-    <%= f.submit class: "submit-search"%>
-  </div>
-<% end %>
 <hr class="my-4">
 <div>  
   <div class="dropdown-divider questions"></div>
