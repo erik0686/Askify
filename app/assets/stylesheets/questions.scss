@@ -79,6 +79,7 @@ div{
   
   overflow: hidden;
   transition: .25s box-shadow;
+  margin-bottom: 20px;
   
   &:focus,
   &:hover {
@@ -105,22 +106,31 @@ div{
 }
 
 #new-question-topic-input {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+
+.card.card-category{
+  margin-bottom: 25px;
 }
 
 .card-category {
-  height: 8rem;
+  height: 10.5rem;
   border-radius: 1rem !important;
+
 
   .card-body {
     display : flex;
     align-items : center;
+    background-color: grey;
     
     .card-title {
       text-align: center;
       width: 100%;
-      font-size: x-large;
+      color: white;
+      font-weight: 550;
+      margin-bottom: 0px;
+      font-size: 1.75rem;
     }
   }
 }
