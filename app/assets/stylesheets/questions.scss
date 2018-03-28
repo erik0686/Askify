@@ -118,13 +118,17 @@ div{
   height: 10.5rem;
   border-radius: 1rem !important;
 
+
   .card-body {
     display : flex;
     align-items : center;
+    background-color: grey;
     
     .card-title {
       text-align: center;
       width: 100%;
+      color: white;
+      font-weight: 550;
       margin-bottom: 0px;
       font-size: 1.75rem;
     }

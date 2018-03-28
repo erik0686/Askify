@@ -38,6 +38,14 @@
 
 }
 
+.logoDecoration{
+	display: block;
+	float: right;
+	position: relative;
+	top: -15px;
+	width: 320px;
+}
+
 #listPosts{
 	max-height: 800px;
 	padding-top: 65px; 
@@ -179,4 +187,16 @@ h5{
 	height: 9px;
 	right: -5px;
 	top: -5px;
+}
+
+@media screen and (max-width: 800px) {
+	.logoDecoration{
+		display: none;
+	}
+
+	#categoryHeader {
+		.lead{
+			width: 100%;
+		}
+	}
 }
