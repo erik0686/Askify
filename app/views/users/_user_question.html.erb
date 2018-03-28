@@ -1,0 +1,31 @@
+<%= search_form_for @q, remote: true, url: user_path do |f| %>
+  <div class="sticky-top align-flex">
+    <%= f.search_field :question_text_or_question_title_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
+    <%= f.submit class: "submit-search"%>
+  </div>
+<% end %>
+<hr class="my-4">
+<div>  
+  <div class="dropdown-divider questions"></div>
+  <% @user_questions.each do |question| %>
+    <div class="question-information">
+      <div class="question-info">
+        <div class="answer-quantity">
+          <%= question.answers.count %>
+        </div>
+        <div>
+          answers
+        </div>
+      </div>
+      <div>
+        <div>
+          <%= link_to question.question_title, question_path(question), class: "link-to-question", onClick:"$('#homeQuestionsPanel').resizable('destroy')"%>
+        </div>
+        <div class="user-info">
+          <%= user_question_timestamp(question) %>
+        </div>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+</div>

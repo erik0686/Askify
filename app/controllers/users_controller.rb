@@ -3,7 +3,17 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @questions = Question.all
-    @user_questions = User.find(params[:id]).questions
+    @q = User.find(params[:id]).questions.ransack(params[:q])
+    @user_questions = @q.result
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @user_questions }
+    end
+  end
+
+  def search
+      
   end
 
   def edit

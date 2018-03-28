@@ -1,35 +1,39 @@
-<div>  
-  <div class="container titleHome">
-      <h3 class="display-4 home">Questions</h3> 
-  </div>
-  <div class="dropdown-divider questions"></div>
-  <div class="questionContent">
+<%= search_form_for @q1, url: home_index_path do |f| %>
+  <div>  
+    <div class="container titleHome">
+        <h3 class="display-4 home">Questions</h3> 
+    </div>
+    <div class="align-flex">
+      <%= f.search_field :question_text_or_question_title_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
+      <%= f.submit class: "submit-search"%>
+    </div>
+    <div class="questionContent">
 
-    <% @questions.each do |question| %>
-      <div class="question-information">
-        <div class="question-info">
-          <div class="answer-quantity">
-            <%= question.answers.count %>
+      <% @questions.each do |question| %>
+        <div class="question-information">
+          <div class="question-info">
+            <div class="answer-quantity">
+              <%= question.answers.count %>
+            </div>
+            <div>
+              answers
+            </div>
           </div>
           <div>
-            answers
+            <div class="questionTitle">
+              <%= link_to question.question_title, question_path(question), class: "link-to-question", onClick:"$('#homeQuestionsPanel').resizable('destroy')"%>
+            </div>
+            <p class="questionText">
+              <%= question.question_text %>
+            </p>
+            <small class="user-info">
+              <%= answer_timestamp(question) %>
+            </small>
           </div>
         </div>
-        <div>
-          <div class="questionTitle">
-            <%= link_to question.question_title, question_path(question), class: "link-to-question", onClick:"$('#homeQuestionsPanel').resizable('destroy')"%>
-          </div>
-          <p class="questionText">
-            <%= question.question_text %>
-          </p>
-          <small class="user-info">
-            <%= answer_timestamp(question) %>
-          </small>
-        </div>
-      </div>
-      <hr>
-    <% end %>
+        <hr>
+      <% end %>
 
+    </div>
   </div>
-
-</div>
+<% end %>
