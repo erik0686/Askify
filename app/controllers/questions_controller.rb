@@ -35,6 +35,15 @@ class QuestionsController < ApplicationController
       @question.destroy
       redirect_to questions_path
     end
+
+    def change (atrribute)
+      binding.pry
+    end
+
+    def set_new_question_category
+      x = @category
+      binding.pry
+    end
   
     private
   

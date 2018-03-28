@@ -1,9 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
-
-
-  before_action :set_question, :get_categories
+  # before_action :set_question, :get_categories, :set_category
+  before_action :set_vars
 
   protected
 
@@ -13,13 +12,29 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def set_question
+  def set_vars
     @question = Question.new
+    @categories = Category.all
+    @category = Category.new
+    @category.id = 5
   end
 
-  def get_categories
-    @categories = Category.all
-  end
+  # def set_question
+  #   @question = Question.new
+  # end
+
+  # def get_categories
+  #   @categories = Category.all
+  # end
+
+  # def set_category
+  #   @category = Category.new
+  # end
+
+  # def set_new_question_category (category)
+  #   # produit_id = params[:category]
+  #   binding.pry
+  # end
 end
 
 
