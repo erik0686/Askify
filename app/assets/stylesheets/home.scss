@@ -42,7 +42,24 @@
 	max-height: 800px;
 	padding-top: 65px; 
 	overflow-y:scroll; 
-	padding:2px;
+	padding: 0px 2px 2px 2px;
+}
+
+#category-cards-container{
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#categoryHeader {
+	background-color: transparent;
+	margin-bottom: 5px;
+	border-radius: 15px;
+
+	.lead{
+		max-width: 300px;
+		font-size: 1rem;
+		margin-bottom: 3px;
+	}
 }
 
 #searchPost{
