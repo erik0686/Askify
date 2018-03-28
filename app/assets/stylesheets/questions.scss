@@ -76,20 +76,20 @@ div{
 
 .card {
   @include BoxShadowHelper(1);
-  
+
   overflow: hidden;
   transition: .25s box-shadow;
   margin-bottom: 20px;
-  
+
   &:focus,
   &:hover {
     @include BoxShadowHelper(2);
   }
 }
 
-// .card-click { 
+// .card-click {
 //   // color: inherit !important;
-//   text-decoration: inherit !important; 
+//   text-decoration: inherit !important;
 // }
 
 // .card-click button {
@@ -99,15 +99,20 @@ div{
 .col-category a {
 	// color: inherit !important;
 	text-decoration: inherit !important;
-	
+
 	button {
-  	z-index: 1;		
+  	z-index: 1;
 	}
 }
 
 #new-question-topic-input {
   margin-left: 7%;
   margin-right: 7%;
+}
+
+
+.imgCategory{
+ filter: brightness(70%) blur(3px);
 }
 
 .card.card-category{
@@ -122,9 +127,9 @@ div{
   .card-body {
     display : flex;
     align-items : center;
-    background-color: grey;
-    
+
     .card-title {
+      vertical-align: middle;
       text-align: center;
       width: 100%;
       color: white;

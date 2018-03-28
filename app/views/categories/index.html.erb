@@ -8,7 +8,7 @@
                     <p class="lead">
                     Each category can lead you to explore many topics that people have asked questions about.
                     </p>
-                </div>      
+                </div>
             </div>
         </div>
         <div class="col-sm-7 col-category">
@@ -21,11 +21,13 @@
     <div class="row bg-white">
         <% @categories.each do |c| %>
             <div class="col-sm-6 col-category">
-                <%= link_to :category => c.category_name do %>
+                <%= link_to :category => c.id do %>
                     <div class="card card-category mb-3%>">
+                            <%= image_tag("categories/" + c.id.to_s+ ".jpeg", class: "card-img-top imgCategory", alt: "c.category_name", style: "height: auto")%>
                             <div class="card-body">
                                 <h5 class="card-title lead">
-                                    <%= c.category_name %>
+                                    <%= c.id %>
+
                                 </h5>
                             </div>
                         </div>
