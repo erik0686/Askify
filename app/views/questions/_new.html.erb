@@ -22,14 +22,14 @@
                         <%= link_to :category => c.category_name do %>
                             <div class="card card-category text-white mb-3 <%= c == @categories[0] ? 'bg-primary' : c == @categories[1] ? 'bg-success' : c == @categories[2] ? 'bg-danger' : 'bg-warning' %>">
                                 <div class="card-body">
-                                    <h5 class="card-title">
+                                    <h5 class="card-title lead">
                                         <%= c.category_name %>
                                     </h5>
                                 </div>
                             </div>
                             <% end %>
                     </div>
-                    <% end %>
+                <% end %>
             </div>
         </div>
     </div>

@@ -38,11 +38,36 @@
 
 }
 
+.logoDecoration{
+	display: block;
+	float: right;
+	position: relative;
+	top: -15px;
+	width: 320px;
+}
+
 #listPosts{
 	max-height: 800px;
 	padding-top: 65px; 
 	overflow-y:scroll; 
-	padding:2px;
+	padding: 0px 2px 2px 2px;
+}
+
+#category-cards-container{
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#categoryHeader {
+	background-color: transparent;
+	margin-bottom: 5px;
+	border-radius: 15px;
+
+	.lead{
+		max-width: 300px;
+		font-size: 1rem;
+		margin-bottom: 3px;
+	}
 }
 
 #searchPost{
@@ -162,4 +187,16 @@ h5{
 	height: 9px;
 	right: -5px;
 	top: -5px;
+}
+
+@media screen and (max-width: 800px) {
+	.logoDecoration{
+		display: none;
+	}
+
+	#categoryHeader {
+		.lead{
+			width: 100%;
+		}
+	}
 }
