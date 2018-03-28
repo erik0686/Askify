@@ -1,0 +1,17 @@
+<div class=question-show> 
+  <div class="question-title"> <%= @question.question_title %></div>
+  <div class="question_text"> <%= @question.question_text %></div>
+  <div class="question-user"><%= question_show_timestamp(@question) %> </div>
+  <div class="question-topic"><%= @question.topic.topic_name %></div>
+  <div class="question-answers">
+  <hr>
+  <% @question.answers.each do |answer| %>
+    <div> 
+      <div> <%= answer.answer_text %> </div>
+      <div>  </div>
+      <div class="small-font"> <%= answer_timestamp(answer) %> by <%= answer.user.user_name %> </div>
+    </div>
+    <hr>
+  <% end %>
+  </div>
+</div>
