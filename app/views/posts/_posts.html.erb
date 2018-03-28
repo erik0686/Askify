@@ -1,22 +1,22 @@
-<div class="container" id="listPosts">
-
-    <div class="sticky-top">
-        <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" id="searchPost" placeholder="Search" aria-label="Search">
-        </form>
+<%= search_form_for @q2, url: home_index_path do |f| %>
+  <div class="container" id="listPosts">
+    <div class="sticky-top align-flex">
+      <%= f.search_field :post_content_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
+      <%= f.submit class: "submit-search"%>
     </div>
 
     <ul id="posts" class="list-group list-group-flush">
-        <% @posts.each do |post| %>
-            <li class="list-group-item flex-column">
-                <div class="d-flex w-100 justify-content-between">
-                    <small><%= post_timestamp post %></small>
-                </div>
-                <p class="mb-1">
-                    <%= post.post_content %>
-                </p>
-                <%= image_tag("testing/testPost.jpg", class: "imgSize", alt: "eventImage") if post.id == 2 %>
-            </li>
-        <% end %>
+      <% @posts.each do |post| %>
+        <li class="list-group-item flex-column">
+          <div class="d-flex w-100 justify-content-between">
+            <small><%= post_timestamp post %></small>
+          </div>
+          <p class="mb-1">
+            <%= post.post_content %>
+          </p>
+          <%= image_tag("testing/testPost.jpg", class: "imgSize", alt: "eventImage") if post.id == 2 %>
+        </li>
+      <% end %>
     </ul>
-</div>
+  </div>
+<% end %>

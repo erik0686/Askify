@@ -24,82 +24,15 @@
           <%= image_tag("userImage.jpg", class:"media-object profile", alt:"user-profile")%>
         </div>
       </div>
-
-
       <div class="user-information-tab">
-        <hr class="my-4">
-      
-        <%=profileCardMaker("User Name",  @user, "user_name")%>
-        <%=profileCardMaker("Email",  @user, "email")%>
-        <%=profileCardMaker("Student ID",  @user, "student_id")%>
-        <%=profileCardMaker("Major",  @user, "major")%>
-        <%=profileCardMaker("Birth Date",  @user, "birth_date" )%>
-        <div class="container deleteAccount">
-          <button type="button" class="btn btn-primary" id="bottomSaveChangesBut">Save Changes</button>
-        </div>
-        <div class="container deleteAccount">
-          <button type="button" class="btn btn-outline-danger" id="deleteProfileBut">Delete Account</button>
-        </div>
+        <%= render 'user_profile_info' %>
       </div>
-
-
-      <div class="user-questions-tab hidden">
-        <hr class="my-4">
-        <div>  
-          <div class="dropdown-divider questions"></div>
-          <% @user_questions.each do |question| %>
-            <div class="question-information">
-              <div class="question-info">
-                <div class="answer-quantity">
-                  <%= question.answers.count %>
-                </div>
-                <div>
-                  answers
-                </div>
-              </div>
-              <div>
-                <div>
-                  <%= link_to question.question_title, question_path(question), class: "link-to-question", onClick:"$('#homeQuestionsPanel').resizable('destroy')"%>
-                </div>
-                <div class="user-info">
-                  <%= user_question_timestamp(question) %>
-                </div>
-              </div>
-            </div>
-            <hr>
-          <% end %>
-        </div>
+      <div class="user-questions-tab hidden-tab">  
+        <%= render 'user_question' %>
       </div>
-      <div class="user-answers-tab hidden">
-        <hr class="my-4">
-        <div>  
-          <div class="dropdown-divider questions"></div>
-          <% @questions.each do |question| %>
-            <% if question_answered_by_me?(question, @user) %>
-              <div class="question-information">
-                <div>
-                  <div>
-                    <%= question_answered_by_me_title(question, @user) %>
-                  </div>
-                  <% my_answers(question, @user).each do |answer| %>
-                    <div>
-                      <%= answer.answer_text %>
-                    </div>
-                    <div class="user-info" style="font-size: 0.8rem;">
-                    <%= answer_timestamp(answer) %>
-                    </div>
-                    <hr>
-                  <% end %>
-                </div>
-              </div>
-              <hr>
-            <% end %>
-          <% end %>
-        </div>
+      <div class="user-answers-tab hidden-tab">
+        <%= render 'user_answers' %>
       </div>
-
-
     </div>
   </div>
 </div>
-
