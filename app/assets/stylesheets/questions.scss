@@ -136,6 +136,36 @@ div{
       font-weight: 550;
       margin-bottom: 0px;
       font-size: 1.75rem;
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      width: 50%;
+      margin: -15% 0 0 -25%;
+    }
+  }
+}
+
+.card-topic {
+  height: 13.5rem;
+  border-radius: 1rem !important;
+
+  .card-body {
+    display : flex;
+    align-items : center;
+
+    .card-title {
+      vertical-align: middle;
+      text-align: center;
+      width: 100%;
+      color: white;
+      font-weight: 550;
+      margin-bottom: 0px;
+      font-size: 1.75rem;
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      width: 50%;
+      margin: -15% 0 0 -25%;
     }
   }
 }

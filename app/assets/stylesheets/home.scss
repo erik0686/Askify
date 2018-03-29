@@ -42,14 +42,14 @@
 	display: block;
 	float: right;
 	position: relative;
-	top: -15px;
-	width: 320px;
+	top: 15px;
+	width: 400px;
 }
 
 #listPosts{
 	max-height: 800px;
-	padding-top: 65px; 
-	overflow-y:scroll; 
+	padding-top: 65px;
+	overflow-y:scroll;
 	padding: 0px 2px 2px 2px;
 }
 
@@ -99,7 +99,7 @@
 
 #homeQuestionsPanel {
 	//float: left;
-	//width: 50%;   
+	//width: 50%;
 	background-color: #e9ecef;
 	margin: 6px;
 	padding: 20px;
