@@ -9,17 +9,7 @@
             </div>
                 <div id="new-question-modal-body-footer">
                     <!-- Add each of the three sections of the new question in here -->
-                    <div class="modal-body modal-body-no-top-padding">
-                        <div class="container-fluid">
-                            <% form_for @category, :url => set_question_category_path do |f| %>
-                                <%= number_field_tag 'id' %>
-
-
-                            
-                                <%= submit_tag "Add"%>
-                            <% end %>
-                        </div>
-                    </div>
+                   
                 </div>
         </div>
     </div>
@@ -28,8 +18,30 @@
 <div id="new-question-first-body" style = "display:none">
     <div class="modal-body modal-body-no-top-padding">
         <div class="container-fluid">
+            <div class="row bg-white">
+                <%= form_tag set_question_category_path do %>
+                <!-- <div class="btn-group" data-toggle="buttons"> -->
+                    <% @categories.each do |category| %>
+                        <!-- <div class="col-sm-6 col-category"> -->
+                            <label class="btn btn-primary btn-category">
+
+                                <%= radio_button_tag 'category_name', category.category_name, true, class: "category_input", :onclick => "this.form.submit();" %>
+                                <%= category.category_name %>
+                            </label>
+                        <!-- </div> -->
+                    <% end %>
+                    <!-- </div> -->
+                    <div class="actions">
+                        <%= submit_tag "Add" %>
+                    </div>
+                <% end %>
+            </div>
+
+
+
+
             <%#= form_for @category, :url => {:controller => "application", :action => "set_new_question_category"} do |f| %>
-                <div class="btn-group" data-toggle="buttons">
+                <!-- <div class="btn-group" data-toggle="buttons"> -->
 
                     <!-- <div class="row bg-white">
                         <% @categories.each do |c| %>
@@ -55,8 +67,8 @@
                         <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
                     </label> -->
 
-                    <%= submit_tag "Add"%>
-                </div>
+                    <!-- <%= submit_tag "Add"%>
+                </div> -->
 
 
                 

@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
   # before_action :set_question, :get_categories, :set_category
   before_action :set_vars
 
+  def set_new_question_category
+    @category = Category.find_by(category_name: params[:category_name])
+    @topics = Topic.find_by(category_id: @category.id)
+  end
+
   protected
 
   def configure_permitted_parameters
@@ -15,25 +20,14 @@ class ApplicationController < ActionController::Base
   def set_vars
     @question = Question.new
     @categories = Category.all
-    @category = Category.new
-    @category.id = 5
   end
-
-  # def set_question
-  #   @question = Question.new
+  
+  # def question_params
+  #   params.require(:question).permit(:question_text)
   # end
 
-  # def get_categories
-  #   @categories = Category.all
-  # end
-
-  # def set_category
-  #   @category = Category.new
-  # end
-
-  # def set_new_question_category (category)
-  #   # produit_id = params[:category]
-  #   binding.pry
+  # def category_params
+  #   params.require(:category).permit(:category_name)
   # end
 end
 
