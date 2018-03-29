@@ -134,3 +134,9 @@ div{
     }
   }
 }
+
+.category_input {
+  pointer-events: none;
+  position: absolute;
+  clip: rect(0,0,0,0);
+}

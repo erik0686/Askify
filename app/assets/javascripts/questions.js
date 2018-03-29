@@ -21,10 +21,16 @@ $(document).on('turbolinks:load', function () {
     newQuestionFirst();
   });
 
-  $(document).on('click',".col-category>a", function(e) {
-    e.preventDefault();
+  // $(document).on('click',".col-category>a", function(e) {
+  //   // e.preventDefault();
+  //   newQuestionSecond();
+  // });
+
+  $(document).on('click',".btn-category", function(e) {
+    // e.preventDefault();
     newQuestionSecond();
   });
+
 
   $(document).on('click',"#btn-new-question-show-categories", function() {
     newQuestionFirst();
