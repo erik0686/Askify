@@ -1,7 +1,17 @@
 class TopicsController < ApplicationController
 
     def index
-      @topics = Topic.all
+      category_name = params[:category]
+      if category_name.nil?
+        @topics = Topic.all
+      else
+        category_id = Category.find_by(category_name: category_name)
+        if category_id.nil?
+          redirect_to topics_path
+        else
+          @topics = Topic.find_by(category_id: category_id)
+        end
+      end
     end
   
     def new

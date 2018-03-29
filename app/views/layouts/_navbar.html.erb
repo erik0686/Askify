@@ -26,10 +26,9 @@
           </a>
           
           <div id="dropdown-menu-categories" class="dropdown-menu dd-menu" aria-labelledby="navbarDropdownCategories">
-            <%= link_to "Computer Science", questions_path, class: "dropdown-item" %>
-            <%= link_to "Languages", questions_path, class: "dropdown-item" %>
-            <%= link_to "Courses", questions_path, class: "dropdown-item" %>
-            <%= link_to "Life @Tec", questions_path, class: "dropdown-item" %>
+            <% @categories.each do |category| %>
+              <%= link_to category.category_name, topics_path(:category => category.category_name), class: "dropdown-item" %>            
+            <% end %>
             <div class="dropdown-divider"></div>
             <%= link_to "All", categories_path, class: "dropdown-item" %>
           </div>
