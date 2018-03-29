@@ -4,9 +4,9 @@
 
 #homeWrapper {
     width: 100%;
-	margin: 0 auto;
-	padding: 12px;
-	padding-top: 20px;
+  margin: 0 auto;
+  padding: 12px;
+  padding-top: 20px;
 }
 
 .row.homeWrapper {
@@ -14,27 +14,27 @@
 }
 
 #posts{
-	li{
-		border-radius: 10px;
-		margin: 3px;
+  li{
+    border-radius: 10px;
+    margin: 3px;
 
-		p{
-			font-size: 0.9rem;
-		}
+    p{
+      font-size: 0.9rem;
+    }
 
-		h5{
-			font-size: 1.1rem;
-		}
+    h5{
+      font-size: 1.1rem;
+    }
 
-		.d-flex {
-			flex-direction: row-reverse;
-			margin-bottom: 5px;
-		}
+    .d-flex {
+      flex-direction: row-reverse;
+      margin-bottom: 5px;
+    }
 
-		.imgSize{
-			border-radius: 30px;
-		}
-	}
+    .imgSize{
+      border-radius: 30px;
+    }
+  }
 
 }
 
@@ -71,33 +71,34 @@
 }
 
 #searchPost{
-	width: 100%;
-	font-size: 0.9rem;
-	border: none;
-	border-radius: 15px;
-	margin-bottom: 4px;
-	margin-top: 4px;
+  width: 100%;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 4px;
+  margin-top: 4px;
 }
 
 .sticky-top{
-	border-bottom-left-radius: 15px;
-	border-bottom-right-radius: 15px;
-	padding-bottom: 5px;
-	background-color: #e9ecef;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-bottom: 5px;
+  background-color: #e9ecef;
 }
 
 #homePanel {
     //float: left;
-	//width: 50%;
-	margin: 6px;
-	padding: 10px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	border-radius: 25px;
-	background-color: #e9ecef;
+  //width: 50%;
+  margin: 6px;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 25px;
+  background-color: #e9ecef;
 }
 
 #homeQuestionsPanel {
+<<<<<<< HEAD
 	//float: left;
 	//width: 50%;
 	background-color: #e9ecef;
@@ -107,88 +108,106 @@
 	// border-right-style: solid;
 	// border-right-color: grey;
 	// border-right-width: 5px;
+=======
+  //float: left;
+  //width: 50%;   
+  background-color: #e9ecef;
+  margin: 6px;
+  padding: 20px;
+  border-radius: 25px;
+  // border-right-style: solid;
+  // border-right-color: grey;
+  // border-right-width: 5px;
+>>>>>>> 0b18c7a450d91ab1270c9ffcd1f62b1e22f7c803
 }
 
 .display-4.home{
-	font-size: 2rem;
-	font-weight: 450;
+  font-size: 2rem;
+  font-weight: 450;
 }
 
 h5{
-	font-weight: 300;
+  font-weight: 300;
 }
 
 .ui-resizable {
-	position: relative;
+  position: relative;
 }
 .ui-resizable-handle {
-	position: absolute;
-	font-size: 0.1px;
-	display: block;
-	-ms-touch-action: none;
-	touch-action: none;
+  position: absolute;
+  font-size: 0.1px;
+  display: block;
+  -ms-touch-action: none;
+  touch-action: none;
 }
 .ui-resizable-disabled .ui-resizable-handle,
 .ui-resizable-autohide .ui-resizable-handle {
-	display: none;
+  display: none;
 }
 .ui-resizable-n {
-	cursor: n-resize;
-	height: 7px;
-	width: 100%;
-	top: -5px;
-	left: 0;
+  cursor: n-resize;
+  height: 7px;
+  width: 100%;
+  top: -5px;
+  left: 0;
 }
 .ui-resizable-s {
-	cursor: s-resize;
-	height: 7px;
-	width: 100%;
-	bottom: -5px;
-	left: 0;
+  cursor: s-resize;
+  height: 7px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
 }
 .ui-resizable-e {
-	cursor: e-resize;
-	width: 7px;
-	right: -5px;
-	top: 0;
-	height: 100%;
+  cursor: e-resize;
+  width: 7px;
+  right: -5px;
+  top: 0;
+  height: 100%;
 }
 .ui-resizable-w {
-	cursor: w-resize;
-	width: 7px;
-	left: -5px;
-	top: 0;
-	height: 100%;
+  cursor: w-resize;
+  width: 7px;
+  left: -5px;
+  top: 0;
+  height: 100%;
 }
 .ui-resizable-se {
-	cursor: se-resize;
-	width: 12px;
-	height: 12px;
-	right: 1px;
-	bottom: 1px;
+  cursor: se-resize;
+  width: 12px;
+  height: 12px;
+  right: 1px;
+  bottom: 1px;
 }
 .ui-resizable-sw {
-	cursor: sw-resize;
-	width: 9px;
-	height: 9px;
-	left: -5px;
-	bottom: -5px;
+  cursor: sw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  bottom: -5px;
 }
 .ui-resizable-nw {
-	cursor: nw-resize;
-	width: 9px;
-	height: 9px;
-	left: -5px;
-	top: -5px;
+  cursor: nw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  top: -5px;
 }
 .ui-resizable-ne {
-	cursor: ne-resize;
-	width: 9px;
-	height: 9px;
-	right: -5px;
-	top: -5px;
+  cursor: ne-resize;
+  width: 9px;
+  height: 9px;
+  right: -5px;
+  top: -5px;
 }
 
+.align-flex {
+  display: flex;
+}
+
+.submit-search {
+  height: 40px;
+}
 @media screen and (max-width: 800px) {
 	.logoDecoration{
 		display: none;

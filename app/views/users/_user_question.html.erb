@@ -1,0 +1,25 @@
+<hr class="my-4">
+<div>  
+  <div class="dropdown-divider questions"></div>
+  <% @user_questions.each do |question| %>
+    <div class="question-information">
+      <div class="question-info">
+        <div class="answer-quantity">
+          <%= question.answers.count %>
+        </div>
+        <div>
+          answers
+        </div>
+      </div>
+      <div>
+        <div>
+          <%= link_to question.question_title, question_path(question), class: "link-to-question", onClick:"$('#homeQuestionsPanel').resizable('destroy')"%>
+        </div>
+        <div class="user-info">
+          <%= user_question_timestamp(question) %>
+        </div>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+</div>

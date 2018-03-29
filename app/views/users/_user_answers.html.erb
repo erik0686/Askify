@@ -1,0 +1,25 @@
+<hr class="my-4">
+<div>  
+  <div class="dropdown-divider questions"></div>
+  <% @questions.each do |question| %>
+    <% if question_answered_by_me?(question, @user) %>
+      <div class="question-information">
+        <div>
+          <div>
+            <%= question_answered_by_me_title(question, @user) %>
+          </div>
+          <% my_answers(question, @user).each do |answer| %>
+            <div>
+              <%= answer.answer_text %>
+            </div>
+            <div class="user-info" style="font-size: 0.8rem;">
+            <%= answer_timestamp(answer) %>
+            </div>
+            <hr>
+          <% end %>
+        </div>
+      </div>
+      <hr>
+    <% end %>
+  <% end %>
+</div>
