@@ -13,11 +13,11 @@
     </div>
 </div>
 
-<div id="new-question-first-body" style = "display:none">
+<div id="new-question-first-body" class="new-question-body">
   <div id="new-question-first-body-content">
     <div class="modal-body modal-body-no-top-padding">
       <div class="container-fluid">
-        <%= form_tag set_new_question_category_path, style: "width: 100%" do %>
+        <%= form_tag set_new_question_category_path do %>
           <div class="row bg-white">
             <% @categories.each do |category| %>
               <div class="col-sm-6 col-category">
@@ -38,7 +38,7 @@
   </div>
 </div>
 
-<div id="new-question-second-body" style="display:none">
+<div id="new-question-second-body" class="new-question-body">
   <div id="new-question-second-body-content">
     <%= form_tag create_new_question_path, :id => 'create-new-question-form' do %>
       <div class="modal-body modal-body-no-top-padding">
