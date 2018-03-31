@@ -18,9 +18,9 @@
     
     <%= yield %>
     
-    <%#= render "questions/new_first", question: @question %>
-    <%#= render "questions/new_second", question: @question %>
-    <%= render "questions/new", question: @question, categories: @categories%>
+    <% if user_signed_in? %>
+      <%= render "questions/new", categories: @categories %>
+    <% end %>
 
   </body>
 </html>
