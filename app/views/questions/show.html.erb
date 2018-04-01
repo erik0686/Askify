@@ -1,17 +1,29 @@
-<div class=question-show> 
-  <div class="question-title"> <%= @question.question_title %></div>
-  <div class="question_text"> <%= @question.question_text %></div>
-  <div class="question-user"><%= question_show_timestamp(@question) %> </div>
-  <div class="question-topic"><%= @question.topic.topic_name %></div>
-  <div class="question-answers">
-  <hr>
-  <% @question.answers.each do |answer| %>
-    <div> 
-      <div> <%= answer.answer_text %> </div>
-      <div>  </div>
-      <div class="small-font"> <%= answer_timestamp(answer) %> by <%= answer.user.user_name %> </div>
+<%= form_for @question do |form| %>
+  <div class=question-show> 
+    <div class="question-title"> <%= @question.question_title %></div>
+    <div class="question_text"> <%= @question.question_text %></div>
+    <div class="question-user"><%= question_show_timestamp(@question) %> </div>
+    <div class="question-topic"> <strong>Category:</strong> <%= @question.topic.category.category_name %></div>
+    <div class="question-topic"> <strong>Topic:</strong> <%= @question.topic.topic_name %></div>
+    <div class="question-answers">
+
+    <div class="TabbedPanelsContent">
+      <%= form.fields_for :questions do |builder| %>
+      <%= render "answer_fields", form: builder %>
+      <% end %>
+      <p><%= link_to_add_fields "Add answer", form, :answers %></p>
+
     </div>
+
+    <%= form.submit "Save" %>
     <hr>
-  <% end %>
+    <% @question.answers.each do |answer| %>
+      <div> 
+        <div> <%= answer.answer_text %> </div>
+        <div class="small-font"> <%= answer_timestamp(answer) %> by <%= answer.user.user_name %> </div>
+      </div>
+      <hr>
+    <% end %>
+    </div>
   </div>
-</div>
+<% end %>

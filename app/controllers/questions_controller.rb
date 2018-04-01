@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     if @question.save
-      redirect_to questions_path
+      redirect_to question_path
     else
       render 'new'
     end
@@ -19,6 +19,8 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
+    @answer = Answer.new
+    @answer.question_id = @question.id
   end
 
   def edit
@@ -28,7 +30,7 @@ class QuestionsController < ApplicationController
   def update
     @question = Question.find(params[:id])
     if @question.update(question_params)
-      redirect_to questions_path
+      redirect_to question_path
     else
       render :edit
     end
@@ -43,6 +45,6 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:question_text)
+    params.require(:question).permit!
   end
 end

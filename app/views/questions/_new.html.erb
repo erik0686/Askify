@@ -1,63 +1,63 @@
 <div id="new-question-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header modal-header-no-line">
-                <h5 id="new-question-modal-title" class="modal-title"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div id="new-question-modal-body-footer">
-            </div>
-        </div>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header modal-header-no-line">
+        <h5 id="new-question-modal-title" class="modal-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="new-question-modal-body-footer">
+      </div>
     </div>
+  </div>
 </div>
 
 <div id="new-question-first-body" style = "display:none">
-    <div class="modal-body modal-body-no-top-padding">
-        <div class="container-fluid">
-            <div class="row bg-white">
-                <% @categories.each do |c| %>
-                    <div class="col-sm-6 col-category">
-                        <%= link_to :category => c.category_name do %>
-                            <div class="card card-category text-white mb-3 <%= c == @categories[0] ? 'bg-primary' : c == @categories[1] ? 'bg-success' : c == @categories[2] ? 'bg-danger' : 'bg-warning' %>">
-                                <div class="card-body">
-                                    <h5 class="card-title lead">
-                                        <%= c.category_name %>
-                                    </h5>
-                                </div>
-                            </div>
-                            <% end %>
-                    </div>
-                <% end %>
-            </div>
-        </div>
+  <div class="modal-body modal-body-no-top-padding">
+    <div class="container-fluid">
+      <div class="row bg-white">
+        <% @categories.each do |c| %>
+          <div class="col-sm-6 col-category">
+            <%= link_to :category => c.category_name do %>
+              <div class="card card-category text-white mb-3 <%= c == @categories[0] ? 'bg-primary' : c == @categories[1] ? 'bg-success' : c == @categories[2] ? 'bg-danger' : 'bg-warning' %>">
+                <div class="card-body">
+                  <h5 class="card-title lead">
+                    <%= c.category_name %>
+                  </h5>
+                </div>
+              </div>
+              <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
+  </div>
 </div>
 
 <div id="new-question-second-body" style = "display:none">
-    <div class="modal-body modal-body-no-top-padding">
-        <div class="input-group mb-3">
-            <input id="new-question-topic-input" type="text" class="form-control" placeholder="Topic" aria-label="Topic" aria-describedby="basic-addon2">
-        </div>
+  <div class="modal-body modal-body-no-top-padding">
+    <div class="input-group mb-3">
+      <input id="new-question-topic-input" type="text" class="form-control" placeholder="Topic" aria-label="Topic" aria-describedby="basic-addon2">
     </div>
-    <div class="modal-footer">
-        <button id="btn-new-question-show-categories" type="button" class="btn btn-warning mr-auto">Back</button>
-        <button id="btn-new-question-ask-question" type="button" class="btn btn-primary">Continue</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    </div>
+  </div>
+  <div class="modal-footer">
+    <button id="btn-new-question-show-categories" type="button" class="btn btn-warning mr-auto">Back</button>
+    <button id="btn-new-question-ask-question" type="button" class="btn btn-primary">Continue</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  </div>
 </div>
 
 <div id="new-question-third-body" style="display:none">
-    <div class="modal-body modal-body-no-top-padding">
-        <div class="input-group mb-3">
-            <textarea id="new-question-question-input" class="form-control" placeholder="Type your question here!" aria-label="With textarea"></textarea>
-        </div>
+  <div class="modal-body modal-body-no-top-padding">
+    <div class="input-group mb-3">
+      <textarea id="new-question-question-input" class="form-control" placeholder="Type your question here!" aria-label="With textarea"></textarea>
     </div>
-    <div class="modal-footer">
-        <button id="btn-new-question-select-topic" type="button" class="btn btn-warning mr-auto">Back</button>
-        <button id="btn-new-question-ask-question" type="button" class="btn btn-success" data-dismiss="modal">Post!</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    </div>
+  </div>
+  <div class="modal-footer">
+    <button id="btn-new-question-select-topic" type="button" class="btn btn-warning mr-auto">Back</button>
+    <button id="btn-new-question-ask-question" type="button" class="btn btn-success" data-dismiss="modal">Post!</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  </div>
 </div>
 

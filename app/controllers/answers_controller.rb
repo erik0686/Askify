@@ -1,44 +1,48 @@
 class AnswerController < ApplicationController
 
-def index
+  def index
     @answer = Answer.all
-end
+  end
 
-def new
-    @answer = Answer.new
-end
+  def new
+    assign_question
+    @answer = @question.answers.new
+  end
 
-def create
-    @answer = Answer.new(answer_params)
-    if @answer.save
-        redirect_to answer_path
-    else
-        render 'new'
+  def create
+    @answer = @question.answers.new(answer_params)
+    @answer.save
+    respond_to do |format|
+      format.js
     end
-end
+  end
 
-def edit
+  def edit
     @answer = Answer.find(params[:id])
-end
+  end
 
-def update
+  def update
     @answer = Answer.find(params[:id])
     if @answer.update(answers_params)
-        redirect_to answers_path
+      redirect_to answers_path
     else
-        render :edit
+      render :edit
     end
-end
+  end
 
-def destroy
+  def destroy
     @answer = Answer.find(params[:id])
     @answer.destroy
     redirect_to answers_path
-end
+  end
 
-    private
+  private
 
-    def answer_params
-        params.require(:answer).permit(:answer_text)
-    end
+  def assign_question
+    @question ||= Question.find(params[:question_id])
+  end
+
+  def answer_params
+    params.require(:answer).permit(:answer_text)
+  end
 end
