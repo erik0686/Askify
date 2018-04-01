@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :answer_ratings
-  resources :questions
+  resources :questions do
+    resources :answers
+  end
   resources :users
   resources :home, only: [:index]
   resources :topics, only: [:index]

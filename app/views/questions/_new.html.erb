@@ -1,18 +1,16 @@
 <div id="new-question-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header modal-header-no-line">
-                <h5 id="new-question-modal-title" class="modal-title"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-                <div id="new-question-modal-body-footer">
-                </div>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+       <div class="modal-header modal-header-no-line">
+          <h5 id="new-question-modal-title" class="modal-title"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div id="new-question-modal-body-footer"></div>
     </div>
+  </div>
 </div>
-
 <div id="new-question-first-body" class="new-question-body">
   <div id="new-question-first-body-content">
     <div class="modal-body modal-body-no-top-padding">
@@ -37,7 +35,6 @@
     </div>
   </div>
 </div>
-
 <div id="new-question-second-body" class="new-question-body">
   <div id="new-question-second-body-content">
     <%= form_tag create_new_question_path, :id => 'create-new-question-form' do %>
