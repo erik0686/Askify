@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   post 'create_new_question', to: "application#create_new_question", as: :create_new_question
   
   get 'set_topic_options', to: "application#set_topic_options", as: :set_topic_options
-  match "/categories/topics/" => "questions#byTopic" , :via => [:get]
+  match "/categories/topics/questions" => "questions#byTopic" , :via => [:get]
 
   resources :questions do
     get :autocomplete_topic_id, on: :collection

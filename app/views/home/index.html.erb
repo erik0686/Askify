@@ -6,9 +6,9 @@
           <div class="container titleHome">
               <h3 class="display-4 home">Questions</h3> 
           </div>
-          <div class="align-flex">
-            <%= f.search_field :question_text_or_question_title_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
-            <%= f.submit class: "submit-search"%>
+          <div class="sticky-top align-flex">
+          <%= f.search_field :question_text_or_question_title_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
+          <%= f.submit class: "submit-search"%>
           </div>
           <%= render 'questions/questions' %>
         </div>

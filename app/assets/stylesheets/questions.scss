@@ -6,6 +6,18 @@
   background-color: #e9ecef;
   padding: 10px;
   border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#suggest-topic-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .lead{
+    font-size: 0.9rem;
+    margin-bottom: 7px;
+  }
 }
 
 #new-topic-modal {
