@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #homeWrapper {
-    width: 100%;
+  width: 100%;
   margin: 0 auto;
   padding: 12px;
   padding-top: 20px;
@@ -56,6 +56,11 @@
 #category-cards-container{
 	padding-left: 10%;
 	padding-right: 10%;
+}
+
+#topic-cards-container{
+	padding-left: .5%;
+	padding-right: .5%;
 }
 
 #categoryHeader {
