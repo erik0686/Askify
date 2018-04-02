@@ -58,6 +58,18 @@
 	padding-right: 10%;
 }
 
+.jumbotron.bannerHeader{
+	background-color: transparent;
+	margin-bottom: 5px;
+	border-radius: 15px;
+
+	.lead{
+		max-width: 300px;
+		font-size: 1rem;
+		margin-bottom: 3px;
+	}
+}
+
 #categoryHeader {
 	background-color: transparent;
 	margin-bottom: 5px;
@@ -93,7 +105,7 @@
   padding: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-radius: 25px;
+  border-radius: 15px;
   background-color: #e9ecef;
 }
 
@@ -103,7 +115,7 @@
   background-color: #e9ecef;
   margin: 6px;
   padding: 20px;
-  border-radius: 25px;
+  border-radius: 15px;
   // border-right-style: solid;
   // border-right-color: grey;
   // border-right-width: 5px;

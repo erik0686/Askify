@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#topic-questions-container{
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 10px;
+
+}
 .btn-group-categories {
   width: 100%;
 }
@@ -110,6 +116,9 @@ div{
   margin-right: 7%;
 }
 
+#topicHeader{
+  padding: 3rem 2rem;
+}
 .card.card-category{
   margin-bottom: 25px;
 }
@@ -126,7 +135,7 @@ div{
     .card-title {
       text-align: center;
       width: 100%;
-      color: white;
+      color: rgba(40, 93, 145, 1);
       font-weight: 550;
       margin-bottom: 0px;
       font-size: 1.75rem;

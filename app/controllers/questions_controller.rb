@@ -1,5 +1,12 @@
 # Questions controller
 class QuestionsController < ApplicationController
+  before_action :set_search
+
+  def set_search
+    @q1=Question.search(params[:q])
+    @questions = Question.all
+  end
+  
   def index
     @questions = Question.all
   end
