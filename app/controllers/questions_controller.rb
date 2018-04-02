@@ -13,6 +13,7 @@ class QuestionsController < ApplicationController
 
   def new
     @question = Question.new
+    @question.answers.build
   end
 
   def create
@@ -26,12 +27,12 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
-    @answer = Answer.new
-    @answer.question_id = @question.id
+    @question.answers.build
   end
 
   def edit
     @question = Question.find(params[:id])
+    @question.answers.build
   end
 
   def update
@@ -52,6 +53,6 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit!
+    params.require(:question).permit(:id, :question_title, :question_text, answers_attributes: [ :id, :answer_text, :question_id, :_destroy])
   end
 end
