@@ -9,6 +9,19 @@
   padding-top: 20px;
 }
 
+.lead.suggest-topic{
+	margin-bottom: 0px;
+    float: right;
+    font-size: 0.6rem;
+	padding: 2px 6px 2px 6px;
+	border-radius: 10px;
+	background-color: rgba(40, 93, 145, 1);
+	color: white;
+}
+.lead.suggest-topic:hover{
+	background-color: rgb(31, 70, 109);
+}
+
 .row.homeWrapper {
     background-color: transparent;
 }

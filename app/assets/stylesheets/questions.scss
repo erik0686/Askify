@@ -6,10 +6,19 @@
   background-color: #e9ecef;
   padding: 10px;
   border-radius: 10px;
+}
 
+#new-topic-modal {
+    textarea {
+      resize: none;
+  }
 }
 .btn-group-categories {
   width: 100%;
+}
+
+.container.new-topic{
+  padding: 15px;
 }
 
 .questionContent{
@@ -51,8 +60,8 @@ div{
 	background-color: white;
 	border-radius: 15px;
 	padding: 20px;
-
 }
+
 
 .question-info {
 	margin-left: 1rem;
@@ -117,10 +126,30 @@ div{
 }
 
 #topicHeader{
-  padding: 3rem 2rem;
+  padding: 3rem 1.5rem;
+
+  .lead.suggest-topic{
+    margin-bottom: 0px;
+    float: right;
+    font-size: 0.9rem;
+    padding: 6px 10px 6px 10px;
+    border-radius: 10px;
+    background-color: rgba(40, 93, 145, 1);
+    color: white;
+  }
+  .lead.suggest-topic:hover{
+    background-color: rgb(31, 70, 109);
+    cursor: pointer;
+  }
 }
+
 .card.card-category{
   margin-bottom: 25px;
+  background-color: grey;
+}
+.card.card-category:hover{
+  margin-bottom: 25px;
+  background-color: rgb(78, 76, 76);
 }
 
 .card-category {
@@ -135,7 +164,7 @@ div{
     .card-title {
       text-align: center;
       width: 100%;
-      color: rgba(40, 93, 145, 1);
+      color: white;
       font-weight: 550;
       margin-bottom: 0px;
       font-size: 1.75rem;
