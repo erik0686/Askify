@@ -1,5 +1,8 @@
 <div class="fields">
+  <p>
+    <%= form.input_field :_destroy, as: :hidden %>
+    <%= link_to "Remove", "#", class: "remove_record" %>
+  </p>
   <p class="lable">Answer</p>
   <p class="field"><%= form.text_field :answer_text %></p></br>
-  <p><%= link_to_remove_fields "remove", form %></p> 
 </div>

@@ -5,12 +5,12 @@ class AnswerController < ApplicationController
   end
 
   def new
-    assign_question
-    @answer = @question.answers.new
+    @answer = Answer.new
   end
 
   def create
-    @answer = @question.answers.new(answer_params)
+    @answer = Answer.new(@answer_params)
+    @answer.question = Question.find(params[:question_id])
     @answer.save
     respond_to do |format|
       format.js
@@ -37,10 +37,6 @@ class AnswerController < ApplicationController
   end
 
   private
-
-  def assign_question
-    @question ||= Question.find(params[:question_id])
-  end
 
   def answer_params
     params.require(:answer).permit(:answer_text)

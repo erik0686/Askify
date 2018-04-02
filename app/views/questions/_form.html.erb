@@ -1,0 +1,9 @@
+<%= simple_form_for @question do |form| %>
+  <div class="TabbedPanelsContent">
+    <%= form.simple_fields_for(:answers, @question.answers.build) do |builder| %>
+      <%= render "answer_fields", form: builder %>
+    <% end %>
+    <p><%= link_to_add_fields "Add answer", form, :answers %></p>
+  </div>
+  <%= form.submit "Save" %>
+<% end %>
