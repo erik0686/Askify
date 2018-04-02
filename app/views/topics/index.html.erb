@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row bg-white">
+        <div class="col-sm-5 col-category">
+            <div class="container">
+                <div class="jumbotron" id="categoryHeader">
+                    <p class="lead">Explore the different topics in</p>
+                    <h1 class="display-2">  c.category_name  </h1>
+                    <p class="lead">
+                        Each category can lead you to explore many topics that people have asked questions about.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" id="topic-cards-container">
+    <div class="row bg-white">
+        <% @topics.each do |t| %>
+            <div class="col-lg-3 col-category">
+                <%= link_to :topic => t.id do %>
+                    <div class="card card-topic mb-3%>">
+                            <%= image_tag("topics/" + t.id.to_s+ ".jpeg", class: "card-img-top imgCategory", alt: "t.topic_name", style: "height: 100%;")%>
+                            <div class="card-body">
+                                <h5 class="card-title lead">
+                                    <%= t.topic_name %>
+                                </h5>
+                            </div>
+                        </div>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+</div>

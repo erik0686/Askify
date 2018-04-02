@@ -1,4 +1,4 @@
-class AnswerController < ApplicationController
+class AnswersController < ApplicationController
 
   def index
     @answer = Answer.all
@@ -9,12 +9,11 @@ class AnswerController < ApplicationController
   end
 
   def create
-    @answer = Answer.new(@answer_params)
-    @answer.question = Question.find(params[:question_id])
+    @question = Question.find(params[:question_id])
+    @answer = @question.answers.new(params[:answer].permit(:answer_text, :question_id, :user_id))
+    @answer.user_id = current_user.id
     @answer.save
-    respond_to do |format|
-      format.js
-    end
+    redirect_to question_path(@question)
   end
 
   def edit

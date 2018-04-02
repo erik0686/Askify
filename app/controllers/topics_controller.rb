@@ -13,11 +13,11 @@ class TopicsController < ApplicationController
         end
       end
     end
-  
+
     def new
       @topic = Topic.new
     end
-  
+
     def create
       @topic = Topic.new(topic_params)
       if @topic.save
@@ -26,11 +26,11 @@ class TopicsController < ApplicationController
         render 'new'
       end
     end
-  
+
     def edit
       @topic = Topic.find(params[:id])
     end
-  
+
     def update
       @topic = Topic.find(params[:id])
       if @topic.update(topic_params)
@@ -39,17 +39,16 @@ class TopicsController < ApplicationController
         render :edit
       end
     end
-  
+
     def destroy
       @topic = Topic.find(params[:id])
       @topic.destroy
       redirect_to topics_path
     end
-  
+
     private
-  
+
     def topic_params
       params.require(:topic).permit(:topic_name, :is_official)
     end
 end
-  

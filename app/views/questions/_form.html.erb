@@ -1,9 +1,6 @@
-<%= simple_form_for @question do |form| %>
+<%= form_for([@question, @question.answers.build]) do |f| %>
   <div class="TabbedPanelsContent">
-    <%= form.simple_fields_for(:answers, @question.answers.build) do |builder| %>
-      <%= render "answer_fields", form: builder %>
-    <% end %>
-    <p><%= link_to_add_fields "Add answer", form, :answers %></p>
+    <%= f.text_area :answer_text, class: "form-control mr-sm-2", cols: "100", rows:"5", placeholder: "Write here your answer" %>
   </div>
-  <%= form.submit "Save" %>
+  <%= f.submit "Submit answer", class: "btn btn-success", style:"margin-top:2rem;" %>
 <% end %>
