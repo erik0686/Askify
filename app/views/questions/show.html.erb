@@ -5,9 +5,12 @@
   <div class="question-topic"> <strong>Category:</strong> <%= @question.topic.category.category_name %></div>
   <div class="question-topic"> <strong>Topic:</strong> <%= @question.topic.topic_name %></div>
   <div class="question-answers">
-    <%= render "form" %>
+    <%= link_to "Answer this question", "#", class: "answer-question" %>
+    <div class="answer-form hidden">
+      <%= render "form" %>
+    </div>
     <hr>
-    <% @question.answers.select(&:persisted?).each do |answer| %>
+    <% @question.answers.by_date.each do |answer| %>
       <div> 
         <div> <%= answer.answer_text %> </div>
         <div class="small-font"> <%= answer_timestamp(answer) %> by <%= answer.user.user_name %> </div>

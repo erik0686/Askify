@@ -6,4 +6,6 @@ class Answer < ApplicationRecord
   has_many :users, through: :answer_rating
 
   validates :answer_text, presence: true
+
+  scope :by_date, -> { order(created_at: :desc) }
 end
