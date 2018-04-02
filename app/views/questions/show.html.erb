@@ -1,29 +1,21 @@
-<%= form_for @question do |form| %>
-  <div class=question-show> 
-    <div class="question-title"> <%= @question.question_title %></div>
-    <div class="question_text"> <%= @question.question_text %></div>
-    <div class="question-user"><%= question_show_timestamp(@question) %> </div>
-    <div class="question-topic"> <strong>Category:</strong> <%= @question.topic.category.category_name %></div>
-    <div class="question-topic"> <strong>Topic:</strong> <%= @question.topic.topic_name %></div>
-    <div class="question-answers">
-
-    <div class="TabbedPanelsContent">
-      <%= form.fields_for :answer do |builder| %>
-      <%= render "answer_fields", form: builder %>
-      <% end %>
-      <p><%= link_to_add_fields "Add answer", form, :answers %></p>
-
+<div class=question-show> 
+  <div class="question-title"> <%= @question.question_title %></div>
+  <div class="question_text"> <%= @question.question_text %></div>
+  <div class="question-user"><%= question_show_timestamp(@question) %> </div>
+  <div class="question-topic"> <strong>Category:</strong> <%= @question.topic.category.category_name %></div>
+  <div class="question-topic"> <strong>Topic:</strong> <%= @question.topic.topic_name %></div>
+  <div class="question-answers">
+    <%= link_to "Answer this question", "#", class: "answer-question" %>
+    <div class="answer-form hidden">
+      <%= render "form" %>
     </div>
-
-    <%= form.submit "Save" %>
     <hr>
-    <% @question.answers.each do |answer| %>
+    <% @question.answers.by_date.each do |answer| %>
       <div> 
         <div> <%= answer.answer_text %> </div>
         <div class="small-font"> <%= answer_timestamp(answer) %> by <%= answer.user.user_name %> </div>
       </div>
       <hr>
     <% end %>
-    </div>
   </div>
-<% end %>
+</div>

@@ -1,20 +1,19 @@
-class AnswerController < ApplicationController
+class AnswersController < ApplicationController
 
   def index
     @answer = Answer.all
   end
 
   def new
-    assign_question
-    @answer = @question.answers.new
+    @answer = Answer.new
   end
 
   def create
-    @answer = @question.answers.new(answer_params)
+    @question = Question.find(params[:question_id])
+    @answer = @question.answers.new(params[:answer].permit(:answer_text, :question_id, :user_id))
+    @answer.user_id = current_user.id
     @answer.save
-    respond_to do |format|
-      format.js
-    end
+    redirect_to question_path(@question)
   end
 
   def edit
@@ -37,10 +36,6 @@ class AnswerController < ApplicationController
   end
 
   private
-
-  def assign_question
-    @question ||= Question.find(params[:question_id])
-  end
 
   def answer_params
     params.require(:answer).permit(:answer_text)
