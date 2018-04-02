@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #homeWrapper {
-    width: 100%;
+  width: 100%;
   margin: 0 auto;
   padding: 12px;
   padding-top: 20px;
@@ -42,20 +42,25 @@
 	display: block;
 	float: right;
 	position: relative;
-	top: -15px;
-	width: 320px;
+	top: 15px;
+	width: 400px;
 }
 
 #listPosts{
 	max-height: 800px;
-	padding-top: 65px; 
-	overflow-y:scroll; 
+	padding-top: 65px;
+	overflow-y:scroll;
 	padding: 0px 2px 2px 2px;
 }
 
 #category-cards-container{
 	padding-left: 10%;
 	padding-right: 10%;
+}
+
+#topic-cards-container{
+	padding-left: .5%;
+	padding-right: .5%;
 }
 
 #categoryHeader {
@@ -98,15 +103,15 @@
 }
 
 #homeQuestionsPanel {
-  //float: left;
-  //width: 50%;   
-  background-color: #e9ecef;
-  margin: 6px;
-  padding: 20px;
-  border-radius: 25px;
-  // border-right-style: solid;
-  // border-right-color: grey;
-  // border-right-width: 5px;
+	//float: left;
+	//width: 50%;
+	background-color: #e9ecef;
+	margin: 6px;
+	padding: 20px;
+	border-radius: 25px;
+	// border-right-style: solid;
+	// border-right-color: grey;
+	// border-right-width: 5px;
 }
 
 .display-4.home{
