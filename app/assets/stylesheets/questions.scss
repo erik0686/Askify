@@ -2,8 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#topic-questions-container{
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#suggest-topic-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .lead{
+    font-size: 0.9rem;
+    margin-bottom: 7px;
+  }
+}
+
+#new-topic-modal {
+    textarea {
+      resize: none;
+  }
+}
 .btn-group-categories {
   width: 100%;
+}
+
+.container.new-topic{
+  padding: 15px;
 }
 
 .questionContent{
@@ -45,8 +72,8 @@ div{
 	background-color: white;
 	border-radius: 15px;
 	padding: 20px;
-
 }
+
 
 .question-info {
 	margin-left: 1rem;
@@ -110,6 +137,23 @@ div{
   margin-right: 7%;
 }
 
+#topicHeader{
+  padding: 3rem 1.5rem;
+
+  .lead.suggest-topic{
+    margin-bottom: 0px;
+    float: right;
+    font-size: 0.9rem;
+    padding: 6px 10px 6px 10px;
+    border-radius: 10px;
+    background-color: rgba(40, 93, 145, 1);
+    color: white;
+  }
+  .lead.suggest-topic:hover{
+    background-color: rgb(31, 70, 109);
+    cursor: pointer;
+  }
+}
 
 .imgCategory{
  filter: brightness(70%) blur(3px);
@@ -118,6 +162,11 @@ div{
 
 .card.card-category{
   margin-bottom: 25px;
+  background-color: grey;
+}
+.card.card-category:hover{
+  margin-bottom: 25px;
+  background-color: rgb(78, 76, 76);
 }
 
 .card-category {

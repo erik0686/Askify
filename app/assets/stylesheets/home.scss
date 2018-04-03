@@ -9,6 +9,8 @@
   padding-top: 20px;
 }
 
+
+
 .row.homeWrapper {
     background-color: transparent;
 }
@@ -58,10 +60,22 @@
 	padding-right: 10%;
 }
 
+.jumbotron.bannerHeader{
+	background-color: transparent;
+	margin-bottom: 5px;
+	border-radius: 15px;
+
+	.lead{
+		max-width: 300px;
+		font-size: 1rem;
+		margin-bottom: 3px;
+  }
+}
+
 #topic-cards-container{
 	padding-left: .5%;
 	padding-right: .5%;
-    background-size: cover;
+  background-size: cover;
   height: 100%;
   width: 100%;
 }
@@ -101,20 +115,20 @@
   padding: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-radius: 25px;
+  border-radius: 15px;
   background-color: #e9ecef;
 }
 
 #homeQuestionsPanel {
-	//float: left;
-	//width: 50%;
-	background-color: #e9ecef;
-	margin: 6px;
-	padding: 20px;
-	border-radius: 25px;
-	// border-right-style: solid;
-	// border-right-color: grey;
-	// border-right-width: 5px;
+  //float: left;
+  //width: 50%;   
+  background-color: #e9ecef;
+  margin: 6px;
+  padding: 20px;
+  border-radius: 15px;
+  // border-right-style: solid;
+  // border-right-color: grey;
+  // border-right-width: 5px;
 }
 
 .display-4.home{
@@ -199,6 +213,9 @@ h5{
 
 .align-flex {
   display: flex;
+  padding-bottom: 5px;
+  border: none;
+  border-radius: 15px;
 }
 
 .submit-search {

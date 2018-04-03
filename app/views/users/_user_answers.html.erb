@@ -1,6 +1,6 @@
 <hr class="my-4">
 <div>  
-  <div class="dropdown-divider questions"></div>
+  
   <% @questions.each do |question| %>
     <% if question_answered_by_me?(question, @user) %>
       <div class="question-information">
