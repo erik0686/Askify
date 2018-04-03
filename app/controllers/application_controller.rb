@@ -6,11 +6,9 @@ class ApplicationController < ActionController::Base
   def set_new_question_category
     category = Category.find_by(category_name: params[:category_name])
     session[:category_id] = category.id
-    # @topics = @category.topics
   end
 
   def create_new_question
-    # check that fields are not empty
     topic_id = Topic.find_by(topic_name: params[:topic_name]).id
     new_question = Question.new(question_text: params[:question_text], question_title: params[:question_title], topic_id: topic_id, user_id: current_user.id)
     new_question.save!

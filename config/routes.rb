@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :users
   resources :home, only: [:index]
   resources :topics, only: [:index]
-  resources :categories, only: [:index]
+  resources :categories, only: [:index, :show]
 
   post 'set_new_question_category', to: "application#set_new_question_category", as: :set_new_question_category
   post 'create_new_question', to: "application#create_new_question", as: :create_new_question
