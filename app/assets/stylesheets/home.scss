@@ -45,7 +45,7 @@
 	float: right;
 	position: relative;
 	top: 15px;
-	width: 400px;
+	width: 300px;
 }
 
 #listPosts{
@@ -81,15 +81,32 @@
 }
 
 #categoryHeader {
-	background-color: transparent;
-	margin-bottom: 5px;
-	border-radius: 15px;
+  padding: 3rem 1.5rem;
 
-	.lead{
-		max-width: 300px;
-		font-size: 1rem;
-		margin-bottom: 3px;
-	}
+  .lead.suggest-topic{
+    margin-bottom: 0px;
+    float: right;
+    font-size: 0.9rem;
+    padding: 6px 10px 6px 10px;
+    border-radius: 10px;
+    background-color: rgba(40, 93, 145, 1);
+    color: white;
+  }
+  .lead.suggest-topic:hover{
+    background-color: rgb(31, 70, 109);
+    cursor: pointer;
+  }
+}
+
+.suggest-topic-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .lead{
+    font-size: 0.9rem;
+    margin-bottom: 7px;
+  }
 }
 
 #searchPost{
