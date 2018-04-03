@@ -9,7 +9,13 @@
   padding-top: 20px;
 }
 
-
+.best_in_place.editable-fields.profile:focus{
+  border: none;
+  outline: 0 none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 
 .row.homeWrapper {
     background-color: transparent;
@@ -102,6 +108,7 @@
   padding: 3rem 1.5rem;
 
   .lead.suggest-topic{
+    width: 150px;
     text-align: center;
     margin-bottom: 0px;
     float: right;
@@ -118,6 +125,7 @@
 }
 
 .suggest-topic-container{
+  text-align: right;
   display: flex;
   flex-direction: column;
   align-items: flex-end;

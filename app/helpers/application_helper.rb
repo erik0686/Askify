@@ -18,7 +18,7 @@ module ApplicationHelper
     data = '<p class="lead hidden">
     <h5 class="hidden">' + title + '</h5>
     <div class="card hidden profile-input"> ' + 
-        "#{ best_in_place user, attribute.to_sym, class: 'editable-fields'} "+ 
+        "#{ best_in_place user, attribute.to_sym, class: 'editable-fields profile'} "+ 
     '</div>
     <p>'
     data.html_safe
