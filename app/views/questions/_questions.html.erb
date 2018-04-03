@@ -6,7 +6,7 @@
           <%= question.answers.count %>
         </div>
         <div>
-          answers
+          <%= "answer".pluralize(question.answers.count) %>
         </div>
       </div>
       <div>
@@ -17,7 +17,7 @@
           <%= question.question_text %>
         </p>
         <small class="user-info">
-          <%= question_show_timestamp(question) %>
+          <%= question_timestamp(question) %>
         </small>
       </div>
     </div>
