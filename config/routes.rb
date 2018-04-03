@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
   resources :users
   resources :home, only: [:index]
-  resources :topics, only: [:index]
+  resources :topics, only: [:index, :show]
   resources :categories, only: [:index, :show]
 
   post 'set_new_question_category', to: "application#set_new_question_category", as: :set_new_question_category

@@ -15,14 +15,14 @@
 </div>
 <div class="container" id="topic-cards-container">
   <div class="row bg-white">
-    <% @category.topics.each do |topics| %>
+    <% @category.topics.each do |topic| %>
       <div class="col-lg-3 col-category">
-        <%= link_to :topic => topics.id do %>
+        <%= link_to topic_path(topic) do %>
           <div class="card card-topic mb-3%>">
-              <%= image_tag("topics/" + topics.id.to_s+ ".jpeg", class: "card-img-top imgCategory", alt: "topics.topic_name", style: "height: 100%;")%>
+              <%= image_tag("topics/" + topic.id.to_s+ ".jpeg", class: "card-img-top imgCategory", alt: "topic.topic_name", style: "height: 100%;")%>
               <div class="card-body">
                 <h5 class="card-title lead">
-                  <%= topics.topic_name %>
+                  <%= topic.topic_name %>
                 </h5>
               </div>
             </div>
