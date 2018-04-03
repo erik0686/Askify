@@ -78,12 +78,31 @@
   background-size: cover;
   height: 100%;
   width: 100%;
+
+  .row.bg-white{
+    margin: 25px;
+  }
+}
+
+.btn.topic-button{
+  background-color: #707070;
+  width: 160px;
+  height: 160px;
+  margin: 14px;
+  font-size: 1rem;
+  border-radius: 50%;
+  white-space: normal;
+  color: white;
+}
+.btn.topic-button:hover{
+  background-color: #4b4a4a;
 }
 
 #categoryHeader {
   padding: 3rem 1.5rem;
 
   .lead.suggest-topic{
+    text-align: center;
     margin-bottom: 0px;
     float: right;
     font-size: 0.9rem;
