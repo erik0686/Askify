@@ -29,7 +29,6 @@ function newQuestionSecond(alreadyInSecondModal) {
 
 function newQuestionThird() {
   $('#new-question-modal-title').text("Now type what you want to ask:" );
-  // $('#new-question-modal-body-footer').html($("#new-question-second-body").html());
   $('.new-question-topic').hide();
   $('.new-question-question').show();
   $('.new-question-question > #question_title').focus();
@@ -58,7 +57,6 @@ $(document).on('turbolinks:load', function () {
   });
 
   $(document).on('click', ".new-question-question > .btn-continue", function () {
-    console.log("question created!");
   });
 
 });

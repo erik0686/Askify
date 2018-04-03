@@ -56,8 +56,9 @@
           <div class="row bg-white">
             <% @categories.each do |category| %>
               <div class="col-sm-6 col-category">
-                <label class="card card-category text-white mb-3 <%= category == @categories[0] ? 'bg-primary' : category == @categories[1] ? 'bg-success' : category == @categories[2] ? 'bg-danger' : 'bg-warning' %>" >
+                <label class="card card-category mb-3">
                   <%= radio_button_tag 'category_name', category.category_name, true, class: "category_input", :onclick => "this.form.submit();" %>
+                  <%= image_tag("categories/" + category.id.to_s+ ".jpeg", class: "card-img-top imgCategory", alt: "category.category_name")%>
                   <div class="card-body">
                     <h5 class="card-title">
                       <%= category.category_name %>
@@ -77,13 +78,13 @@
     <%= form_tag create_new_question_path, :id => 'create-new-question-form' do %>
       <div class="modal-body modal-body-no-top-padding">
         <div class="input-group mb-3 new-question-topic">
-          <%= text_field_tag 'topic_name', nil, class: 'form-control', data: { autocomplete_source: set_topic_options_path } %> 
+          <%= text_field_tag 'topic_name', nil, class: 'form-control', required: 'true', data: { autocomplete_source: set_topic_options_path } %> 
         </div>
         <div class="input-group mb-3 new-question-question">
-          <%= text_field_tag 'question_title', nil, class: 'form-control', placeholder: "Question Title" %>
+          <%= text_field_tag 'question_title', nil, class: 'form-control', required: 'true', minlength: "20", placeholder: "Question Title" %>
         </div>
         <div class="input-group mb-3 new-question-question">
-          <%= text_area_tag 'question_text', nil, class: 'form-control', rows: 6, placeholder: "Type here some extra content for the question if needed..." %>
+          <%= text_area_tag 'question_text', nil, class: 'form-control', rows: 6, required: 'true', placeholder: "Type here some extra content for the question if needed..." %>
         </div>
       </div>
       <div class="modal-footer new-question-topic">
