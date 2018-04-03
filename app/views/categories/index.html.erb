@@ -22,8 +22,8 @@
     <% @categories.each do |category| %>
       <div class="col-sm-6 col-category">
         <%= link_to category_path(category) do %>
-          <div class="card card-category mb-3%>">
-              <%= image_tag("categories/" + category.id.to_s+ ".jpeg", class: "card-img-top imgCategory", alt: "category.category_name", style: "height: auto")%>
+          <div class="card card-category mb-3">
+              <%= image_tag("categories/" + category.id.to_s+ ".jpeg", class: "card-img-top imgCategory", alt: "category.category_name")%>
               <div class="card-body">
                 <h5 class="card-title lead">
                   <%= category.category_name %>
