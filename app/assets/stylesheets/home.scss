@@ -96,7 +96,7 @@
   width: 100%;
   font-size: 0.9rem;
   border: none;
-  border-radius: 15px;
+  border-radius: 12px;
   margin-bottom: 4px;
   margin-top: 4px;
 }
@@ -106,6 +106,9 @@
   border-bottom-right-radius: 15px;
   padding-bottom: 5px;
   background-color: #e9ecef;
+  align-flex{
+    
+  }
 }
 
 #homePanel {
@@ -215,11 +218,22 @@ h5{
   display: flex;
   padding-bottom: 5px;
   border: none;
-  border-radius: 15px;
+  border-radius: 12px;
 }
 
 .submit-search {
-  height: 40px;
+  -webkit-appearance: none;
+  background-color: rgba(40, 93, 145, 1);
+  color: white;
+  border: none;
+  height: 100%;
+  border-radius: 12px;
+  margin: 5px 0px 5px 0px;
+  font-size: 0.9rem;
+  height: 100%;
+  padding: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 @media screen and (max-width: 800px) {
 	.logoDecoration{
