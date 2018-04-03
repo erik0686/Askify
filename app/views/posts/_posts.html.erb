@@ -4,7 +4,6 @@
       <%= f.search_field :post_content_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
       <%= f.submit class: "submit-search"%>
     </div>
-
     <ul id="posts" class="list-group list-group-flush">
       <% @posts.each do |post| %>
         <li class="list-group-item flex-column">

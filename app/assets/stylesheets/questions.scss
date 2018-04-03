@@ -9,7 +9,8 @@
   margin-bottom: 20px;
 }
 
-#suggest-topic-container{
+.suggest-topic-container{
+  text-align: right;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -141,6 +142,7 @@ div{
   padding: 3rem 1.5rem;
 
   .lead.suggest-topic{
+    width: 150px;
     margin-bottom: 0px;
     float: right;
     font-size: 0.9rem;
@@ -157,7 +159,6 @@ div{
 
 .imgCategory{
  filter: brightness(70%) blur(3px);
- height: 100%;
 }
 
 .card.card-category{
