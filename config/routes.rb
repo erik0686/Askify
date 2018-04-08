@@ -16,10 +16,6 @@ Rails.application.routes.draw do
   get 'set_topic_options', to: "application#set_topic_options", as: :set_topic_options
   match "/categories/topics/questions" => "questions#byTopic" , :via => [:get]
 
-  resources :questions do
-    get :autocomplete_topic_id, on: :collection
-  end
-
   devise_scope :user do
     authenticated :user do
       root 'home#index', as: :authenticated_root
