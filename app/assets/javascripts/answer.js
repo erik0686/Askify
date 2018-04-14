@@ -4,6 +4,4 @@ $(document).on('turbolinks:load', function () {
     $(".answer-question").addClass("hidden");
     event.preventDefault();
   });
-    
-
 });
