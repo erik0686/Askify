@@ -5,7 +5,7 @@
                 <span class="lead">
                     Not finding what you're looking for?
                 </span>
-                <%= link_to "Suggest new topic", "#new-topic-modal", "data-toggle" => "modal", class: "lead suggest-topic"%>        
+                <%= link_to "Suggest new topic", "#new-topic-modal", "data-toggle" => "modal", class: "lead suggest-topic"%>
             </div>
             <h1 class="display-4"> <%= @category.category_name %>  </h1>
             <p class="lead">
@@ -18,7 +18,7 @@
 <div class="container-fluid" id="topic-cards-container">
     <% @category.topics.each do |topic| %>
         <%= link_to topic_path(topic) do %>
-          <button type="button" class="btn topic-button"><%= topic.topic_name %></button>
+        <button name= "color<%= topic.id%9 %> " type="button" class="btn topic-button"><%= topic.topic_name %></button>
         <% end %>
     <% end %>
 </div>

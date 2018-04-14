@@ -94,8 +94,28 @@
   }
 }
 
+$bckColor: (
+'color1' : #6eb6ff,
+'color2' : #92d051,
+'color3' : #ff5e64,
+'color4' : #a96cc6,
+'color5' : #f2c337,
+'color6' : #f7893b,
+'color0' : #68c2ac,
+'color8' : #f9a4dd,
+'color7' : #4771cc,
+);
+
+// loop, to style social media links
+@each $name, $color in $bckColor {
+  // selector based on href name
+  [name*='#{$name}'] {
+    background-color: $color;
+  }
+}
+
 .btn.topic-button{
-  background-color: red;
+  filter: saturate(120%);
   width: 160px;
   height: 160px;
   margin: 20px 30px 20px 30px;
@@ -104,7 +124,7 @@
   border-radius: 50%;
   white-space: normal;
   color: white;
-
+  font-weight: bold;
   -o-transition:.5s;
   -ms-transition:.5s;
   -moz-transition:.5s;
@@ -112,7 +132,7 @@
   transition: all 300ms ease-in-out;
 }
 .btn.topic-button:hover{
-  filter: grayscale(50%);
+  filter: brightness(70%);
 }
 
 #categoryHeader {
@@ -163,7 +183,7 @@
   padding-bottom: 5px;
   background-color: #e9ecef;
   align-flex{
-    
+
   }
 }
 
@@ -180,7 +200,7 @@
 
 #homeQuestionsPanel {
   //float: left;
-  //width: 50%;   
+  //width: 50%;
   background-color: #e9ecef;
   margin: 6px;
   padding: 20px;
