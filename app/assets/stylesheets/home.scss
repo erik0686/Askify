@@ -87,6 +87,11 @@
   display: flow-root;
   flex-direction: row;
   text-align: center;
+
+    >a{
+      color: none;
+      text-decoration: none;
+  }
 }
 
 .btn.topic-button{
@@ -107,7 +112,7 @@
   transition: all 300ms ease-in-out;
 }
 .btn.topic-button:hover{
-  filter: grayscale(100%);
+  filter: grayscale(50%);
 }
 
 #categoryHeader {
