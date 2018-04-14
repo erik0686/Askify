@@ -11,7 +11,7 @@
                 <div class="container new-topic">
                     <p>Type the name of the topic you want to suggest</p>
                     <div class="input-group mb-3 new-question-topic">
-                        <%= text_field_tag 'topic_name', nil, class: 'form-control lead', data: { autocomplete_source: set_topic_options_path } %> 
+                        <%= text_field_tag 'new_topic_name', nil, class: 'form-control lead', data: { autocomplete_source: set_topic_options_path } %> 
                     </div>
                     <p>Choose the category it corresponds to</p>
                     <div class="form-group mb-3">
@@ -48,6 +48,7 @@
     </div>
   </div>
 </div>
+
 <div id="new-question-first-body" class="new-question-body">
   <div id="new-question-first-body-content">
     <div class="modal-body modal-body-no-top-padding">
@@ -73,6 +74,7 @@
     </div>
   </div>
 </div>
+
 <div id="new-question-second-body" class="new-question-body">
   <div id="new-question-second-body-content">
     <%= form_tag create_new_question_path, :id => 'create-new-question-form' do %>
@@ -90,12 +92,10 @@
       <div class="modal-footer new-question-topic">
         <button type="button" class="btn btn-warning mr-auto btn-back">Back</button>
         <button type="button" class="btn btn-primary btn-continue">Continue</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
       <div class="modal-footer new-question-question">
         <button type="button" class="btn btn-warning mr-auto btn-back">Back</button>
         <%= submit_tag "Post!", class: "btn btn-success btn-continue" %>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     <% end %>
   </div>  

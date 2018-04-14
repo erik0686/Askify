@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   def set_topic_options
     # topics = @category.topics.all.order(:topic_name).where("lower(topic_name) like ?", "%#{params[:term]}%".downcase)
-    topics = Category.find_by(id: session[:category_id]).topics.order(:topic_name).where("lower(topic_name) like ?", "%#{params[:term]}%".downcase)
+    topics = Category.find_by(id: session[:category_id]).topics.order(:topic_name).where("SELECT REPLACE(LOWER(topic_name), ' ', '') like ?", "%#{params[:term]}%".downcase.delete(' '))
     render json: topics.map(&:topic_name)
   end
 
