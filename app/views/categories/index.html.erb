@@ -26,11 +26,7 @@
         <%= link_to category_path(category) do %>
           <div class="card card-category mb-3">
               <%= image_tag("categories/" + category.id.to_s+ ".jpeg", class: "card-img-top imgCategory", alt: "category.category_name")%>
-              <div class="card-body">
-                <h5 class="card-title lead">
-                  <%= category.category_name %>
-                </h5>
-              </div>
+              <div class="centered lead"><%= category.category_name %></div>
             </div>
         <% end %>
       </div>

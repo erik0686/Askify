@@ -166,6 +166,7 @@ div{
   margin-bottom: 25px;
   background-color: grey;
 }
+
 .card.card-category:hover{
   margin-bottom: 25px;
   background-color: rgb(78, 76, 76);
@@ -175,25 +176,23 @@ div{
   height: 10.5rem;
   border-radius: 1rem !important;
   cursor: pointer;
+  position: relative;
+  text-align: center;
+
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 500;
+    font-size: 1.75rem;
+  }
 
   .card-body {
     display : flex;
     align-items : center;
-
-    .card-title {
-      vertical-align: middle;
-      text-align: center;
-      width: 100%;
-      color: white;
-      font-weight: 550;
-      margin-bottom: 0px;
-      font-size: 1.75rem;
-      position: absolute;
-      top: 80%;
-      left: 50%;
-      width: 50%;
-      margin: -15% 0 0 -25%;
-    }
   }
 }
 
