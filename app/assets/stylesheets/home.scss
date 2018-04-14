@@ -178,13 +178,8 @@ $bckColor: (
 }
 
 .sticky-top{
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
   padding-bottom: 5px;
   background-color: #e9ecef;
-  align-flex{
-
-  }
 }
 
 #homePanel {
@@ -294,7 +289,6 @@ h5{
   display: flex;
   padding-bottom: 5px;
   border: none;
-  border-radius: 12px;
 }
 
 .submit-search {
