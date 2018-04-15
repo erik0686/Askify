@@ -1,10 +1,22 @@
-<div id="homeQuestionsPanel" style="width:50%;"> 
-    <div class="container titleHome">
-        <h3 class="display-4 home">Questions</h3> 
+<div class="container">
+    <div class="container">
+        <div class="jumbotron bannerHeader" id="topicHeader">
+            <h1 class="display-4"> <%= @topic.topic_name %> </h1>
+            <p class="lead">
+                Each topic has its own description to introduce you to what they do and what they can answer.
+            </p>
+        </div>
     </div>
-   
+</div>
+<div class="container" id="topic-questions-container">
+    <%= search_form_for @q, url: topic_path do |f| %>
+        <div class="sticky-top align-flex">
+          <%= f.search_field :question_text_or_question_title_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
+          <%= f.submit class: "submit-search"%>
+        </div>
+    <% end %>
     <div class="questionContent">
-      <% @topic.questions.by_date.each do |question| %>
+      <% @questions.by_date.each do |question| %>
         <div class="question-information">
           <div class="question-info">
             <div class="answer-quantity">

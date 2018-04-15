@@ -79,29 +79,60 @@
 }
 
 #topic-cards-container{
-	padding-left: .5%;
-	padding-right: .5%;
+  padding-left: 5%;
+  padding-right: 5%;
   background-size: cover;
   height: 100%;
   width: 100%;
+  display: flow-root;
+  flex-direction: row;
+  text-align: center;
 
-  .row.bg-white{
-    margin: 25px;
+    >a{
+      color: none;
+      text-decoration: none;
+  }
+}
+
+$bckColor: (
+'color1' : #6eb6ff,
+'color2' : #92d051,
+'color3' : #ff5e64,
+'color4' : #a96cc6,
+'color5' : #f2c337,
+'color6' : #f7893b,
+'color0' : #68c2ac,
+'color8' : #f9a4dd,
+'color7' : #4771cc,
+);
+
+// loop, to style social media links
+@each $name, $color in $bckColor {
+  // selector based on href name
+  [name*='#{$name}'] {
+    background-color: $color;
   }
 }
 
 .btn.topic-button{
-  background-color: #707070;
+  filter: saturate(120%);
   width: 160px;
   height: 160px;
-  margin: 14px;
+  margin: 20px 30px 20px 30px;
   font-size: 1rem;
+  display: inline-block;
   border-radius: 50%;
   white-space: normal;
   color: white;
+  font-weight: bold;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: all 300ms ease-in-out;
 }
 .btn.topic-button:hover{
-  background-color: #4b4a4a;
+  filter: brightness(70%);
 }
 
 #categoryHeader {
@@ -129,6 +160,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-bottom: 1rem;
 
   .lead{
     font-size: 0.9rem;
@@ -146,13 +178,8 @@
 }
 
 .sticky-top{
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
   padding-bottom: 5px;
   background-color: #e9ecef;
-  align-flex{
-    
-  }
 }
 
 #homePanel {
@@ -168,7 +195,7 @@
 
 #homeQuestionsPanel {
   //float: left;
-  //width: 50%;   
+  //width: 50%;
   background-color: #e9ecef;
   margin: 6px;
   padding: 20px;
@@ -262,7 +289,6 @@ h5{
   display: flex;
   padding-bottom: 5px;
   border: none;
-  border-radius: 12px;
 }
 
 .submit-search {
