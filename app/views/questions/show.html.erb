@@ -1,21 +1,84 @@
-<div class=question-show> 
-  <div class="question-title"> <%= @question.question_title %></div>
-  <div class="question_text"> <%= @question.question_text %></div>
-  <div class="question-user"><%= question_show_timestamp(@question) %> </div>
-  <div class="question-topic"> <strong>Category:</strong> <%= @question.topic.category.category_name %></div>
-  <div class="question-topic"> <strong>Topic:</strong> <%= @question.topic.topic_name %></div>
-  <div class="question-answers">
-    <%= link_to "Answer this question", "#", class: "answer-question" %>
-    <div class="answer-form hidden">
-      <%= render "form" %>
+<div class="container">
+    <div class="container">
+        <div class="jumbotron bannerHeader" id="questionHeader">
+            <div class="suggest-topic-container">
+               <span class="user-info long-text lead">
+                    <%= question_show_timestamp(@question) %> 
+                </span>    
+            </div>
+            <span class="badge badge-pill badge-info"><%= @question.topic.category.category_name %></span>
+            <span class="badge badge-pill badge-info"><%= @question.topic.topic_name %></span>
+            <h1 class="display-4"><%= @question.question_title %></h1>
+            <p class="long-text lead">
+                <%= @question.question_text %>
+            </p>
+            <span class="badge badge-pill badge-secondary" id="answer-counter"><%= @question.answers.count %> Answers</span>
+        </div>  
+
+        <% if @question.answers.count <= 0 %>
+          <hr>
+          <div class="container answer-button">
+            <p class="lead">
+              <%= current_user.first_name %>, can you answer this question?
+            </p>  
+            <small id="answer-help-text">
+              Your knowledge is deeply appreciated.
+            </small> 
+            <%= link_to "Answer", "#", class: "btn btn-success answer-question" %> 
+            <div class="answer-form hidden">
+              <div class="container answer-form-container">
+                <%= render "form" %>
+              </div>
+            </div>
+          </div>
+          <hr>
+        <% end %>
+                      
     </div>
-    <hr>
-    <% @question.answers.by_date.each do |answer| %>
-      <div> 
-        <div> <%= answer.answer_text %> </div>
-        <div class="small-font"> <%= answer_timestamp(answer) %> by <%= answer.user.user_name %> </div>
-      </div>
-      <hr>
-    <% end %>
-  </div>
+
 </div>
+
+
+  <div class=question-show> 
+    <div class="question-answers">
+
+      <% if @question.answers.count > 0 %>
+        <div class="container" id="answerContent">
+          <div class="answers-top">
+            <h4 id="answers-header">Answers</h4>
+            <%= link_to "Write answer", "#", class: "btn btn-success answer-question" , id:"answer-button-inlist"%> 
+          </div>
+            <hr>
+            <div class="answer-form hidden">
+              <div class="container answer-form-container">
+                <%= render "form" %>
+              </div>
+            </div>
+            <% @question.answers.by_date.each do |answer| %>
+            <div class="question-information">
+              <div class="question-container">
+              <div class="media">
+                <%= image_tag("userImage.jpg", class:"align-self-center mr-3 media-object answer", alt:"profile")%>
+                <div class="media-body">
+                  <h5 class="mt-0"> <%= answer.user.user_name %> </h5>
+                  <small class="mb-0 user-info">
+                    <%= answer_timestamp(answer) %>
+                  </small>
+                </div>
+              </div>
+                <p class="container questionText lead">
+                <%= answer.answer_text %>
+                </p>
+              </div>
+            </div>
+            <hr>
+          <% end %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+
+
+
+

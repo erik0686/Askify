@@ -1,7 +1,9 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+body {
+  font-family: 'Roboto', sans-serif !important;
+}
 #homeWrapper {
   width: 100%;
   margin: 0 auto;
@@ -58,7 +60,11 @@
 	max-height: 800px;
 	padding-top: 65px;
 	overflow-y:scroll;
-	padding: 0px 2px 2px 2px;
+  padding: 0px 2px 2px 2px;
+  
+  small{
+    color: #707070;
+  }
 }
 
 #category-cards-container{
