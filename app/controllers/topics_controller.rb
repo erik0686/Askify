@@ -29,10 +29,11 @@ class TopicsController < ApplicationController
   def edit
     @topic = Topic.find(params[:id])
   end
-
+  # show method
+  # if has parameter q, filter results by query
+  # else show all the current questions in topic
   def show
     @topic = Topic.find(params[:id])
-
     @q = @topic.questions.ransack(params[:q])
     @questions = @q.result(distinct: true)
   end
