@@ -25,6 +25,11 @@
               Your knowledge is deeply appreciated.
             </small> 
             <%= link_to "Answer", "#", class: "btn btn-success answer-question" %> 
+            <div class="answer-form hidden">
+              <div class="container answer-form-container">
+                <%= render "form" %>
+              </div>
+            </div>
           </div>
           <hr>
         <% end %>
@@ -36,23 +41,24 @@
 
   <div class=question-show> 
     <div class="question-answers">
-      <div class="answer-form hidden">
-        <%= render "form" %>
-      </div>
 
       <% if @question.answers.count > 0 %>
         <div class="container" id="answerContent">
           <div class="answers-top">
             <h4 id="answers-header">Answers</h4>
-            <%= link_to "Write answer", "#", class: "btn btn-success" , id:"answer-button-inlist"%> 
+            <%= link_to "Write answer", "#", class: "btn btn-success answer-question" , id:"answer-button-inlist"%> 
           </div>
-          <hr>
+            <hr>
+            <div class="answer-form hidden">
+              <div class="container answer-form-container">
+                <%= render "form" %>
+              </div>
+            </div>
             <% @question.answers.by_date.each do |answer| %>
             <div class="question-information">
               <div class="question-container">
               <div class="media">
-                  <%= image_tag("userImage.jpg", class:"align-self-center mr-3 media-object answer", alt:"profile")%>
-                
+                <%= image_tag("userImage.jpg", class:"align-self-center mr-3 media-object answer", alt:"profile")%>
                 <div class="media-body">
                   <h5 class="mt-0"> <%= answer.user.user_name %> </h5>
                   <small class="mb-0 user-info">

@@ -207,6 +207,19 @@ div{
   display: inline-block;
 }
 
+.answer-form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.hidden,
+.lead.hidden,
+.card.hidden {
+    display:none;
+}
+
 .container.answer-button{
   display: flex;
   flex-direction: column;
@@ -226,6 +239,10 @@ div{
     font-size: 1rem;
   }
 
+  #answer-help-text{
+    margin-bottom: 20px;
+  }
+
   >small{
     color: #707070;
   }
@@ -237,9 +254,8 @@ div{
   justify-content: space-between;
 }
 
-#answer-button-inlist{
-  display: inline;
-  font-size: 1rem;
+.hidden{
+  display: none !important;
 }
 
 #answers-header{
