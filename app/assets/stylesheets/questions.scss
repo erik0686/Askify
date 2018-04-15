@@ -39,6 +39,19 @@
     overflow-y: scroll;
 }
 
+#answerContent{
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-height: 800px;
+  overflow-y: scroll;
+
+  small{
+    margin: 0 auto;
+  }
+}
+
 div{
   .modal-header-no-line {
     border-bottom: 0px;
@@ -58,7 +71,13 @@ div{
 .questionText{
 	font-size: 0.9rem;
 	max-height: 100px;
-	text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.questionTitle{
+  display: inline-block;
 }
 
 .link-to-question:hover {
@@ -156,6 +175,77 @@ div{
     cursor: pointer;
   }
 }
+
+#questionHeader{
+  #answer-counter{
+    font-size: 0.8rem;
+    font-weight: normal;
+    padding: 10px;
+    margin: 5px 0;
+    background: #343a40;
+  }
+  
+  .long-text.lead{
+    max-width: 100%;
+  }
+
+  .badge.badge-pill.badge-info{
+    padding: 8px;
+    margin: 5px 0;
+    font-weight: normal;
+  }
+}
+
+.question-container{
+  display: inline-block;
+  flex-direction: column;
+}
+
+.user-info{
+  margin: 10px 3px;
+  color: #707070;
+  display: inline-block;
+}
+
+.container.answer-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+
+  .lead{
+    margin: 0 auto;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .btn.btn-success.answer-question{
+    margin: 15px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  >small{
+    color: #707070;
+  }
+}
+
+.answers-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#answer-button-inlist{
+  display: inline;
+  font-size: 1rem;
+}
+
+#answers-header{
+  display: inline;
+}
+
 
 .imgCategory{
  filter: brightness(70%) blur(3px);

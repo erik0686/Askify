@@ -1,6 +1,6 @@
 <%= form_for([@question, @question.answers.build]) do |f| %>
   <div class="TabbedPanelsContent">
-    <%= f.text_area :answer_text, class: "form-control mr-sm-2", cols: "100", rows:"5", placeholder: "Write here your answer" %>
+    <%= f.text_area :answer_text, class: "form-control mr-sm-2", cols: "100", rows:"5", placeholder: "Write your answer here" %>
   </div>
   <%= f.submit "Submit answer", class: "btn btn-success", style:"margin-top:2rem;" %>
 <% end %>

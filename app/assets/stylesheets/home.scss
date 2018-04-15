@@ -58,7 +58,11 @@
 	max-height: 800px;
 	padding-top: 65px;
 	overflow-y:scroll;
-	padding: 0px 2px 2px 2px;
+  padding: 0px 2px 2px 2px;
+  
+  small{
+    color: #707070;
+  }
 }
 
 #category-cards-container{
