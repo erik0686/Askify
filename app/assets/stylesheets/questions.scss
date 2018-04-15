@@ -65,7 +65,8 @@ div{
 .link-to-question {
 	font-size: 1.2rem;
 	font-weight: 450;
-	color: black;
+  color: black;
+  display: inline-block;
 }
 
 .questionText{
@@ -220,6 +221,15 @@ div{
     display:none;
 }
 
+.answer-question{
+  margin: 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  &.hidden {
+    display: none !important;
+  }
+}
+
 .container.answer-button{
   display: flex;
   flex-direction: column;
@@ -231,12 +241,6 @@ div{
     margin: 0 auto;
     font-size: 1.5rem;
     text-align: center;
-  }
-
-  .btn.btn-success.answer-question{
-    margin: 15px;
-    font-weight: bold;
-    font-size: 1rem;
   }
 
   #answer-help-text{
@@ -254,9 +258,7 @@ div{
   justify-content: space-between;
 }
 
-.hidden{
-  display: none !important;
-}
+
 
 #answers-header{
   display: inline;
