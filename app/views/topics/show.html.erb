@@ -9,13 +9,13 @@
     </div>
 </div>
 <div class="container" id="topic-questions-container">
+    <%= search_form_for @q, url: topic_path do |f| %>
+        <div class="sticky-top align-flex">
+          <%= f.search_field :question_text_or_question_title_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
+          <%= f.submit class: "submit-search"%>
+        </div>
+    <% end %>
     <div class="questionContent">
-        <%= search_form_for @q, url: topic_path do |f| %>
-            <div class="sticky-top align-flex">
-              <%= f.search_field :question_text_or_question_title_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
-              <%= f.submit class: "submit-search"%>
-            </div>
-        <% end %>
       <% @questions.by_date.each do |question| %>
         <div class="question-information">
           <div class="question-info">
