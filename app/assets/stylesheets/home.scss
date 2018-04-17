@@ -11,14 +11,6 @@ body {
   padding-top: 20px;
 }
 
-.best_in_place.editable-fields.profile:focus{
-  border: none;
-  outline: 0 none;
-  border-color: inherit;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
 .row.homeWrapper {
     background-color: transparent;
 }
@@ -45,7 +37,24 @@ body {
       border-radius: 30px;
     }
   }
+}
 
+#new-question-modal-body-footer{
+  vertical-align: middle;
+  margin: auto 40px;
+}
+
+#topic_name{
+  padding-top: 6px !important;
+}
+
+.modal-footer.new-question-question,
+.modal-footer.new-question-topic{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-top:  none; 
 }
 
 .logoDecoration{

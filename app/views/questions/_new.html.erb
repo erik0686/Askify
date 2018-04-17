@@ -36,10 +36,10 @@
 </div>
 
 <div id="new-question-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content" id="ask-question-content">
        <div class="modal-header modal-header-no-line">
-          <h5 id="new-question-modal-title" class="modal-title"></h5>
+          <h5 id="new-question-modal-title-1" class="modal-title"></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -60,11 +60,7 @@
                 <label class="card card-category mb-3">
                   <%= radio_button_tag 'category_name', category.category_name, true, class: "category_input", :onclick => "this.form.submit();" %>
                   <%= image_tag("categories/" + category.id.to_s+ ".jpeg", class: "card-img-top imgCategory", alt: "category.category_name")%>
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <%= category.category_name %>
-                    </h5>
-                  </div>
+                  <div class="centered lead"><%= category.category_name %></div>
                 </label>
               </div>
             <% end %>
@@ -77,25 +73,26 @@
 
 <div id="new-question-second-body" class="new-question-body">
   <div id="new-question-second-body-content">
+    <h5 id="new-question-modal-title" class="modal-title"></h5>
     <%= form_tag create_new_question_path, :id => 'create-new-question-form' do %>
       <div class="modal-body modal-body-no-top-padding">
         <div class="input-group mb-3 new-question-topic">
           <%= text_field_tag 'topic_name', nil, class: 'form-control', required: 'true', data: { autocomplete_source: set_topic_options_path } %> 
         </div>
         <div class="input-group mb-3 new-question-question">
-          <%= text_field_tag 'question_title', nil, class: 'form-control', required: 'true', minlength: "20", placeholder: "Question Title" %>
+          <%= text_field_tag 'question_title', nil, class: 'form-control', required: 'true', minlength: "20", placeholder: "Type your question here" %>
         </div>
         <div class="input-group mb-3 new-question-question">
-          <%= text_area_tag 'question_text', nil, class: 'form-control', rows: 6, required: 'true', placeholder: "Type here some extra content for the question if needed..." %>
+          <%= text_area_tag 'question_text', nil, class: 'form-control', rows: 6, required: 'true', placeholder: "Write a description about your question here" %>
         </div>
       </div>
       <div class="modal-footer new-question-topic">
-        <button type="button" class="btn btn-warning mr-auto btn-back">Back</button>
+        <button type="button" class="btn btn-warning btn-back">Back</button>
         <button type="button" class="btn btn-primary btn-continue">Continue</button>
       </div>
       <div class="modal-footer new-question-question">
-        <button type="button" class="btn btn-warning mr-auto btn-back">Back</button>
-        <%= submit_tag "Post!", class: "btn btn-success btn-continue" %>
+        <button type="button" class="btn btn-warning btn-back">Back</button>
+        <%= submit_tag "Post", class: "btn btn-success btn-continue" %>
       </div>
     <% end %>
   </div>  

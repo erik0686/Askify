@@ -57,9 +57,6 @@ div{
     border-bottom: 0px;
   }
 
-  .modal-body-no-top-padding {
-    padding-top: 0;
-  }
 }
 
 .link-to-question {
@@ -78,7 +75,7 @@ div{
 }
 
 .questionTitle{
-  display: inline-block;
+  display: block;
 }
 
 .link-to-question:hover {
@@ -278,6 +275,13 @@ div{
 .card.card-category:hover{
   margin-bottom: 25px;
   background-color: rgb(78, 76, 76);
+}
+
+#new-question-second-body-content{
+  h5{
+    text-align: center;
+    margin: 0 20px 20px 20px;
+  }
 }
 
 .card-category {
