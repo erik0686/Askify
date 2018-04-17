@@ -4,9 +4,10 @@
   <% @questions.each do |question| %>
     <% if question_answered_by_me?(question, @user) %>
       <div class="question-information">
-        <div>
+        <div style="width: 100%;">
           <div>
-            <%= question_answered_by_me_title(question, @user) %>
+            <%= question_answered_by_me_title(question, @user)%>
+            <hr>
           </div>
           <% my_answers(question, @user).each do |answer| %>
             <div>

@@ -1,7 +1,7 @@
 # Application helper
 module ApplicationHelper
   def profileCardMaker(title, data)
-    data = '<p class="lead showing">
+    data = '
     <h5 class="showing">' + title + '</h5>
     <div class="card showing">
         <div class="card-body">
@@ -9,18 +9,16 @@ module ApplicationHelper
               <span class="form-control editProfile" >' + data + '</span> 
             </div>
         </div>
-    </div>
-    <p>'
+    </div>'
     data.html_safe
   end
 
   def profileEditableCardMaker(title, user, attribute)
-    data = '<p class="lead hidden">
+    data = '
     <h5 class="hidden">' + title + '</h5>
     <div class="card hidden profile-input"> ' + 
-        "#{ best_in_place user, attribute.to_sym, class: 'editable-fields profile'} "+ 
-    '</div>
-    <p>'
+        "#{ best_in_place user, attribute.to_sym, :as => :input, class: 'editable-fields'} "+ 
+    '</div>'
     data.html_safe
   end
 
@@ -62,7 +60,7 @@ module ApplicationHelper
 
   def question_answered_by_me_title(question, user)
     if my_answers(question, user).count > 0
-      link_to question.question_title, question_path(question), class: "link-to-question"
+      link_to question.question_title, question_path(question), class: "link-to-question", style:"font-weight: bold;"
     end
   end
 

@@ -35,6 +35,10 @@
     margin-right: 25px;
 }
 
+.card{
+    display: flex;
+}
+
 .hidden,
 .lead.hidden,
 .card.hidden {
@@ -48,7 +52,7 @@
 .showing,
 .lead.showing,
 .card.showing {
-    display: block;
+    display: flex;
 }
 
 .list-group-item.menu:hover {
@@ -90,10 +94,17 @@
     margin-left: 1rem;
 }
 
+.editable-fields:focus{
+    width:100%;
+    margin-left: 1rem;
+}
+
 .profile-input {
+    display: flex !important;
     height: 4rem;
-    padding-top: 1rem;
+    justify-content: center;
     color: #2980B9;
+
 }
 
 .profile-input:focus{
@@ -102,4 +113,13 @@
     border-color: inherit;
     -webkit-box-shadow: none;
     box-shadow: none;
+
+    *:focus{
+        border: none;
+        outline: 0 none;
+        border-color: inherit;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
 }

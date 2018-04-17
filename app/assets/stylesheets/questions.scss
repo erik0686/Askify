@@ -57,9 +57,6 @@ div{
     border-bottom: 0px;
   }
 
-  .modal-body-no-top-padding {
-    padding-top: 0;
-  }
 }
 
 .link-to-question {
@@ -73,12 +70,12 @@ div{
 	font-size: 0.9rem;
 	max-height: 100px;
   text-overflow: ellipsis;
-  display: inline-block;
+  display: block;
   margin-top: 20px;
 }
 
 .questionTitle{
-  display: inline-block;
+  display: block;
 }
 
 .link-to-question:hover {
@@ -205,7 +202,7 @@ div{
 .user-info{
   margin: 10px 3px;
   color: #707070;
-  display: inline-block;
+  display: block;
 }
 
 .answer-form-container{
@@ -280,6 +277,13 @@ div{
   background-color: rgb(78, 76, 76);
 }
 
+#new-question-second-body-content{
+  h5{
+    text-align: center;
+    margin: 0 20px 20px 20px;
+  }
+}
+
 .card-category {
   height: 10.5rem;
   border-radius: 1rem !important;
@@ -352,7 +356,26 @@ div{
   font-size: 12px;
 }
 
+.ui-menu{
+  background-color: transparent;
+  background: transparent;
+  max-height: 150px;
+  text-overflow: auto;
+}
+
+.ui-menu-item{
+  padding: 7px;
+  border-radius: 5px;
+
+  .ui-menu-item-wrapper{
+    padding: 7px;
+    border-radius: 5px;
+  }
+}
+
 .ui-autocomplete {
+  max-height: 300px;
+  overflow-y: scroll;
   position: fixed;
   top: 100%;
   left: 0;
