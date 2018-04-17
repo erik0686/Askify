@@ -356,7 +356,26 @@ div{
   font-size: 12px;
 }
 
+.ui-menu{
+  background-color: transparent;
+  background: transparent;
+  max-height: 150px;
+  text-overflow: auto;
+}
+
+.ui-menu-item{
+  padding: 7px;
+  border-radius: 5px;
+
+  .ui-menu-item-wrapper{
+    padding: 7px;
+    border-radius: 5px;
+  }
+}
+
 .ui-autocomplete {
+  max-height: 300px;
+  overflow-y: scroll;
   position: fixed;
   top: 100%;
   left: 0;
