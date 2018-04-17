@@ -1,12 +1,12 @@
 function newQuestionFirst() {
-  $('#new-question-modal-title-1').text("Choose a category:");
+  $('#new-question-modal-title-1').text("Choose a category");
   $('#new-question-modal-body-footer').html($("#new-question-first-body").html());
 }
 
 function newQuestionSecond(alreadyInSecondModal) {
   $(".new-question-topic > .btn-continue").hide();
   
-  $('#new-question-modal-title').text("Type a topic for your question:");
+  $('#new-question-modal-title').text("Type a topic for your question");
   $('#new-question-modal-title-1').text("");
   
   if (!alreadyInSecondModal){
@@ -38,7 +38,7 @@ function newQuestionSecond(alreadyInSecondModal) {
 function newQuestionThird() {
   $('div.new-question-question > #question_title').attr('required', 'required');
   $('div.new-question-question > #question_text').attr('required', 'required');
-  $('#new-question-modal-title').text("Now type what you want to ask:" );
+  $('#new-question-modal-title').text("Now type what you want to ask" );
   $('#new-question-modal-title-1').text("");
   $('.new-question-topic').hide();
   $('.new-question-question').show();

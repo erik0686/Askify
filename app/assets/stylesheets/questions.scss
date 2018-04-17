@@ -70,7 +70,7 @@ div{
 	font-size: 0.9rem;
 	max-height: 100px;
   text-overflow: ellipsis;
-  display: inline-block;
+  display: block;
   margin-top: 20px;
 }
 
@@ -202,7 +202,7 @@ div{
 .user-info{
   margin: 10px 3px;
   color: #707070;
-  display: inline-block;
+  display: block;
 }
 
 .answer-form-container{

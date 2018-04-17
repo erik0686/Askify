@@ -60,7 +60,7 @@ module ApplicationHelper
 
   def question_answered_by_me_title(question, user)
     if my_answers(question, user).count > 0
-      link_to question.question_title, question_path(question), class: "link-to-question"
+      link_to question.question_title, question_path(question), class: "link-to-question", style:"font-weight: bold;"
     end
   end
 
