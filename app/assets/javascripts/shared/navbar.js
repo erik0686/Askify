@@ -8,10 +8,10 @@ $(document).on('turbolinks:load', function () {
 
   if ($("#navbar-toggler").is(":visible")) {
     $('#navbarContentCollapsable').addClass("mobile-navbar");
+    $('.dropdown-non-hover').removeClass("dropdown-toggle");    
   } else {
     $('#navbarContentCollapsable').addClass("desktop-navbar");
   }
-
 
   $('#navbarContentCollapsable').on('show.bs.collapse', function () {
     $('.navbar-logo-text').hide();
@@ -28,7 +28,7 @@ $(document).on('turbolinks:load', function () {
   });
 
   $("#navbar-toggler").hideShow(function (e, visibility) {
-    var isVisible = $(this).is(":visible");
+    var isVisible = $("#navbar-toggler").is(":visible");
     var visibilityStatus;
     if (isVisible){
       visibilityStatus = "shown";
@@ -39,23 +39,28 @@ $(document).on('turbolinks:load', function () {
       $('#navbarContentCollapsable').removeClass("mobile-navbar");
       $('#navbarContentCollapsable').addClass("desktop-navbar");
       $('#navbarContentCollapsable').collapse('hide')
+      $('.dropdown-non-hover').addClass("dropdown-toggle");
     } else {
       $('#navbarContentCollapsable').addClass("mobile-navbar");
       $('#navbarContentCollapsable').removeClass("desktop-navbar");
+      $('.dropdown-non-hover').removeClass("dropdown-toggle");
     }
   });
 
   $('.dropdown-toggle').click(function (e) {
-      $(this).next().removeClass('dd-menu');
-      $('.dd-menu').removeAttr('style');
-      $(this).next().toggle();
-      // $(this).next().slideDown();
-      e.stopPropagation();
-      e.preventDefault();
-      $(this).next().addClass('dd-menu');
-      if (!$(this).next().is(':visible')) {
-        $(this).next().hide();
-      }
+    
+    $(this).next().removeClass('dd-menu');
+    $('.dd-menu').removeAttr('style');
+    $(this).next().toggle();
+    $(this).next().addClass('dd-menu');
+    if (!$(this).next().is(':visible')) {
+      $(this).next().hide();
+    }
+    
+    if ($(this).hasClass("dropdown-hover")) {
+      return false;
+    }
+
   });
 
   $('.dropdown-toggle').mouseenter(function() {

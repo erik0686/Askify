@@ -104,4 +104,19 @@ module ApplicationHelper
 
      content_tag(:a, name, html_options.merge(:href => href, :onclick => onclick))
   end
+
+  def my_questions_notifications
+    count = current_user.questions.count
+    count > 0 ? count : 0
+  end
+
+  def my_answers_notifications
+    count = current_user.answers.count
+    count > 0 ? count : 0
+  end
+
+  def my_total_notifications
+    count = current_user.questions.count + current_user.answers.count
+    count > 0 ? count : 0
+  end
 end
