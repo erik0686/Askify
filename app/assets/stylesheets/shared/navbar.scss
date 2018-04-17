@@ -64,6 +64,10 @@ html, body {
   font-weight: normal;
 }
 
+#navbarDropdownOptions{
+  min-width: 120px;
+}
+
 #navbarHomeButton:hover,
 #navbarDropdownCategories:hover,
 #navbarDropdownOptions:hover{

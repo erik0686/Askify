@@ -36,18 +36,18 @@
 
         <li class="nav-item dropdown mr-3">
           <a class="nav-link dropdown-toggle lead" href="#" id="navbarDropdownOptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= @user.first_name %> <span class="badge badge-secondary"><%= @user.questions.count + @user.answers.count  %></span>
+            <%= current_user.first_name %> 
             <!-- En lugar de 1+3 se debe obtener la cantidad de preguntas y respuestas no leidas -->
           </a>
 
           <div id="dropdown-menu-options" class="dropdown-menu dd-menu" aria-labelledby="navbarDropdownOptions">
             <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
             <%= link_to(user_path(current_user), class:"dropdown-item") do %>
-              My questions   <span class="badge badge-secondary"><%= @user.questions.count %></span>
+              My questions   <span class="badge badge-secondary"><%= current_user.questions.count %></span>
               <!-- En lugar de 1 se debe obtener la cantidad de preguntas no leidas -->
             <% end %>
             <%= link_to(user_path(current_user), class:"dropdown-item") do %>
-              My answers   <span class="badge badge-secondary"><%= @user.answers.count  %></span>
+              My answers   <span class="badge badge-secondary"><%= current_user.answers.count %></span>
               <!-- En lugar de 1 se debe obtener la cantidad de respuestas no leidas -->
             <% end %>
             <div class="dropdown-divider"></div>
