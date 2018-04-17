@@ -1,6 +1,12 @@
 $(document).on('ready', function () {
   //reloadUserPage();
   jQuery(".best_in_place").best_in_place();
+  $('#updateChangesBut').hide();
+  $('.file-upload').on('change', function() {
+    $('#updateChangesBut').show();
+    $("#saveChangesBut").hide();
+  });
+
 });
 
 $(document).on('turbolinks:load', function () {
@@ -68,6 +74,7 @@ function reloadUserPage(){
     // show editable fields
     $(".hidden").toggle();
     $(".showing").toggle();
+    location.reload();
   });
 
   $( "#bottomSaveChangesBut").click(function() {

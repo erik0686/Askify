@@ -18,10 +18,16 @@
             View your profile details
             <a class="btn btn-success btn-sm" href="#" role="button" id="editProfileBut">Edit</a>
             <a class="btn btn-primary btn-sm" href="#" role="button" id="saveChangesBut">Save Changes</a>
+            <%= form_for @user, url: user_path, html: { multipart: true, class: "file-upload" } do |form| %>
+            <%= form.file_field :avatar, class: "hidden", default: @user.avatar %>
+            <%= form.submit id: "updateChangesBut" %>
+            
+            <% end %>
+
           </p>
         </div>
         <div id="userImage" class="media-right media-middle">
-          <%= image_tag("userImage.jpg", class:"media-object profile", alt:"user-profile")%>
+          <%= image_tag( @user.avatar.url, class: "media-object profile", alt:"user-profile" )%>
         </div>
       </div>
       <div class="user-information-tab">
@@ -35,4 +41,5 @@
       </div>
     </div>
   </div>
+
 </div>
