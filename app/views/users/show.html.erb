@@ -3,8 +3,8 @@
     <p class="lead" id="profileTitle">My Profile</p>
     <ul class="list-group list-group-flush">
     <li class="list-group-item menu profile-details">Profile Details</li>
-    <li class="list-group-item menu my-questions">My Questions <span class="badge badge-secondary"><%= 3 if 1+3 > 0 %></span></li>
-    <li class="list-group-item menu my-answers">My Answers <span class="badge badge-secondary"><%= 1 if 1+3 > 0 %></span></li>
+    <li class="list-group-item menu my-questions">My Questions <span class="badge badge-secondary"><%= @user.questions.count %></span></li>
+    <li class="list-group-item menu my-answers">My Answers <span class="badge badge-secondary"><%= @user.answers.count %></span></li>
     </ul>
   </div>
 
