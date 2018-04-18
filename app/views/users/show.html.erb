@@ -13,7 +13,7 @@
       <div class="media">
         <div class="media-body">
           <h1 class="display-4">Hello, <%= @user.first_name %> <%= @user.last_name %></h1>
-          <p name="starRating" id="userRating"></p> 
+          <p name="starRating" id="userRating"></p>
           <p class="lead">
             View your profile details
             <a class="btn btn-success btn-sm" href="#" role="button" id="editProfileBut">Edit</a>
@@ -21,7 +21,7 @@
             <%= form_for @user, url: user_path, html: { multipart: true, class: "file-upload" } do |form| %>
             <%= form.file_field :avatar, class: "hidden", default: @user.avatar %>
             <%= form.submit id: "updateChangesBut" %>
-            
+
             <% end %>
 
           </p>
@@ -33,7 +33,7 @@
       <div class="user-information-tab">
         <%= render 'user_profile_info' %>
       </div>
-      <div class="user-questions-tab hidden-tab">  
+      <div class="user-questions-tab hidden-tab">
         <%= render 'user_question' %>
       </div>
       <div class="user-answers-tab hidden-tab">

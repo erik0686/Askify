@@ -2,11 +2,11 @@
 module ApplicationHelper
   def profileCardMaker(title, data)
     data = '
-    <h5 class="showing">' + title + '</h5>
-    <div class="card showing">
+    <h5 class="showing static-field">' + title + '</h5>
+    <div class="card showing static-field">
         <div class="card-body">
             <div class="form-group editProfile">
-              <span class="form-control editProfile" >' + data + '</span> 
+              <span class="form-control editProfile" >' + data + '</span>
             </div>
         </div>
     </div>'
@@ -15,9 +15,9 @@ module ApplicationHelper
 
   def profileEditableCardMaker(title, user, attribute)
     data = '
-    <h5 class="hidden">' + title + '</h5>
-    <div class="card hidden profile-input"> ' + 
-        "#{ best_in_place user, attribute.to_sym, :as => :input, class: 'editable-fields'} "+ 
+    <h5 class="hidden editable-field">' + title + '</h5>
+    <div class="card hidden profile-input editable-field"> ' +
+        "#{ best_in_place user, attribute.to_sym, :as => :input, class: 'editable-fields'} "+
     '</div>'
     data.html_safe
   end

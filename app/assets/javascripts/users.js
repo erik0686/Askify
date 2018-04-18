@@ -24,6 +24,8 @@ $(document).on('turbolinks:load', function () {
     $(".user-answers-tab").hide();
     $(".user-questions-tab").show();
     $( "#editProfileBut" ).hide();
+    $('#updateChangesBut').hide();
+
   });
 
   $(".my-answers").click(function() {
@@ -32,11 +34,11 @@ $(document).on('turbolinks:load', function () {
     $(".user-questions-tab").hide();
     $(".user-answers-tab").show();
     $( "#editProfileBut" ).hide();
+    $('#updateChangesBut').hide();
+
   });
 
   reloadUserPage();
-    
-
 });
 
 function reloadUserPage(){
@@ -52,42 +54,17 @@ function reloadUserPage(){
 
   $( "#editProfileBut").click(function() {
     event.preventDefault()
-    // edit html, hide fields, show form
-    $( "#deleteProfileBut" ).hide();
-    $( "#editProfileBut" ).hide();
-    $( "#saveChangesBut" ).show();
-    $( "#bottomSaveChangesBut" ).show();
-
-    // show editable fields
-    $(".hidden").toggle();
-    $(".showing").toggle();
+    showEditableFields();
   });
 
   $( "#saveChangesBut").click(function() {
     event.preventDefault()
-    // edit html, hide fields, show form
-    $( "#deleteProfileBut" ).show();
-    $( "#editProfileBut" ).show();
-    $( "#saveChangesBut" ).hide();
-    $( "#bottomSaveChangesBut" ).hide();
-
-    // show editable fields
-    $(".hidden").toggle();
-    $(".showing").toggle();
-    location.reload();
+    saveData();
   });
 
   $( "#bottomSaveChangesBut").click(function() {
     event.preventDefault()
-    // edit html, hide fields, show form
-    $( "#deleteProfileBut" ).show();
-    $( "#editProfileBut" ).show();
-    $( "#saveChangesBut" ).hide();
-    $( "#bottomSaveChangesBut" ).hide();
-
-    // show editable fields
-    $(".hidden").toggle();
-    $(".showing").toggle();
+    saveData();
   });
 
   $( "#deleteProfileBut" ).click(function() {
@@ -107,4 +84,32 @@ function reloadUserPage(){
     close: 'Ok',
     closeOnSelect: false // Close upon selecting a date,
     });*/
+}
+
+function saveData(){
+  // edit html, hide fields, show form
+  $( "#deleteProfileBut" ).show();
+  $( "#editProfileBut" ).show();
+  $( "#saveChangesBut" ).hide();
+  $( "#bottomSaveChangesBut" ).hide();
+
+  // show editable fields
+  $(".hidden").toggle();
+  $(".showing").toggle();
+  location.reload();
+}
+
+function showEditableFields(){
+  // edit html, hide fields, show form
+  $( "#deleteProfileBut" ).hide();
+  $( "#editProfileBut" ).hide();
+  $( "#saveChangesBut" ).show();
+  $( "#bottomSaveChangesBut" ).show();
+
+  // show editable fields
+  $(".editable-field").removeClass("hidden");
+  $(".editable-field").addClass("showing");
+
+  $(".static-field").addClass("hidden");
+  $(".static-field").removeClass("showing");
 }
