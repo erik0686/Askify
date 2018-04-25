@@ -5,6 +5,7 @@
                 <span class="lead">
                     Not finding what you're looking for?
                 </span>
+                <%= render "categories/suggest_topic", topic: @topic %>
                 <%= link_to "Suggest new topic", "#new-topic-modal", "data-toggle" => "modal", class: "lead suggest-topic"%>
             </div>
             <h1 class="display-4"> <%= @category.category_name %>  </h1>

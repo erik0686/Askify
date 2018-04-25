@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    @posts = Post.all.by_date_desc
   end
 
   def new
@@ -39,6 +39,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:post :expiry_date)
+    params.require(:post).permit(:post :expiry_date, :avatar)
   end
 end
