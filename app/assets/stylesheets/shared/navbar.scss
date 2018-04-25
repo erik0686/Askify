@@ -55,6 +55,34 @@ html, body {
   padding-left: 0px;
   margin-left: 0px;
 }
+#linkQuestion:focus{
+  border: none;
+  outline: 0 none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#linkQuestion:hover{
+  color: rgba(202, 202, 204, 1);
+  text-decoration: underline;
+}
+
+#link-no-question{
+  color: white;
+  font-size: 1.2rem;
+}
+#link-no-question:focus{
+  border: none;
+  outline: 0 none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#link-no-question:hover{
+  text-decoration: underline;
+}
 
 #navbarHomeButton,
 #navbarDropdownCategories,
@@ -72,19 +100,6 @@ html, body {
 #navbarDropdownCategories:hover,
 #navbarDropdownOptions:hover{
   color: rgba(202, 202, 204, 1);
-}
-
-#linkQuestion:focus{
-  border: none;
-  outline: 0 none;
-  border-color: inherit;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-#linkQuestion:hover{
-  color: rgba(202, 202, 204, 1);
-  text-decoration: underline;
 }
 
 #navbar{

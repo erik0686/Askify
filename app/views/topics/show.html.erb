@@ -3,42 +3,63 @@
         <div class="jumbotron bannerHeader" id="topicHeader">
             <h1 class="display-4"> <%= @topic.topic_name %> </h1>
             <p class="lead">
-                Each topic has its own description to introduce you to what they do and what they can answer.
+                <%= @topic.description %> 
             </p>
         </div>
     </div>
+
+    <% if @questions.count <= 0 %>
+      <div class="dropdown-divider"></div>
+        <div class="container no-questions-found">
+          <p class="lead">
+              There are no questions for this topic.
+          </p>  
+          <small id="answer-help-text">
+              Your can ask anything related to this topic.
+          </small> 
+          <div class="no-questions-ask-container">
+              <%= link_to "Ask something", "#new-question-modal", "data-toggle" => "modal", class: "nav-link lead", id:"link-no-question"%>
+          </div>
+        </div>
+      <div class="dropdown-divider"></div>
+   
 </div>
-<div class="container" id="topic-questions-container">
-    <%= search_form_for @q, url: topic_path do |f| %>
-        <div class="sticky-top align-flex">
-          <%= f.search_field :question_text_or_question_title_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
-          <%= f.submit class: "submit-search"%>
-        </div>
-    <% end %>
-    <div class="questionContent">
-      <% @questions.by_date.each do |question| %>
-        <div class="question-information">
-          <div class="question-info">
-            <div class="answer-quantity">
-              <%= question.answers.count %>
-            </div>
-            <div>
-              answers
-            </div>
+ <% else %>
+  <div class="container" id="topic-questions-container">
+      <%= search_form_for @q, url: topic_path do |f| %>
+          <div class="sticky-top align-flex">
+            <%= f.search_field :question_text_or_question_title_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
+            <%= f.submit class: "submit-search"%>
           </div>
-          <div class="question-container">
-            <div class="questionTitle">
-              <%= link_to question.question_title, question_path(question), class: "link-to-question"%>
-            </div>
-            <p class="questionText">
-              <%= question.question_text %>
-            </p>
-            <small class="user-info">
-              <%= question_show_timestamp(question) %>
-            </small>
-          </div>
-        </div>
-        <hr>
       <% end %>
-    </div>
-</div>
+      <div class="questionContent">
+        <% @questions.by_date.each do |question| %>
+          <div class="question-information">
+            <div class="question-info">
+              <div class="answer-quantity">
+                <%= question.answers.count %>
+              </div>
+              <div>
+                answers
+              </div>
+            </div>
+            <div class="question-container">
+              <div class="questionTitle">
+                <%= link_to question.question_title, question_path(question), class: "link-to-question"%>
+              </div>
+              <p class="questionText">
+                <%= question.question_text %>
+              </p>
+              <small class="user-info">
+                <%= question_show_timestamp(question) %>
+              </small>
+            </div>
+          </div>
+          <hr>
+        <% end %>
+      </div>
+  </div>
+
+<%end%>
+
+
