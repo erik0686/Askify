@@ -87,9 +87,13 @@ body {
 	border-radius: 15px;
 
 	.lead{
-		max-width: 300px;
+    max-width: 300px;
 		font-size: 1rem;
 		margin-bottom: 3px;
+  }
+
+  p{
+    min-width: 300px;
   }
 }
 
