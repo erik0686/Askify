@@ -1,5 +1,5 @@
 function newQuestionFirst() {
-  $('#new-question-modal-title-1').text("Choose a category");
+  $('#new-question-modal-title-1').text("What is your question about?");
   $('#new-question-modal-body-footer').html($("#new-question-first-body").html());
 }
 

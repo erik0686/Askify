@@ -9,6 +9,39 @@
   margin-bottom: 20px;
 }
 
+.comment-container{
+  margin-left: 50px;
+
+  img{
+      margin-right: 5px !important;
+
+  }
+
+  .comment-text-container{
+    background: #e9ecef;
+    margin: 0px 10px 10px 10px;
+    margin-left: 0;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    width: fit-content;
+    align-self: flex-end;
+    
+    p{
+      margin-bottom: 0;
+      font-size: 0.9rem;
+    }
+  
+    span{
+      font-weight: bold;
+      color: rgba(40, 93, 145, 1);
+    }
+  }
+}
+
+
 .suggest-topic-container{
   text-align: right;
   display: flex;
@@ -67,11 +100,14 @@ div{
 }
 
 .questionText{
-	font-size: 0.9rem;
 	max-height: 100px;
   text-overflow: ellipsis;
   display: block;
   margin-top: 20px;
+
+  &.lead{
+    font-size: 0.9rem !important;
+  }
 }
 
 .questionTitle{
@@ -84,12 +120,12 @@ div{
 }
 
 .question-information {
-	display: inline-flex;
+  display: inline-flex;
 	margin-bottom: 0rem;
 	width: 100%;
 	background-color: white;
 	border-radius: 15px;
-	padding: 20px;
+  padding: 20px;
 }
 
 

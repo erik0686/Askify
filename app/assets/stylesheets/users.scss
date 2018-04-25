@@ -10,6 +10,8 @@
 #profileTitle{
     margin-top: 20px;
     margin-left: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .cardWithFocus{
@@ -29,10 +31,14 @@
     border-radius: 50%;
 }
 
+.media-object.comment {
+    width: 35px;
+    border-radius: 50%;
+}
+
 .jumbotron.profile {
     padding-top: 44px;
-    margin-top: 32px;
-    margin-right: 25px;
+    margin: 32px 25px;
 }
 
 .card{
@@ -61,7 +67,7 @@
 
 .list-group-item.menu {
     background-color: transparent;
-    font-size: 14px;
+    font-size: 1.1rem;
 }
 
 .container.deleteAccount{

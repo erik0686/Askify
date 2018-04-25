@@ -58,7 +58,7 @@
             <div class="question-information">
               <div class="question-container">
               <div class="media">
-                <%= image_tag("userImage.jpg", class:"align-self-center mr-3 media-object answer", alt:"profile")%>
+              <%= image_tag( answer.user.avatar.url, class:"align-self-top mr-3 media-object comment", alt: answer.user.avatar.url )%>
                 <div class="media-body">
                   <h5 class="mt-0"> <%= answer.user.user_name %> </h5>
                   <small class="mb-0 user-info">
@@ -68,6 +68,16 @@
               </div>
                 <p class="container questionText lead">
                 <%= answer.answer_text %>
+                <% answer.comments.by_date.each do |comment| %>
+                  <div class="media comment-container">
+                    <%= image_tag( User.find_by(id: comment.user_id).avatar.url, class:"align-self-top mr-3 media-object comment", alt: User.find_by(id: comment.user_id).avatar.url )%>
+                    <div class="media-body">
+                       <div class="comment-text-container">
+                        <p class="lead"> <span> <%= User.find_by(id: comment.user_id).user_name %> </span> <%= comment.comment_text %>  </p>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
                 </p>
               </div>
             </div>
