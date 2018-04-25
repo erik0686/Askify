@@ -227,7 +227,8 @@ div{
   }
 }
 
-.container.answer-button{
+.no-topics-found,
+.answer-button{
   display: flex;
   flex-direction: column;
   justify-content: center;

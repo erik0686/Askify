@@ -9,16 +9,31 @@
             </div>
             <h1 class="display-4"> <%= @category.category_name %>  </h1>
             <p class="lead">
-                Explore the different topics in each category. Topics contain many questions already asked.
+                <%= @category.description %>  
             </p>
         </div>
     </div>
 </div>
 
-<div class="container-fluid" id="topic-cards-container">
-    <% @category.topics.each do |topic| %>
-        <%= link_to topic_path(topic) do %>
-        <button name= "color<%= topic.id%9 %> " type="button" class="btn topic-button"><%= topic.topic_name %></button>
+<% if @category.topics.count <= 0 %>
+    <hr>
+        <div class="container no-topics-found">
+        <p class="lead">
+            There are no topics for this category.
+        </p>  
+        <small id="answer-help-text">
+            Your suggestions for topics are deeply appreciated.
+        </small> 
+        </div>
+    <hr>
+<% else %>
+    <div class="container-fluid" id="topic-cards-container">
+        <% @category.topics.each do |topic| %>
+            <%= link_to topic_path(topic) do %>
+            <button name= "color<%= topic.id%9 %> " type="button" class="btn topic-button"><%= topic.topic_name %></button>
+            <% end %>
         <% end %>
-    <% end %>
-</div>
+    </div>
+<% end %>
+
+

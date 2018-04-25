@@ -4,5 +4,6 @@ FactoryBot.define do
          is_official true
          user_id 1
          category_id 1
+         description { FFaker::Lorem.sentence }
     end
   end
