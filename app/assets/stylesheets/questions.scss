@@ -227,12 +227,15 @@ div{
   }
 }
 
-.container.answer-button{
+.no-questions-found,
+.no-topics-found,
+.answer-button{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  padding: 45px 0;
+  margin: 0 auto;
 
   .lead{
     margin: 0 auto;
@@ -242,6 +245,14 @@ div{
 
   #answer-help-text{
     margin-bottom: 20px;
+  }
+
+  .no-questions-ask-container{
+    color: black;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(39, 138, 219, 1);
+    border-radius: 7px
   }
 
   >small{
