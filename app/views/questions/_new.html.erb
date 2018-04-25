@@ -1,40 +1,3 @@
-<div id="new-topic-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header modal-header">
-                <h5 id="new-topic-modal-title" class="modal-title lead">Suggest new topic</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div id="new-topic-modal-body">
-                <div class="container new-topic">
-                    <p>Type the name of the topic you want to suggest</p>
-                    <div class="input-group mb-3 new-question-topic">
-                        <%= text_field_tag 'new_topic_name', nil, class: 'form-control lead', data: { autocomplete_source: set_topic_options_path } %> 
-                    </div>
-                    <p>Choose the category it corresponds to</p>
-                    <div class="form-group mb-3">
-                        <select class="form-control lead">
-                            <% @categories.each do |category| %>
-                                <option class="lead"> <%= category.category_name %> </option> 
-                            <% end %>
-                        </select>
-                    </div>
-                    <p>Write a brief description about the topic</p>
-                    <div class="form-group mb-3">
-                        <textarea class="form-control lead" id="exampleFormControlTextarea1" rows="3" placeholder="Write one or two sentences about this topic..."></textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer new-question-topic">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary btn-suggest">Submit Suggestion</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div id="new-question-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content" id="ask-question-content">
@@ -77,7 +40,7 @@
     <%= form_tag create_new_question_path, :id => 'create-new-question-form' do %>
       <div class="modal-body modal-body-no-top-padding">
         <div class="input-group mb-3 new-question-topic">
-          <%= text_field_tag 'topic_name', nil, class: 'form-control', required: 'true', data: { autocomplete_source: set_topic_options_path } %> 
+          <%= text_field_tag 'topic_name', nil, class: 'form-control', required: 'true', data: { autocomplete_source: set_topic_options_path } %>
         </div>
         <div class="input-group mb-3 new-question-question">
           <%= text_field_tag 'question_title', nil, class: 'form-control', required: 'true', minlength: "20", placeholder: "Type your question here" %>
@@ -95,5 +58,5 @@
         <%= submit_tag "Post", class: "btn btn-success btn-continue" %>
       </div>
     <% end %>
-  </div>  
+  </div>
 </div>

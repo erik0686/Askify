@@ -13,7 +13,7 @@
           <p class="mb-1">
             <%= post.post_content %>
           </p>
-          <%= image_tag("testing/testPost.jpg", class: "imgSize", alt: "eventImage") if post.id == 2 %>
+          <%= image_tag(post.avatar, class: "imgSize", alt: "eventImage") if post.avatar.exists? %>
         </li>
       <% end %>
     </ul>

@@ -1,10 +1,10 @@
 <div id="homeWrapper" class="row homeWrapper">
   <div class="col-sm-7">
-    <div id="homeQuestionsPanel"> 
+    <div id="homeQuestionsPanel">
       <%= search_form_for @q1, url: home_index_path do |f| %>
-        <div>  
+        <div>
           <div class="container titleHome">
-              <h3 class="display-4 home">Questions</h3> 
+              <h3 class="display-4 home">Questions</h3>
           </div>
           <div class="sticky-top align-flex">
             <%= f.search_field :question_text_or_question_title_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
@@ -16,9 +16,15 @@
     </div>
   </div>
   <div class="col-sm-5">
-    <div id="homePanel"> 
+    <div id="homePanel">
       <div class="container titleHome">
-        <h3 class="display-4 home"> Elda says</h3> 
+        <div>
+          <h3 class="display-4 home"> Elda says</h3>
+          <% if current_user.admin == true %>
+            <%= render "home/new_post", post: @post %>
+            <%= link_to "Create new Post", "#new-post-modal", "data-toggle" => "modal", class: "lead suggest-topic"%>
+          <% end %>
+        </div>
         <%= render 'posts/posts'%>
       </div>
     </div>
