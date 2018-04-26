@@ -74,9 +74,6 @@
                   <%= answer.answer_text %>
                 </p>
 
-                <div class="form-container-new-comment hidden"  id="reply-container-<%= answer.id %>">
-                    <%= render "formComment", answer: answer %>
-                </div>
 
                 <% answer.comments.by_date.each do |comment| %>
                   <div class="media comment-container">
@@ -88,6 +85,11 @@
                     </div>
                   </div>
                 <% end %>
+
+                <div class="form-container-new-comment hidden"  id="reply-container-<%= answer.id %>">
+                   <%= render "formComment", answer: answer %>
+                </div>
+
                 
               </div>
             </div>
