@@ -25,7 +25,7 @@
               <a class="btn btn-success btn-sm question-tab-element" href="#" role="button" id="editProfileBut">Edit</a>
               <a class="btn btn-primary btn-sm question-tab-element" href="#" role="button" id="saveChangesBut">Save Changes</a>
               <%= form.file_field :avatar, class: "editable-field hidden question-tab-element", default: @user.avatar %>
-              <%= form.submit id: "updateChangesBut", class: "btn btn-primary btn-sm question-tab-element" %>
+              <%= form.submit id: "updateChangesBut", class: "btn btn-primary btn-sm" %>
             <% end %>
 
           </div>

@@ -10,6 +10,12 @@ $(document).on('ready', function () {
 });
 
 $(document).on('turbolinks:load', function () {
+
+  $('.file-upload').on('change', function() {
+    $('#updateChangesBut').show();
+    $("#saveChangesBut").hide();
+  });
+
   $('#updateChangesBut').hide();
   $(".profile-details").click(function() {
     $(".user-questions-tab").hide();
