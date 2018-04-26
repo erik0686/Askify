@@ -1,5 +1,5 @@
 <%= search_form_for @q2, url: home_index_path do |f| %>
-  <div class="container" id="listPosts">
+  <div id="listPosts">
     <div class="sticky-top align-flex">
       <%= f.search_field :post_content_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
       <%= f.submit class: "submit-search"%>

@@ -203,7 +203,7 @@ div{
 .questionText{
 	max-height: 100px;
   text-overflow: ellipsis;
-  display: block;
+  display: inline;
   margin-top: 20px;
 
   &.lead{
