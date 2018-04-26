@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   font-family: 'Roboto', sans-serif !important;
+
+  .display-4{
+    word-wrap: break-word;
+  }
 }
 #homeWrapper {
   width: 100%;
