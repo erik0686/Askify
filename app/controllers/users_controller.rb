@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @questions = Question.all
     @q = User.find(params[:id]).questions.ransack(params[:q])
     @user_questions = @q.result
+    @categories = Category.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def search
-      
+
   end
 
   def edit

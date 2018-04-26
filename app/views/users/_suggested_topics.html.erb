@@ -1,0 +1,8 @@
+<% @categories.each do |category| %>
+  <div class="category-topics" style="display:flex;">
+    <% category.topics.each do |topic| %>
+      <button name= "color<%= topic.id%9 %> " type="button" class="btn topic-button"><%= topic.topic_name %></button>
+    <% end %>
+  </div>
+
+<% end %>
