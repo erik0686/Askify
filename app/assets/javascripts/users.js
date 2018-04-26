@@ -10,6 +10,7 @@ $(document).on('ready', function () {
 });
 
 $(document).on('turbolinks:load', function () {
+  $('#updateChangesBut').hide();
   $(".profile-details").click(function() {
     $(".user-questions-tab").hide();
     $(".user-answers-tab").hide();

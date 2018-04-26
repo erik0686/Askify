@@ -14,17 +14,16 @@
         <div class="media-body">
           <h1 class="display-4">Hello, <%= @user.first_name %> <%= @user.last_name %></h1>
           <p name="starRating" id="userRating"></p>
-          <p class="lead">
-            View your profile details
-            <a class="btn btn-success btn-sm" href="#" role="button" id="editProfileBut">Edit</a>
-            <a class="btn btn-primary btn-sm" href="#" role="button" id="saveChangesBut">Save Changes</a>
+          <div class="lead">
             <%= form_for @user, url: user_path, html: { multipart: true, class: "file-upload" } do |form| %>
-            <%= form.file_field :avatar, class: "hidden", default: @user.avatar %>
-            <%= form.submit id: "updateChangesBut" %>
-
+              View your profile details
+              <a class="btn btn-success btn-sm" href="#" role="button" id="editProfileBut">Edit</a>
+              <a class="btn btn-primary btn-sm" href="#" role="button" id="saveChangesBut">Save Changes</a>
+              <%= form.file_field :avatar, class: "editable-field hidden", default: @user.avatar %>
+              <%= form.submit id: "updateChangesBut", class: "btn btn-primary btn-sm" %>
             <% end %>
 
-          </p>
+          </div>
         </div>
         <div id="userImage" class="media-right media-middle">
           <%= image_tag( @user.avatar.url, class: "media-object profile", alt:@user.avatar.url )%>
