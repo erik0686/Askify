@@ -15,17 +15,25 @@ $(document).on('turbolinks:load', function () {
     $(".user-questions-tab").hide();
     $(".user-answers-tab").hide();
     $(".user-information-tab").show();
+    $(".suggested-topics-tab").hide();
     $( "#editProfileBut" ).show();
     $( "#saveChangesBut" ).hide();
     $( "#bottomSaveChangesBut" ).hide();
+    $('#updateChangesBut').hide();
+
+    $(".static-field").removeClass("hidden");
+    $(".static-field").addClass("showing");
+
   });
   $(".my-questions").click(function() {
     $(".user-questions-tab").removeClass("hidden");
     $(".user-information-tab").hide();
     $(".user-answers-tab").hide();
+    $(".suggested-topics-tab").hide();
     $(".user-questions-tab").show();
     $( "#editProfileBut" ).hide();
     $('#updateChangesBut').hide();
+    hideUpdateFields();
 
   });
 
@@ -33,10 +41,26 @@ $(document).on('turbolinks:load', function () {
     $(".user-answers-tab").removeClass("hidden");
     $(".user-information-tab").hide();
     $(".user-questions-tab").hide();
+    $(".suggested-topics-tab").hide();
     $(".user-answers-tab").show();
     $( "#editProfileBut" ).hide();
     $('#updateChangesBut').hide();
+    hideUpdateFields();
 
+  });
+
+  $(".suggested-topics").click(function() {
+    $("#bottomSaveChangesBut" ).hide();
+    $(".user-information-tab").hide();
+    $(".user-questions-tab").hide();
+    $(".user-answers-tab").hide();
+    $("#editProfileBut" ).hide();
+    $('#updateChangesBut').hide();
+    $("#saveChangesBut" ).hide();
+    $(".editable-field").addClass("hidden");
+    $(".editable-field").removeClass("showing");
+
+    $(".suggested-topics-tab").show();
   });
 
   reloadUserPage();
@@ -113,4 +137,14 @@ function showEditableFields(){
 
   $(".static-field").addClass("hidden");
   $(".static-field").removeClass("showing");
+}
+
+function hideUpdateFields(){
+  $( "#deleteProfileBut" ).show();
+  $( "#saveChangesBut" ).hide();
+  $( "#bottomSaveChangesBut" ).hide();
+
+  // show editable fields
+  $(".editable-field").addClass("hidden");
+  $(".editable-field").removeClass("showing");
 }

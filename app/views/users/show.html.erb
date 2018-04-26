@@ -5,6 +5,11 @@
     <li class="list-group-item menu profile-details">Profile Details</li>
     <li class="list-group-item menu my-questions">My Questions <span class="badge badge-secondary"><%= @user.questions.count %></span></li>
     <li class="list-group-item menu my-answers">My Answers <span class="badge badge-secondary"><%= @user.answers.count %></span></li>
+    <% if current_user.admin %>
+      <li class="list-group-item menu suggested-topics">Sugested Topics
+        <span class="badge badge-secondary"><%= Topic.all.where(is_official: false).count %></span>
+      </li>
+    <% end %>
     </ul>
   </div>
 
@@ -17,10 +22,10 @@
           <div class="lead">
             <%= form_for @user, url: user_path, html: { multipart: true, class: "file-upload" } do |form| %>
               View your profile details
-              <a class="btn btn-success btn-sm" href="#" role="button" id="editProfileBut">Edit</a>
-              <a class="btn btn-primary btn-sm" href="#" role="button" id="saveChangesBut">Save Changes</a>
-              <%= form.file_field :avatar, class: "editable-field hidden", default: @user.avatar %>
-              <%= form.submit id: "updateChangesBut", class: "btn btn-primary btn-sm" %>
+              <a class="btn btn-success btn-sm question-tab-element" href="#" role="button" id="editProfileBut">Edit</a>
+              <a class="btn btn-primary btn-sm question-tab-element" href="#" role="button" id="saveChangesBut">Save Changes</a>
+              <%= form.file_field :avatar, class: "editable-field hidden question-tab-element", default: @user.avatar %>
+              <%= form.submit id: "updateChangesBut", class: "btn btn-primary btn-sm question-tab-element" %>
             <% end %>
 
           </div>
@@ -37,6 +42,9 @@
       </div>
       <div class="user-answers-tab hidden-tab">
         <%= render 'user_answers' %>
+      </div>
+      <div class="suggested-topics-tab hidden-tab">
+        <%= render 'suggested_topics' %>
       </div>
     </div>
   </div>
