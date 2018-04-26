@@ -30,7 +30,9 @@ $(document).on('turbolinks:load', function () {
     $(".user-answers-tab").hide();
     $(".user-information-tab").show();
     $(".suggested-topics-tab").hide();
-    $( "#editProfileBut" ).show();
+    $(".photo_upload").show();
+    $("#editProfileBut").show();
+    $("#form-update-user").show();
     $( "#saveChangesBut" ).hide();
     $( "#bottomSaveChangesBut" ).hide();
     $('#updateChangesBut').hide();
@@ -45,7 +47,9 @@ $(document).on('turbolinks:load', function () {
     $(".user-answers-tab").hide();
     $(".suggested-topics-tab").hide();
     $(".user-questions-tab").show();
-    $( "#editProfileBut" ).hide();
+    $(".photo_upload").hide();
+    $("#editProfileBut").hide();
+    $("#form-update-user").hide();
     $('#updateChangesBut').hide();
     hideUpdateFields();
 
@@ -58,6 +62,8 @@ $(document).on('turbolinks:load', function () {
     $(".suggested-topics-tab").hide();
     $(".user-answers-tab").show();
     $( "#editProfileBut" ).hide();
+    $("#form-update-user").hide();
+    $(".photo_upload").hide();
     $('#updateChangesBut').hide();
     hideUpdateFields();
 
@@ -69,6 +75,8 @@ $(document).on('turbolinks:load', function () {
     $(".user-questions-tab").hide();
     $(".user-answers-tab").hide();
     $("#editProfileBut" ).hide();
+    $("#form-update-user").hide();
+    $(".photo_upload").hide();
     $('#updateChangesBut').hide();
     $("#saveChangesBut" ).hide();
     $(".editable-field").addClass("hidden");
@@ -90,6 +98,8 @@ function reloadUserPage(){
   $( "#bottomSaveChangesBut" ).hide();
   $( "#deleteProfileBut" ).show();
   $( "#editProfileBut" ).show();
+  $("#form-update-user").show();
+  $(".photo_upload").show();
 
   $( "#editProfileBut").click(function() {
     event.preventDefault()
