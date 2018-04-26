@@ -30,7 +30,7 @@
 
 <% if @category.topics.count > 0  %>
     <div class="container-fluid" id="topic-cards-container">
-        <% @category.topics.each do |topic| %>
+        <% @category.topics.by_id.each do |topic| %>
             <%= link_to topic_path(topic) do %>
             <button name= "color<%= topic.id%9 %> " type="button" class="btn topic-button"><%= topic.topic_name %></button>
             <% end %>

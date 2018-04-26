@@ -7,6 +7,10 @@
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 20px;
+
+  .questionContent{
+    max-height: max-content;
+  }
 }
 
 .form-container-new-comment{
@@ -174,7 +178,6 @@
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 20px;
-  max-height: 800px;
   overflow-y: scroll;
 
   small{

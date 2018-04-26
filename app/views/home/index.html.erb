@@ -18,11 +18,13 @@
   <div class="col-sm-5">
     <div id="homePanel">
       <div class="container titleHome">
-        <div>
+        <div class="title-button-container-posts">
           <h3 class="display-4 home"> Elda says</h3>
           <% if current_user.admin == true %>
             <%= render "home/new_post", post: @post %>
-            <%= link_to "Create new Post", "#new-post-modal", "data-toggle" => "modal", class: "lead suggest-topic"%>
+            <div class="button-new-post-container">
+              <%= link_to "+", "#new-post-modal", "data-toggle" => "modal", class: "lead new-post-button"%>
+            </div>
           <% end %>
         </div>
         <%= render 'posts/posts'%>
