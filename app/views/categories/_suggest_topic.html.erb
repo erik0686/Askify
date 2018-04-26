@@ -1,0 +1,36 @@
+<div id="new-topic-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header modal-header">
+                <h5 id="new-topic-modal-title" class="modal-title lead">Suggest new topic</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <%= form_for topic, url: "create_topic" do |form| %>
+            <div id="new-topic-modal-body">
+                <div class="container new-topic">
+                    <p class="center-horizontal">Type the name of the topic you want to suggest</p>
+                    <div class="input-group mb-3 new-question-topic">
+                        <%= form.text_field :topic_name, class: 'form-control lead form-center-horizontal',  data: { autocomplete_source: set_topic_options_path } %>
+                    </div>
+                    <p class="center-horizontal">Choose the category it corresponds to</p>
+                    <div class="form-group mb-3">
+
+                        <%= form.select :category_id, Category.pluck(:category_name), {}, {class: "form-control lead form-center-horizontal"} %>
+                    </div>
+                    <p class="center-horizontal">Write a brief description about the topic</p>
+                    <div class="form-group mb-3">
+                        <%= form.text_area :description, class:"form-control lead form-center-horizontal", id:"exampleFormControlTextarea1", rows:3, placeholder:"Write one or two sentences about this topic..." %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+
+            <div class="modal-footer new-question-topic">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary btn-suggest">Submit Suggestion</button>
+            </div>
+        </div>
+    </div>
+</div>

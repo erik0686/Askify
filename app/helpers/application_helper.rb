@@ -15,9 +15,9 @@ module ApplicationHelper
 
   def profileEditableCardMaker(title, user, attribute)
     data = '
-    <h5 class="hidden editable-field">' + title + '</h5>
-    <div class="card hidden profile-input editable-field"> ' +
-        "#{ best_in_place user, attribute.to_sym, :as => :input, class: 'editable-fields'} "+
+    <h5 class="hidden editable-field question-tab-element">' + title + '</h5>
+    <div class="card hidden profile-input editable-field question-tab-element"> ' +
+        "#{ best_in_place user, attribute.to_sym, :as => :input, class: 'editable-fields question-tab-element'} "+
     '</div>'
     data.html_safe
   end

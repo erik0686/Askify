@@ -19,6 +19,13 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    @topic = Topic.new
+  end
+
+  def create_post
+    @topic = Topic.new(topic_params)
+    @topic.save
+    redirect_to category_path
   end
 
   def edit
