@@ -137,6 +137,16 @@ input[type="file"]{
     display: none;
 }
 
+.post-content-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  textarea{
+    width: 70%;
+  }
+}
+
 .custom-file-upload {
   display: inline-block;
   padding: 6px 12px;

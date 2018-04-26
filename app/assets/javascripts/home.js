@@ -12,7 +12,7 @@ $(document).on('turbolinks:load', function () {
 
     $('.new-post-button').on('click', function() { 
         $(".submit-file-button").val(null);
-        $("#name-file").text("No file selected");
+        $("#name-file").text("");
         $("#preview-image").attr("src",""); 
      });
 
