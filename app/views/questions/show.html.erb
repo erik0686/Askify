@@ -6,8 +6,8 @@
                     <%= question_show_timestamp(@question) %> 
                 </span>    
             </div>
-            <span class="badge badge-pill badge-info"><%= @question.topic.category.category_name %></span>
-            <span class="badge badge-pill badge-info"><%= @question.topic.topic_name %></span>
+            <span class="badge badge-pill badge-secondary"><%= @question.topic.category.category_name %></span>
+            <span class="badge badge-pill badge-secondary"><%= @question.topic.topic_name %></span>
             <h1 class="display-4"><%= @question.question_title %></h1>
             <p class="long-text lead">
                 <%= @question.question_text %>

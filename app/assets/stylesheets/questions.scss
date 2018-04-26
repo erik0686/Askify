@@ -20,6 +20,11 @@
     border-radius: 3px;
     border: none;
     color: white;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: all 300ms ease-in-out;
   }
   .submit-comment:hover{ 
     background-color: #0069d9;
@@ -67,6 +72,11 @@
     font-size: 0.7rem;
     margin: 0px 15px;
     border-radius: 9px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: all 300ms ease-in-out;
   }
   .btn-reply:focus{
       outline: 0 none;
