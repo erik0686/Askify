@@ -10,13 +10,13 @@
             <%= form_for post, url: "create_post", html: { multipart: true } do |form| %>
             <div id="new-topic-modal-body">
                 <div class="container new-topic">
-                    <p>Write the content of you post</p>
+                    <p>What do you want to share in your post?</p>
                     <div class="form-group mb-3">
                         <%= form.text_area :post_content, class:"form-control lead", rows:3, placeholder:"Post Content" %>
                     </div>
                 </div>
                 <div class="container new-topic">
-                    <p>Add an image to your post</p>
+                    <p>Have an image to share too?</p>
                     <div class="form-group mb-3">
                       <%= form.file_field :avatar %>
                       <%= form.hidden_field :user_id, value: current_user.id %>

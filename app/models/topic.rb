@@ -5,4 +5,6 @@ class Topic < ApplicationRecord
 
 	validates :topic_name, :is_official, presence: true
 	validates :topic_name, uniqueness: true
+
+	scope :by_id, -> { order(id: :asc) }
 end

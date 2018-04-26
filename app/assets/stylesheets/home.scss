@@ -133,6 +133,46 @@ $bckColor: (
   }
 }
 
+.button-new-post-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  width: 30px;
+  height: 30px;
+  margin: 0px 10px 10px 10px;
+  border-radius: 50%;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: all 300ms ease-in-out;
+
+  .new-post-button{
+    color:white;
+    text-align: center;
+    text-decoration: none;
+  }
+  .new-post-button:focus{
+    border: none;
+    outline: 0 none;
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+.button-new-post-container:hover{
+  background-color: rgb(31, 70, 109);
+}
+
+.title-button-container-posts{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
 .btn.topic-button{
   filter: saturate(120%);
   width: 160px;

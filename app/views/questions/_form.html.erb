@@ -2,6 +2,6 @@
   <div class="TabbedPanelsContent">
     <%= f.text_area :answer_text, class: "form-control mr-sm-2 form-answer-text", cols: "100", rows:"3", placeholder: "Write your answer here", style:"resize: none;" %>
   </div>
-  <%=link_to 'Cancel', "#", class: "btn btn-outline-secondary", style:"margin-top:0.5rem;" %>
+  <%=link_to 'Cancel', "#", id:"cancel-write-answer", class: "btn btn-outline-secondary", style:"margin-top:0.5rem;" %>
   <%= f.submit "Submit answer", class: "btn btn-success", style:"margin-top:0.5rem;" %>
 <% end %>

@@ -27,7 +27,12 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
-    @question.answers.build
+  end
+
+  def create_comment
+    @comment = Comment.new(comment_params)
+    @comment.save
+    redirect_to question_path(@comment.answer.question_id)
   end
 
   def edit
@@ -54,5 +59,9 @@ class QuestionsController < ApplicationController
 
   def question_params
     params.require(:question).permit(:id, :question_title, :question_text, answers_attributes: [ :id, :answer_text, :question_id, :_destroy])
+  end
+
+  def comment_params
+    params.require(:comment).permit(:comment_text, :answer_id, :user_id)
   end
 end

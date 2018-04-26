@@ -1,25 +1,46 @@
 <hr class="my-4">
 <div>  
   <div class="dropdown-divider questions"></div>
-  <% @user_questions.each do |question| %>
-    <div class="question-information">
-      <div class="question-info">
-        <div class="answer-quantity">
-          <%= question.answers.count %>
+
+  <% if @user_questions.count <= 0 %>
+      <div class="dropdown-divider"></div>
+        <div class="container no-questions-found">
+          <p class="lead">
+              You have not made any questions
+          </p>  
+          <small id="answer-help-text">
+              We encourage our users to ask questions.
+          </small> 
+          <div class="no-questions-ask-container">
+              <%= link_to "Ask something", "#new-question-modal", "data-toggle" => "modal", class: "nav-link lead", id:"link-no-question"%>
+          </div>
+        </div>
+      <div class="dropdown-divider"></div>
+
+  <%else%>
+
+    <% @user_questions.each do |question| %>
+      <div class="question-information">
+        <div class="question-info">
+          <div class="answer-quantity">
+            <%= question.answers.count %>
+          </div>
+          <div>
+            <%= "answer".pluralize(question.answers.count) %>
+          </div>
         </div>
         <div>
-          <%= "answer".pluralize(question.answers.count) %>
+          <div>
+            <%= link_to question.question_title, question_path(question), class: "link-to-question", onClick:"$('#homeQuestionsPanel').resizable('destroy')"%>
+          </div>
+          <div class="user-info">
+            <%= user_question_timestamp(question) %>
+          </div>
         </div>
       </div>
-      <div>
-        <div>
-          <%= link_to question.question_title, question_path(question), class: "link-to-question", onClick:"$('#homeQuestionsPanel').resizable('destroy')"%>
-        </div>
-        <div class="user-info">
-          <%= user_question_timestamp(question) %>
-        </div>
-      </div>
-    </div>
-    <hr>
+      <hr>
+    <% end %>
+
   <% end %>
+
 </div>
