@@ -9,8 +9,88 @@
   margin-bottom: 20px;
 }
 
+.form-container-new-comment{
+  width: 100%;
+
+  .submit-comment{ 
+    background: #278adb;
+    display: inline-block;
+    font-size: 75%;
+    font-weight: 700;
+    border-radius: 3px;
+    border: none;
+    color: white;
+  }
+  .submit-comment:hover{ 
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+
+  .cancel-write-comment{
+    background: none;
+    display: inline-block;
+    font-size: 75%;
+    font-weight: 700;
+    border: none;
+    color: rgba(35, 35, 43, 1);
+    text-decoration: underline;
+    margin: 0px 6px; 
+  }
+  .cancel-write-comment:hover{
+    font-weight: 900;
+    color: rgb(100, 100, 104);
+  }
+
+  .button-comment-container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    margin-bottom: 14px;
+  }
+
+  .comment-text-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+
+.user-reply{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  .btn-reply{
+    background: rgba(39, 138, 219, 1);
+    font-size: 0.7rem;
+    margin: 0px 15px;
+    border-radius: 9px;
+  }
+}
+
 .comment-container{
   margin-left: 50px;
+
+  .textarea-new-comment{
+    border-radius: 20px;
+    background: white;
+    border: 1.5px solid #e9ecef;
+    padding: 10px;
+    margin: 0px 4px 10px 10px;
+    margin-left: 0;
+    min-width: 50%;
+    max-width: 90%;
+    width: fit-content;
+    font-size: 0.9rem;
+  }
+
+  .textarea-new-comment:focus{
+      border: 2px solid #afb1b3;
+      outline: 0 none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+  }
 
   img{
       margin-right: 5px !important;
@@ -25,7 +105,7 @@
     border-radius: 20px;
     display: flex;
     flex-direction: row;
-    max-width: 900px;
+    max-width: 90%;
     width: fit-content;
     align-self: flex-end;
     
@@ -99,6 +179,7 @@ div{
   display: inline-block;
 }
 
+.answerText,
 .questionText{
 	max-height: 100px;
   text-overflow: ellipsis;
@@ -108,6 +189,10 @@ div{
   &.lead{
     font-size: 0.9rem !important;
   }
+}
+
+.answerText{
+  max-height: max-content;
 }
 
 .questionTitle{
@@ -233,6 +318,7 @@ div{
 .question-container{
   display: inline-block;
   flex-direction: column;
+  width: 100%;
 }
 
 .user-info{

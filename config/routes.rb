@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   
   get 'set_topic_options', to: "application#set_topic_options", as: :set_topic_options
   match "/categories/topics/questions" => "questions#byTopic" , :via => [:get]
+  post "questions/create_comment", to: "questions#create_comment",  as: :create_comment
 
   devise_scope :user do
     authenticated :user do

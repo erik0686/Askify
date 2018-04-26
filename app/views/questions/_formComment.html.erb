@@ -1,0 +1,17 @@
+<%= form_for([answer, answer.comments.build], url: "create_comment", html: {id:"form-comment-#{answer.id}"}) do |f| %>
+    <div class="media comment-container">
+        <%= image_tag( current_user.avatar.url, class:"align-self-top mr-3 media-object comment", alt: current_user.avatar.url )%>
+        <div class="media-body">
+            <div class="comment-text-button">
+                <div type="text" id="textarea-comment-<%=answer.id%>" class="lead textarea-new-comment" contenteditable></div>
+                <div class="button-comment-container">
+                    <%=link_to 'Cancel', "#", id:"cancel-comment-#{answer.id}", class: "cancel-write-comment", style:"margin-top:0.5rem;" %>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= f.hidden_field :comment_text, id: "answer-comment-#{answer.id}"%>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :answer_id, value: answer.id %>
+<% end %>
