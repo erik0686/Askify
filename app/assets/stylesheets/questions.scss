@@ -32,13 +32,13 @@
     font-size: 75%;
     font-weight: 700;
     border: none;
-    color: rgba(35, 35, 43, 1);
+    color: rgb(130, 130, 134);
     text-decoration: underline;
     margin: 0px 6px; 
   }
   .cancel-write-comment:hover{
     font-weight: 900;
-    color: rgb(100, 100, 104);
+    color: rgba(35, 35, 43, 1);
   }
 
   .button-comment-container{
@@ -62,10 +62,17 @@
   align-items: flex-start;
 
   .btn-reply{
-    background: rgba(39, 138, 219, 1);
+    color: #278adb;
+    background: none;
     font-size: 0.7rem;
     margin: 0px 15px;
     border-radius: 9px;
+  }
+  .btn-reply:focus{
+      outline: 0 none;
+      border-color: inherit;
+      -webkit-box-shadow: none;
+      box-shadow: none;
   }
 }
 
