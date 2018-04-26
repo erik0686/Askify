@@ -17,7 +17,12 @@
     <div class="jumbotron profile">
       <div class="media">
         <div class="media-body">
+        
           <h1 class="display-4" id="profile-title">Hello, <%= @user.first_name %> <%= @user.last_name %></h1>
+          <h1 class="display-4" id="my-questions-title"><%= @user.first_name %>'s Questions</h1>
+          <h1 class="display-4" id="my-answers-title"><%= @user.first_name %>'s Answers</h1>
+          <h1 class="display-4" id="my-topics-title"> Manage Topics</h1>
+
           <p name="starRating" id="userRating"></p>
           <div class="lead">
             <%= form_for @user, url: user_path, html: { multipart: true, class: "file-upload", id: "form-update-user" } do |form| %>

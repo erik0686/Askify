@@ -26,6 +26,12 @@ $(document).on('turbolinks:load', function () {
 
   $('#updateChangesBut').hide();
   $(".profile-details").click(function() {
+    //titles
+    $("#profile-title").show();
+    $("#my-questions-title").hide();
+    $("#my-answers-title").hide();
+    $("#my-topics-title").hide();
+
     $(".user-questions-tab").hide();
     $(".user-answers-tab").hide();
     $(".user-information-tab").show();
@@ -42,6 +48,12 @@ $(document).on('turbolinks:load', function () {
 
   });
   $(".my-questions").click(function() {
+    //titles
+    $("#profile-title").hide();
+    $("#my-questions-title").show();
+    $("#my-answers-title").hide();
+    $("#my-topics-title").hide();
+
     $(".user-questions-tab").removeClass("hidden");
     $(".user-information-tab").hide();
     $(".user-answers-tab").hide();
@@ -56,6 +68,12 @@ $(document).on('turbolinks:load', function () {
   });
 
   $(".my-answers").click(function() {
+    //titles
+    $("#profile-title").hide();
+    $("#my-questions-title").hide();
+    $("#my-answers-title").show();
+    $("#my-topics-title").hide();
+
     $(".user-answers-tab").removeClass("hidden");
     $(".user-information-tab").hide();
     $(".user-questions-tab").hide();
@@ -70,6 +88,12 @@ $(document).on('turbolinks:load', function () {
   });
 
   $(".suggested-topics").click(function() {
+    //titles
+    $("#profile-title").hide();
+    $("#my-questions-title").hide();
+    $("#my-answers-title").hide();
+    $("#my-topics-title").show();
+
     $("#bottomSaveChangesBut" ).hide();
     $(".user-information-tab").hide();
     $(".user-questions-tab").hide();
@@ -93,12 +117,18 @@ function reloadUserPage(){
     $(this).parent().parent().parent()
     .addClass("cardWithFocus");
   });
+  //titles
+  $("#profile-title").show();
+  $("#my-questions-title").hide();
+  $("#my-answers-title").hide();
+  $("#my-topics-title").hide();
 
   $( "#saveChangesBut" ).hide();
   $( "#bottomSaveChangesBut" ).hide();
   $( "#deleteProfileBut" ).show();
   $( "#editProfileBut" ).show();
   $("#form-update-user").show();
+  
   $(".photo_upload").show();
 
   $( "#editProfileBut").click(function() {
