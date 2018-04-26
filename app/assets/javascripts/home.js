@@ -10,4 +10,28 @@ $(document).on('turbolinks:load', function () {
     //     $('#homeQuestions').height($("#parent").height());
     // });
 
+    $('.new-post-button').on('click', function() { 
+        $(".submit-file-button").val(null);
+        $("#name-file").text("");
+        $("#preview-image").attr("src",""); 
+     });
+
+    $(".submit-file-button").on('change', (e) => {
+        var reader  = new FileReader();
+        var fileName = e.target.files[0].name;
+        var file = e.target.files[0];
+        $("#name-file").text(fileName);
+
+        reader.onloadend = function () {
+            $("#preview-image").attr("src",reader.result); 
+        }
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            $("#preview-image").attr("src",""); 
+        }
+        
+    });
+
 });

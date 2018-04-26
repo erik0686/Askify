@@ -1,31 +1,37 @@
 <div id="new-post-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header modal-header">
-                <h5 id="new-topic-modal-title" class="modal-title lead">Create new Post</h5>
+            <div class="modal-header modal-header-no-line">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <%= form_for post, url: "create_post", html: { multipart: true } do |form| %>
             <div id="new-topic-modal-body">
-                <div class="container new-topic">
+                <div class="container new-post">
                     <p>What do you want to share in your post?</p>
-                    <div class="form-group mb-3">
-                        <%= form.text_area :post_content, class:"form-control lead", rows:3, placeholder:"Post Content" %>
+                    <div class="form-group mb-3 post-content-container">
+                        <%= form.text_area :post_content, class:"form-control lead", rows:3, placeholder:"Write your post here" %>
                     </div>
                 </div>
-                <div class="container new-topic">
-                    <p>Have an image to share too?</p>
-                    <div class="form-group mb-3">
-                      <%= form.file_field :avatar %>
+                <div class="container new-post">
+                    <p>Have an image to share with your post?</p>
+                    <div class="form-group mb-3 submit-file">
+                    <label class="custom-file-upload">
+                        <%= form.file_field :avatar, class: "submit-file-button" %>
+                        Upload image
+                    </label>
+                    <div class="preview">
+                        <img src="" id="preview-image" height="100" alt="">
+                        <p id="name-file"></p>
+                    </div>
                       <%= form.hidden_field :user_id, value: current_user.id %>
                     </div>
                 </div>
             </div>
             <div class="modal-footer new-question-topic">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <%= form.submit "Submit post", class:"btn btn-primary btn-suggest" %>
+                <%= form.submit "Submit post", class:"btn btn-success btn-suggest" %>
             </div>
             <% end %>
         </div>
