@@ -23,7 +23,7 @@
             <%= form_for @user, url: user_path, html: { multipart: true, class: "file-upload" } do |form| %>
               View your profile details
               <a class="btn btn-success btn-sm question-tab-element" href="#" role="button" id="editProfileBut">Edit</a>
-              <a class="btn btn-primary btn-sm question-tab-element" href="#" role="button" id="saveChangesBut">Save Changes</a>
+              <a class="btn btn-primary btn-sm question-tab-element" href="#" role="button" id="saveChangesBut">Done</a>
               <%= form.file_field :avatar, class: "editable-field hidden question-tab-element", default: @user.avatar %>
               <%= form.submit id: "updateChangesBut", class: "btn btn-primary btn-sm" %>
             <% end %>
