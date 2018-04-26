@@ -39,6 +39,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:post :expiry_date, :avatar)
+    params.require(:post).permit(:post_content, :expiry_date, :avatar)
   end
 end
