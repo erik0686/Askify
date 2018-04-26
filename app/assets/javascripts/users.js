@@ -10,6 +10,14 @@ $(document).on('ready', function () {
 });
 
 $(document).on('turbolinks:load', function () {
+  //file upload
+  $("#change-profile-button").on('change', (e) => {
+    var fileName = e.target.files[0].name;
+
+    //submit form for photo
+    $("#form-update-user").submit();
+    return true;
+});
 
   $('.file-upload').on('change', function() {
     $('#updateChangesBut').show();
@@ -140,6 +148,7 @@ function showEditableFields(){
   // show editable fields
   $(".editable-field").removeClass("hidden");
   $(".editable-field").addClass("showing");
+
 
   $(".static-field").addClass("hidden");
   $(".static-field").removeClass("showing");

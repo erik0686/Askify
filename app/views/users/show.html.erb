@@ -20,18 +20,24 @@
           <h1 class="display-4">Hello, <%= @user.first_name %> <%= @user.last_name %></h1>
           <p name="starRating" id="userRating"></p>
           <div class="lead">
-            <%= form_for @user, url: user_path, html: { multipart: true, class: "file-upload" } do |form| %>
+            <%= form_for @user, url: user_path, html: { multipart: true, class: "file-upload", id: "form-update-user" } do |form| %>
               View your profile details
               <a class="btn btn-success btn-sm question-tab-element" href="#" role="button" id="editProfileBut">Edit</a>
               <a class="btn btn-primary btn-sm question-tab-element" href="#" role="button" id="saveChangesBut">Done</a>
-              <%= form.file_field :avatar, class: "editable-field hidden question-tab-element", default: @user.avatar %>
-              <%= form.submit id: "updateChangesBut", class: "btn btn-primary btn-sm" %>
-            <% end %>
-
           </div>
         </div>
         <div id="userImage" class="media-right media-middle">
           <%= image_tag( @user.avatar.url, class: "media-object profile", alt:@user.avatar.url )%>
+
+          <div class="photo_upload">
+            <div class="layout-photo-upload">
+              <label class="custom-file-upload">
+                <%= form.file_field :avatar, id: "change-profile-button", class: "question-tab-element", default: @user.avatar %>
+                Change photo
+              </label>
+            </div>
+          </div>
+          <% end %>
         </div>
       </div>
       <div class="user-information-tab">
