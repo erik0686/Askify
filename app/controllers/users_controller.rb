@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def search
 
   end
-
+  
   def edit
     @user = User.find(params[:id])
   end

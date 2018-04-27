@@ -22,10 +22,10 @@ class CategoriesController < ApplicationController
     @topic = Topic.new
   end
 
-  def create_post
+  def create_topic
     @topic = Topic.new(topic_params)
     @topic.save
-    redirect_to category_path
+    redirect_to category_path(@topic.category_id)
   end
 
   def edit
@@ -51,5 +51,9 @@ class CategoriesController < ApplicationController
 
   def category_params
     params.require(:category).permit(:category_name)
+  end
+
+  def topic_params
+    params.require(:topic).permit(:topic_name, :description, :is_official, :user_id, :category_id)
   end
 end

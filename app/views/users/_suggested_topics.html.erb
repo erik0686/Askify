@@ -1,7 +1,20 @@
 <% @categories.each do |category| %>
+  <div>
+    <%= category.category_name %>
+  </div>
   <div class="category-topics" style="display:flex;">
-    <% category.topics.each do |topic| %>
-      <button name= "color<%= topic.id%9 %> " type="button" class="btn topic-button"><%= topic.topic_name %></button>
+    <% category.topics.by_date_desc.each do |topic| %>
+    <div style="background-color: #f8f8f8; margin-bottom: 2rem;">
+      <div>
+        <button name= "<%= color_for_topic(topic) %>" type="button" class="btn topic-button"><%= topic.topic_name %></button>
+      </div>
+      <div style="text-align: center;">
+        <% if !topic.official? %>
+          <%= link_to_approve_topic(topic) %>
+        <% end %>
+      </div>
+    </div>
+
     <% end %>
   </div>
 

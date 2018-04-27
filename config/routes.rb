@@ -16,10 +16,14 @@ Rails.application.routes.draw do
   post 'create_new_question', to: "application#create_new_question", as: :create_new_question
   match "home" => "home#index", as: :home_index, via: [:get, :post]
   post "create_post", to: "home#create_post", as: :create_post
+  post "categories/create_topic", to: "categories#create_topic", as: :create_topic
+
 
   get 'set_topic_options', to: "application#set_topic_options", as: :set_topic_options
   match "/categories/topics/questions" => "questions#byTopic" , :via => [:get]
   post "questions/create_comment", to: "questions#create_comment",  as: :create_comment
+
+  patch "topics/approve/:id", to: "topics#approve", as: 'approve_topics'
 
   devise_scope :user do
     authenticated :user do

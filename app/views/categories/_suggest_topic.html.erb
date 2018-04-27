@@ -17,7 +17,10 @@
                     <p class="center-horizontal">Choose the category it corresponds to</p>
                     <div class="form-group mb-3">
 
-                        <%= form.select :category_id, Category.pluck(:category_name), {}, {class: "form-control lead form-center-horizontal"} %>
+                        <%= form.collection_select :category_id, Category.all, :id, :category_name, {}, {class: "form-control lead form-center-horizontal"} %>
+                        <%= form.hidden_field :user_id, value: current_user.id %>
+                        <%= form.hidden_field :is_official, value: false %>
+
                     </div>
                     <p class="center-horizontal">Write a brief description about the topic</p>
                     <div class="form-group mb-3">
@@ -25,12 +28,13 @@
                     </div>
                 </div>
             </div>
-            <% end %>
 
             <div class="modal-footer new-question-topic">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary btn-suggest">Submit Suggestion</button>
+                <%= form.submit "Submit", class:"btn btn-primary btn-suggest"%>
             </div>
+            <% end %>
+
         </div>
     </div>
 </div>
