@@ -119,4 +119,17 @@ module ApplicationHelper
     count = current_user.questions.count + current_user.answers.count
     count > 0 ? count : 0
   end
+
+  def link_to_approve_topic(object, class_name = "")
+      link_to t('Approve'), "/#{object.model_name.plural}/approve/#{object.id}", method: :patch, data: { confirm: t('confirm') }, class: class_name
+  end
+
+  def color_for_topic(topic)
+    if topic.is_official
+      "color#{topic.id%9}"
+    else
+      "color-gray"
+    end
+  end
+
 end

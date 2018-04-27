@@ -17,6 +17,12 @@ class TopicsController < ApplicationController
     @topic = Topic.new
   end
 
+  def approve
+    @topic = Topic.find(params[:id])
+    @topic.approve!
+    redirect_to user_path(@topic.user_id), notice: 'The topic has been approved'
+  end
+
   def create
     @topic = Topic.new(topic_params)
     if @topic.save
