@@ -146,6 +146,7 @@ $bckColor: (
   justify-content: center;
   flex-direction: row;
 
+  input,
   textarea{
     width: 70%;
   }
@@ -290,11 +291,12 @@ $bckColor: (
 }
 
 .suggest-topic-container{
-  text-align: right;
   display: flex;
-  flex-direction: column;
+  text-align: right;
+  flex-direction: row-reverse;
   align-items: flex-end;
   margin-bottom: 1rem;
+
 
   .lead{
     font-size: 0.9rem;
