@@ -2,14 +2,14 @@
   <div class="col-sm">
     <p class="lead" id="profileTitle">My Profile</p>
     <ul class="list-group list-group-flush">
-    <li class="list-group-item menu profile-details">Profile Details</li>
-    <li class="list-group-item menu my-questions">My Questions <span class="badge badge-secondary"><%= @user.questions.count %></span></li>
-    <li class="list-group-item menu my-answers">My Answers <span class="badge badge-secondary"><%= @user.answers.count %></span></li>
-    <% if current_user.admin %>
-      <li class="list-group-item menu suggested-topics">Sugested Topics
-        <span class="badge badge-secondary"><%= Topic.all.where(is_official: false).count %></span>
-      </li>
-    <% end %>
+      <li class="list-group-item menu profile-details">Profile Details</li>
+      <li class="list-group-item menu my-questions">My Questions <span class="badge badge-secondary"><%= @user.questions.count %></span></li>
+      <li class="list-group-item menu my-answers">My Answers <span class="badge badge-secondary"><%= @user.answers.count %></span></li>
+      <% if current_user.admin %>
+        <li class="list-group-item menu suggested-topics">Sugested Topics
+          <span class="badge badge-secondary"><%= Topic.all.where(is_official: false).count %></span>
+        </li>
+      <% end %>
     </ul>
   </div>
 
@@ -17,7 +17,7 @@
     <div class="jumbotron profile">
       <div class="media">
         <div class="media-body">
-        
+
           <h1 class="display-4" id="profile-title">Hello, <%= @user.first_name %> <%= @user.last_name %></h1>
           <h1 class="display-4" id="my-questions-title"><%= @user.first_name %>'s Questions</h1>
           <h1 class="display-4" id="my-answers-title"><%= @user.first_name %>'s Answers</h1>
@@ -25,7 +25,6 @@
 
           <p name="starRating" id="userRating"></p>
           <div class="lead">
-            <%= form_for @user, url: user_path, html: { multipart: true, class: "file-upload", id: "form-update-user" } do |form| %>
               View your profile details
               <a class="btn btn-success btn-sm question-tab-element" href="#" role="button" id="editProfileBut">Edit</a>
               <a class="btn btn-primary btn-sm question-tab-element" href="#" role="button" id="saveChangesBut">Done</a>
@@ -33,6 +32,7 @@
         </div>
         <div id="userImage" class="media-right media-middle">
           <%= image_tag( @user.avatar.url, class: "media-object profile", alt:@user.avatar.url )%>
+          <%= form_for @user, url: user_path, html: { multipart: true, class: "file-upload", id: "form-update-user" } do |form| %>
 
           <div class="photo_upload">
             <div class="layout-photo-upload">

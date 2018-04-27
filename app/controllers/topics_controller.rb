@@ -36,6 +36,10 @@ class TopicsController < ApplicationController
     @topic = Topic.find(params[:id])
     @q = @topic.questions.ransack(params[:q])
     @questions = @q.result(distinct: true)
+    @is_search = false
+    if params[:q].present?
+        @is_search = true
+    end
   end
 
   def update

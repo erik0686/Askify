@@ -128,7 +128,7 @@ function reloadUserPage(){
   $( "#deleteProfileBut" ).show();
   $( "#editProfileBut" ).show();
   $("#form-update-user").show();
-  
+
   $(".photo_upload").show();
 
   $( "#editProfileBut").click(function() {

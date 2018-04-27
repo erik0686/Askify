@@ -16,6 +16,9 @@
             </small>
           </div>
           <p class="mb-1">
+            <%= post.post_title %>
+          </p>
+          <p class="mb-1">
             <%= post.post_content %>
           </p>
           <%= image_tag(post.avatar, class: "imgSize", alt: "eventImage") if post.avatar.exists? %>
