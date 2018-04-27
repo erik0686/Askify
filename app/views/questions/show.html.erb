@@ -2,12 +2,12 @@
     <div class="container">
         <div class="jumbotron bannerHeader" id="questionHeader">
             <div class="suggest-topic-container">
-               <span class="user-info long-text lead">
-                    <%= question_show_timestamp(@question) %> 
-                </span>
                 <% if current_user.admin == true %>
                   <%= link_to ('<i class="fas fa-minus-circle delete-item" style="font-size:1.5em"></i>').html_safe, question_path(@question), method: :delete, data: { confirm: 'Are you sure?' } %>
                 <% end %>
+                <span class="user-info long-text lead">
+                    <%= question_show_timestamp(@question) %> 
+                </span>
             </div>
             <span class="badge badge-pill badge-secondary"><%= @question.topic.category.category_name %></span>
             <span class="badge badge-pill badge-secondary"><%= @question.topic.topic_name %></span>
@@ -64,8 +64,10 @@
               <%= image_tag( answer.user.avatar.url, class:"align-self-top mr-3 media-object comment", alt: answer.user.avatar.url )%>
                 <div class="media-body">
                   <div class="user-reply">
-                    <h5 class="mt-0"> <%= answer.user.user_name %> </h5>
-                    <%= link_to "reply", "#", class: "btn btn-primary btn-sm btn-reply",  id: "btn-reply-#{answer.id}"%> 
+                    <div class="user-reply-left">
+                      <h5 class="mt-0"> <%= answer.user.user_name %> </h5>
+                      <%= link_to "reply", "#", class: "btn btn-primary btn-sm btn-reply",  id: "btn-reply-#{answer.id}"%> 
+                    </div>
                     <% if current_user.admin == true %>
                       <%= link_to ('<i class="fas fa-minus-circle delete-item"></i>').html_safe, answer_path(answer), method: :delete, data: { confirm: 'Are you sure?' } %>
                     <% end %>
@@ -86,10 +88,10 @@
                     <div class="media-body">
                        <div class="comment-text-container">
                         <p class="lead"> <span> <%= User.find_by(id: comment.user_id).user_name %> </span> <%= comment.comment_text %> </p>
-                        <% if current_user.admin == true %>
-                          <%= link_to ('<i class="fas fa-minus-circle delete-item"></i>').html_safe, comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %>
-                        <% end %>
                       </div>
+                      <% if current_user.admin == true %>
+                          <%= link_to ('<i class="fas fa-minus-circle delete-item"></i>').html_safe, comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+                      <% end %>
                     </div>
                   </div>
                 <% end %>
