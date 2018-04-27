@@ -33,7 +33,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path
+    redirect_to home_index_path
   end
 
   private
