@@ -7,8 +7,13 @@
     <ul id="posts" class="list-group list-group-flush">
       <% @posts.each do |post| %>
         <li class="list-group-item flex-column">
-          <div class="d-flex w-100 justify-content-between">
-            <small><%= post_timestamp post %></small>
+          <div class="d-flex w-100">
+            <% if current_user.admin == true %>
+              <%= link_to ('<i class="fas fa-minus-circle delete-item"></i>').html_safe, post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+            <small>
+              <%= post_timestamp post %>
+            </small>
           </div>
           <p class="mb-1">
             <%= post.post_content %>
