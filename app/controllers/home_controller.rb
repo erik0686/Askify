@@ -25,6 +25,6 @@ class HomeController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:post_content, :expiry_date, :avatar, :user_id)
+    params.require(:post).permit(:post_content, :expiry_date, :avatar, :user_id, :post_title)
   end
 end
