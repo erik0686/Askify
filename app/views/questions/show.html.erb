@@ -1,7 +1,7 @@
 <div class="container">
     <div class="container">
         <div class="jumbotron bannerHeader" id="questionHeader">
-            <div class="suggest-topic-container">
+            <div class="delete-time-container">
                 <% if current_user.admin == true %>
                   <%= link_to ('<i class="fas fa-minus-circle delete-item" style="font-size:1.5em"></i>').html_safe, question_path(@question), method: :delete, data: { confirm: 'Are you sure?' } %>
                 <% end %>

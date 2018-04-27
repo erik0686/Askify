@@ -322,10 +322,23 @@ $bckColor: (
   }
 }
 
-.suggest-topic-container{
+.delete-time-container{
   display: flex;
   text-align: right;
   flex-direction: row-reverse;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+
+  .lead{
+    font-size: 0.9rem;
+    margin-bottom: 7px;
+  }
+}
+
+.suggest-topic-container{
+  display: flex;
+  text-align: right;
+  flex-direction: column;
   align-items: flex-end;
   margin-bottom: 1rem;
 
