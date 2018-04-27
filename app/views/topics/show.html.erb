@@ -6,6 +6,7 @@
         </div>
     </div>
 </div>
+<div class="container" id="topic-questions-container">
 <div class="container" id="topics">
     <%= search_form_for @q, url: topic_path do |f| %>
         <div class="sticky-top align-flex">
@@ -30,9 +31,7 @@
         </div>
         <div class="dropdown-divider"></div>
     </div>
-
 <% else %>
-<div class="container" id="topic-questions-container">
         <div class="questionContent">
             <% @questions.by_date.each do |question| %>
                 <div class="question-information">
