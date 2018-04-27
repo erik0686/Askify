@@ -11,6 +11,10 @@
     background-color: #f7f7f9;
 }
 
+#change-profile-button{
+    display: none;
+}
+
 #profileTitle{
     margin-top: 20px;
     margin-left: 20px;
@@ -47,6 +51,20 @@
 
 .card{
     display: flex;
+    box-shadow: none !important;
+
+    &.static-field{
+        background-color: #d6d9db; 
+        color: black;
+        border: 0;
+
+        span{
+            background-color: transparent; 
+        }
+    }
+}
+.card:hover{
+    box-shadow: none !important;
 }
 
 .hidden,
@@ -91,6 +109,10 @@
     padding-left: 0px;
 }
 
+.photo_upload{
+    display: flex;
+}
+
 .form-control.editProfile:focus{
     border: none;
     outline: 0 none;
@@ -114,9 +136,16 @@
     height: 4rem;
     justify-content: center;
     color: #2980B9;
-
+    span{
+        input {
+        border: none !important;
+        outline: 0 none !important;
+        border-color: inherit !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        }
+    }
 }
-
 .profile-input:focus{
     border: none;
     outline: 0 none;

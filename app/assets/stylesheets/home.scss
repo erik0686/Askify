@@ -133,8 +133,8 @@ $bckColor: (
   }
 }
 
-input[type="file"]{
-    display: none;
+.submit-file-button{
+    display: none !important;
 }
 
 .post-content-container{
@@ -144,6 +144,29 @@ input[type="file"]{
 
   textarea{
     width: 70%;
+  }
+}
+
+.layout-photo-upload{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+  font-size: 0.8rem;
+
+  .custom-file-upload{
+    margin: 0 auto;
+    font-size: 0.8rem !important;
+    background: rgb(140, 140, 141);
+    color: white;
+    font-size: 1rem;
+    border: 1px solid rgb(140, 140, 141);
+  }
+  .custom-file-upload:hover{
+    background: rgb(74, 74, 75);
+    color: white;
   }
 }
 
@@ -163,6 +186,10 @@ input[type="file"]{
   -webkit-transition:.5s;
   transition: all 300ms ease-in-out;
 }
+.custom-file-upload:hover {
+  background: #007bff;
+  color: white;
+}
 
 .preview{
   margin: 10px;
@@ -171,11 +198,6 @@ input[type="file"]{
   img{
     padding: 5px;
   }
-}
-
-.custom-file-upload:hover {
-  background: #007bff;
-  color: white;
 }
 
 .titleHome{
