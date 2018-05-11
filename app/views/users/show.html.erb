@@ -5,11 +5,15 @@
       <li class="list-group-item menu profile-details">Profile Details</li>
       <li class="list-group-item menu my-questions">My Questions <span class="badge badge-secondary"><%= @user.questions.count %></span></li>
       <li class="list-group-item menu my-answers">My Answers <span class="badge badge-secondary"><%= @user.answers.count %></span></li>
+<<<<<<< HEAD
       <% if current_user.admin %>
         <li class="list-group-item menu suggested-topics">Suggested Topics
           <span class="badge badge-secondary"><%= Topic.all.where(is_official: false).count %></span>
         </li>
       <% end %>
+=======
+      
+>>>>>>> 761b7ff6d372dd483ad59a94f8d35803f36482bc
     </ul>
   </div>
 
