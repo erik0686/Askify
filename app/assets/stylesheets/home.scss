@@ -55,10 +55,10 @@ body {
   li{
     border-radius: 10px;
     margin: 3px;
-
-    p{
-      font-size: 0.9rem;
-    }
+    // 
+    // p{
+    //   font-size: 0.9rem;
+    // }
 
     h5{
       font-size: 1.1rem;
@@ -90,7 +90,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-top:  none; 
+  border-top:  none;
 }
 
 .logoDecoration{
@@ -106,7 +106,7 @@ body {
 	padding-top: 65px;
 	overflow-y:scroll;
   padding: 0px 2px 2px 2px;
-  
+
   small{
     color: #707070;
   }
