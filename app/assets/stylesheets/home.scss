@@ -19,6 +19,38 @@ body {
     background-color: transparent;
 }
 
+.modal.false.fade.show{
+  .modal-header{
+    border-bottom: 0px;
+    h5{
+      display: none;
+    }
+  }
+
+  .modal-body{
+    p{
+      text-align: center;
+    }
+  }
+
+  .modal-footer{
+    border-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    .btn.cancel{
+      background: rgb(189, 189, 189);
+      &:hover{
+        background: rgb(143, 143, 143);
+      }
+    }
+
+  }
+
+}
+
 #posts{
   li{
     border-radius: 10px;
@@ -146,6 +178,7 @@ $bckColor: (
   justify-content: center;
   flex-direction: row;
 
+  input,
   textarea{
     width: 70%;
   }
@@ -289,9 +322,22 @@ $bckColor: (
   }
 }
 
-.suggest-topic-container{
-  text-align: right;
+.delete-time-container{
   display: flex;
+  text-align: right;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+
+  .lead{
+    font-size: 0.9rem;
+    margin-bottom: 7px;
+  }
+}
+
+.suggest-topic-container{
+  display: flex;
+  text-align: right;
   flex-direction: column;
   align-items: flex-end;
   margin-bottom: 1rem;
