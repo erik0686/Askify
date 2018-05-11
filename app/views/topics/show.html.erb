@@ -8,10 +8,18 @@
 </div>
 
 <% if @questions.count == 0 %>
-    <div class="container">
-        <div class="dropdown-divider"></div>
-        <div class="container no-questions-found">
             <% if @is_search %>
+            <div class="container" id="topic-questions-container">
+            <div class="container" id="topics">
+                <%= search_form_for @q, url: topic_path do |f| %>
+                    <div class="sticky-top align-flex">
+                        <%= f.search_field :question_text_or_question_title_cont, class: "form-control mr-sm-2", id: "searchPost", placeholder: "Search..." %>
+                        <%= f.submit class: "submit-search"%>
+                    </div>
+                <% end %>
+            </div>
+                <div class="dropdown-divider"></div>
+                <div class="container no-questions-found">
                 <p class="lead"> There are no results for your search </p>
             <% else %>
                 <p class="lead"> There are no questions for this topic. </p>
