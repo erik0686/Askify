@@ -113,6 +113,19 @@
     display: flex;
 }
 
+.category-topics{
+    overflow-x: scroll;
+    display:flex;
+    background-color: #d6d9db;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+[name='color-gray']{
+    background: grey;
+}
+
 .form-control.editProfile:focus{
     border: none;
     outline: 0 none;

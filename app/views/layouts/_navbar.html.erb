@@ -37,12 +37,6 @@
 
           <div id="dropdown-menu-options" class="dropdown-menu dd-menu" aria-labelledby="navbarDropdownOptions">
             <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
-            <%= link_to(user_path(current_user), class:"dropdown-item") do %>
-              My questions <span class="badge badge-secondary"><%= my_questions_notifications %></span>
-            <% end %>
-            <%= link_to(user_path(current_user), class:"dropdown-item") do %>
-              My answers <span class="badge badge-secondary"><%= my_answers_notifications %></span>
-            <% end %>
             <div class="dropdown-divider"></div>
               <%= link_to(destroy_user_session_path, method: :delete, class:"dropdown-item") do %>
               Sign out

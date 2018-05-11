@@ -14,7 +14,7 @@
             </p>
         </div>
     </div>
-    <% if @category.topics.count <= 0 %>
+    <% if @category.topics.where(is_official:true).count <= 0  %>
         <hr>
             <div class="container no-topics-found">
             <p class="lead">
@@ -31,9 +31,11 @@
 <% if @category.topics.count > 0  %>
     <div class="container-fluid" id="topic-cards-container">
         <% @category.topics.by_id.each do |topic| %>
-            <%= link_to topic_path(topic) do %>
-            <button name= "color<%= topic.id%9 %> " type="button" class="btn topic-button"><%= topic.topic_name %></button>
-            <% end %>
+            <% if topic.is_official %>
+                <%= link_to topic_path(topic) do %>
+                <button name= "color<%= topic.id%9 %> " type="button" class="btn topic-button"><%= topic.topic_name %></button>
+                <% end %>
+            <%end%>
         <% end %>
     </div>
 <% end %>
