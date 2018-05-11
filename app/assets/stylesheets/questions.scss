@@ -120,10 +120,11 @@
     padding: 10px;
     margin: 0px 4px 10px 10px;
     margin-left: 0;
-    min-width: 50%;
+    min-width: 250px;
     max-width: 100%;
     width: fit-content;
     font-size: 0.9rem;
+    word-break: break-all;
   }
 
   .textarea-new-comment:focus{
