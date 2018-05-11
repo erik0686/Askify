@@ -116,7 +116,7 @@ module ApplicationHelper
   end
 
   def my_total_notifications
-    count = current_user.questions.count + current_user.answers.count
+    count = Topic.all.where(is_official: false).count
     count > 0 ? count : 0
   end
 
