@@ -14,6 +14,7 @@ $(document).on('turbolinks:load', function () {
   $(".btn-reply").click(function() {
     var answerId = $(this).attr('id').replace("btn-reply-","");
     $("#reply-container-" + answerId).removeClass("hidden");
+    $("#textarea-comment-" + answerId).focus();
     event.preventDefault();
   });
 

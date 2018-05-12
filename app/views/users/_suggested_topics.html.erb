@@ -1,20 +1,34 @@
+<hr class="my-4">
 <% @categories.each do |category| %>
   <div>
     <%= category.category_name %>
   </div>
-  <div class="category-topics" style="display:flex;">
-    <% category.topics.by_date_desc.each do |topic| %>
-    <div style="background-color: #f8f8f8; margin-bottom: 2rem;">
-      <div>
-        <button name= "<%= color_for_topic(topic) %>" type="button" class="btn topic-button"><%= topic.topic_name %></button>
-      </div>
-      <div style="text-align: center;">
-        <% if !topic.official? %>
-          <%= link_to_approve_topic(topic) %>
-        <% end %>
-      </div>
-    </div>
+  <div class="category-topics">
 
+    <% category.topics.by_date_desc.each do |topic| %>
+      <% if !topic.official? %>
+        <div>
+          <div>
+            <button name= "<%= color_for_topic(topic) %>" type="button" class="btn topic-button"><%= topic.topic_name %></button>
+          </div>
+          <div style="text-align: center; padding-bottom: 1rem;">
+            <% if !topic.official? %>
+              <%= link_to ('<button class="btn btn-danger btn-sm btn-reply tiny">Reject</button>').html_safe, topic_path(topic), method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to_approve_topic(topic,"btn btn-primary btn-sm btn-reply tiny")%>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+    <% category.topics.by_date_desc.each do |topic| %>
+      <% if topic.official? %>
+        <div>
+          <div>
+            <button name= "<%= color_for_topic(topic) %>" type="button" class="btn topic-button"><%= topic.topic_name %></button>
+          </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
 
