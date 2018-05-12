@@ -13,6 +13,21 @@
   }
 }
 
+.cancel-write-comment{
+  background: none;
+  display: inline-block;
+  font-size: 75%;
+  font-weight: 700;
+  border: none;
+  color: rgb(130, 130, 134);
+  text-decoration: underline;
+  margin: 0px 15px 0px 0px;
+}
+.cancel-write-comment:hover{
+  font-weight: 900;
+  color: rgba(35, 35, 43, 1);
+}
+
 .form-container-new-comment{
   width: 100%;
 
@@ -33,21 +48,6 @@
   .submit-comment:hover{ 
     background-color: #0069d9;
     border-color: #0062cc;
-  }
-
-  .cancel-write-comment{
-    background: none;
-    display: inline-block;
-    font-size: 75%;
-    font-weight: 700;
-    border: none;
-    color: rgb(130, 130, 134);
-    text-decoration: underline;
-    margin: 0px 15px 0px 0px;
-  }
-  .cancel-write-comment:hover{
-    font-weight: 900;
-    color: rgba(35, 35, 43, 1);
   }
 
   .button-comment-container{
@@ -156,7 +156,6 @@
 
   img{
       margin-right: 5px !important;
-
   }
 
   .comment-text-container{
