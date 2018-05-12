@@ -27,6 +27,9 @@
           <div>
             <button name= "<%= color_for_topic(topic) %>" type="button" class="btn topic-button"><%= topic.topic_name %></button>
           </div>
+          <div style="text-align: center; padding-bottom: 1rem;">
+              <%= link_to ('<button class="btn btn-danger btn-sm btn-reply tiny delete-official-topic">Delete</button>').html_safe, topic_path(topic), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
         </div>
       <% end %>
     <% end %>
