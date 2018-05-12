@@ -22,11 +22,14 @@
                 <div class="container no-questions-found">
                 <p class="lead"> There are no results for your search </p>
             <% else %>
+                <div class="dropdown-divider"> </div>
+                <div class="container no-questions-found">
                 <p class="lead"> There are no questions for this topic. </p>
                 <small id="answer-help-text"> Your can ask anything related to this topic. </small>
                 <div class="no-questions-ask-container">
                     <%= link_to "Ask something", "#new-question-modal", "data-toggle" => "modal", class: "nav-link lead", id:"link-no-question" %>
                 </div>
+            </div>
             <% end %>
         </div>
         <div class="dropdown-divider"></div>
