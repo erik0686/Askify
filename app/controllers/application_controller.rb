@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_vars
+  before_action :authenticate_user!
   
   def set_new_question_category
     category = Category.find_by(category_name: params[:category_name])
@@ -34,7 +35,3 @@ class ApplicationController < ActionController::Base
   end
 
 end
-
-
-
-  
