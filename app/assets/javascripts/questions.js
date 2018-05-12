@@ -118,4 +118,25 @@ $(document).on('turbolinks:load', function () {
     }
   });
 
+  $(document).on('click', ".edit-question", function (event) {
+    var answerId = $(this).attr('id').replace("edit-question-","");
+    $(this).addClass('hidden');
+    $('#cancel-edit-' + answerId).removeClass('hidden');  
+    $('#delete-item-' + answerId).removeClass('hidden');
+    $('.delete-comment-' + answerId).removeClass('hidden');
+    event.stopPropagation();
+    event.preventDefault();
+  });
+
+  $(document).on('click', ".cancel-write-comment", function (event) {
+    var answerId = $(this).attr('id').replace("cancel-edit-","");
+    $('#edit-question-' + answerId).removeClass('hidden');  
+    $(this).addClass('hidden');
+    $('#cancel-edit-' + answerId).addClass('hidden');  
+    $('#delete-item-' + answerId).addClass('hidden');
+    $('.delete-comment-' + answerId).addClass('hidden');
+    event.stopPropagation();
+    event.preventDefault();
+  });
+
 });
