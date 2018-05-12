@@ -3,8 +3,14 @@
     <p class="lead" id="profileTitle">My Profile</p>
     <ul class="list-group list-group-flush">
       <li class="list-group-item menu profile-details">Profile Details</li>
-      <li class="list-group-item menu my-questions">My Questions <span class="badge badge-secondary"><%= @user.questions.count %></span></li>
-      <li class="list-group-item menu my-answers">My Answers <span class="badge badge-secondary"><%= @user.answers.count %></span></li>
+
+      <li class="list-group-item menu my-questions">My Questions</li>
+      <li class="list-group-item menu my-answers">My Answers</li>
+      <% if current_user.admin %>
+        <li class="list-group-item menu suggested-topics">Suggested Topics
+          <span class="badge badge-secondary"><%= Topic.all.where(is_official: false).count %></span>
+        </li>
+      <% end %>
     </ul>
   </div>
 
@@ -40,6 +46,8 @@
           <% end %>
         </div>
       </div>
+      <div class="edit-error"> </div>
+
       <div class="user-information-tab">
         <%= render 'user_profile_info' %>
       </div>

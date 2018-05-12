@@ -11,6 +11,14 @@ $(document).on('ready', function () {
 
 $(document).on('turbolinks:load', function () {
   //file upload
+
+  $(".editable-fields").focusout(function(event){
+    // debugger
+    if ( $(this).data("bestInPlaceEditor").getValue() == ""){
+      $(".edit-error").text("Por favor no dejes el campo vacío")
+      event.stopImmediatePropagation();
+    }
+  });
   $("#change-profile-button").on('change', (e) => {
     var fileName = e.target.files[0].name;
 
@@ -154,27 +162,18 @@ function reloadUserPage(){
     $(this).parent().parent().parent()
     .removeClass("cardWithFocus");
   });
-
-  /*$('.datepicker').pickadate({
-    selectMonths: true, // Creates a dropdown to control month
-    selectYears: 15, // Creates a dropdown of 15 years to control year,
-    today: 'Today',
-    clear: 'Clear',
-    close: 'Ok',
-    closeOnSelect: false // Close upon selecting a date,
-    });*/
 }
 
 function saveData(){
   // edit html, hide fields, show form
-  $( "#deleteProfileBut" ).show();
-  $( "#editProfileBut" ).show();
-  $( "#saveChangesBut" ).hide();
-  $( "#bottomSaveChangesBut" ).hide();
+  // $( "#deleteProfileBut" ).show();
+  // $( "#editProfileBut" ).show();
+  // $( "#saveChangesBut" ).hide();
+  // $( "#bottomSaveChangesBut" ).hide();
 
   // show editable fields
-  $(".hidden").toggle();
-  $(".showing").toggle();
+  // $(".hidden").toggle();
+  // $(".showing").toggle();
   location.reload();
 }
 

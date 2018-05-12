@@ -32,17 +32,14 @@
 
         <li class="nav-item dropdown mr-3">
           <a class="nav-link dropdown-toggle lead dropdown-hover" href="#" id="navbarDropdownOptions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= current_user.first_name %> <span class="badge badge-secondary"><%= my_total_notifications %></span>
+            <%= current_user.first_name %> 
+            <% if current_user.admin? %>
+              <span class="badge badge-secondary"><%= my_total_notifications %></span>
+            <%end%>
           </a>
 
           <div id="dropdown-menu-options" class="dropdown-menu dd-menu" aria-labelledby="navbarDropdownOptions">
             <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
-            <%= link_to(user_path(current_user), class:"dropdown-item") do %>
-              My questions <span class="badge badge-secondary"><%= my_questions_notifications %></span>
-            <% end %>
-            <%= link_to(user_path(current_user), class:"dropdown-item") do %>
-              My answers <span class="badge badge-secondary"><%= my_answers_notifications %></span>
-            <% end %>
             <div class="dropdown-divider"></div>
               <%= link_to(destroy_user_session_path, method: :delete, class:"dropdown-item") do %>
               Sign out

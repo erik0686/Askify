@@ -48,17 +48,20 @@ body {
     }
 
   }
+}
 
+.ui-helper-hidden-accessible{
+  display: none;
 }
 
 #posts{
   li{
     border-radius: 10px;
     margin: 3px;
-
-    p{
-      font-size: 0.9rem;
-    }
+    // 
+    // p{
+    //   font-size: 0.9rem;
+    // }
 
     h5{
       font-size: 1.1rem;

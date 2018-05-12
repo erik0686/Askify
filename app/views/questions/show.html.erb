@@ -67,9 +67,13 @@
                     <div class="user-reply-left">
                       <h5 class="mt-0"> <%= answer.user.user_name %> </h5>
                       <%= link_to "reply", "#", class: "btn btn-primary btn-sm btn-reply",  id: "btn-reply-#{answer.id}"%> 
+                      <%= link_to ('<i class="fas fa-minus-circle delete-item"></i>').html_safe, answer_path(answer), method: :delete, data: { confirm: 'Are you sure?' }, id:"delete-item-#{answer.id}" ,class: "hidden" %>
                     </div>
                     <% if current_user.admin == true %>
-                      <%= link_to ('<i class="fas fa-minus-circle delete-item"></i>').html_safe, answer_path(answer), method: :delete, data: { confirm: 'Are you sure?' } %>
+                    <span>
+                        <%= link_to ('<i class="fas fa-cog"></i>').html_safe, "#", id:"edit-question-#{answer.id}", class:"edit-question" %>
+                        <%= link_to 'Done', "#", id:"cancel-edit-#{answer.id}", class: "cancel-write-comment hidden", style:"margin-top:0.5rem;" %>
+                    </span>
                     <% end %>
                   </div>
                   <small class="mb-0 user-info">
@@ -90,7 +94,7 @@
                         <p class="lead"> <span> <%= User.find_by(id: comment.user_id).user_name %> </span> <%= comment.comment_text %> </p>
                       </div>
                       <% if current_user.admin == true %>
-                          <%= link_to ('<i class="fas fa-minus-circle delete-item"></i>').html_safe, comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+                          <%= link_to ('<i class="fas fa-minus-circle delete-item"></i>').html_safe, comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, class:"hidden delete-comment-#{answer.id}" %>
                       <% end %>
                     </div>
                   </div>

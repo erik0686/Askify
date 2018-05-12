@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :answers
   end
   resources :users
-  resources :topics, only: [:index, :show]
+  resources :topics, only: [:index, :show, :destroy]
   resources :categories, only: [:index, :show]
   resources :posts, only: [:destroy]
   resources :answers, only: [:destroy]
