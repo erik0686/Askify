@@ -43,4 +43,6 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
+gem 'rails_12factor', group: :production 
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
